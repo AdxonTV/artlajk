@@ -3,7 +3,7 @@ import Navbar from "@/components/Navbar";
 
 import Header from "@/components/header";
 import Artlajk from "@/components/Artlajk";
-import Cursor from "@/components/cursor";
+
 export default function Home() {
   
  

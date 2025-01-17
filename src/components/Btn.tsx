@@ -2,13 +2,13 @@ import React from 'react'
 
 interface face {
     id:string,
-    containerClass?: string,
+
     leftIcon?: React.ReactNode,
     title:string,
     rightIcon?: React.ReactNode
 
 }
-const Btn:React.FC<face> =  ({ id, title, rightIcon, leftIcon, containerClass }) => {
+const Btn:React.FC<face> =  ({ id, title, rightIcon, leftIcon,  }) => {
 
     return (
 
