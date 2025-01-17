@@ -10,7 +10,6 @@ const Header = () => {
     gsap.registerPlugin(ScrollTrigger);
     gsap.set(".tracker", {
       scale: 1,
-    
 
       ease: "power2.inOut",
       scrollTrigger: {
@@ -48,10 +47,18 @@ const Header = () => {
           <ScrollBtn></ScrollBtn>
         </div>
         <div className="md:w-[30vw] absolute bottom-0 mb-[6vh] md:flex gap-[2vw] justify-end right-0 m-4 hidden sm:block">
-          <div className="w-fit"><div>Kontakt: </div><div>512 321 664</div></div> 
-          <div className="w-fit"><div>Prowadzi</div><div>Ela Jakubowska</div></div> 
-          <div className="w-fit"><div>Miejsce:</div><div>Chojnice, ul. 31 Stycznia</div></div> 
-          
+          <div className="w-fit">
+            <div>Kontakt: </div>
+            <div>512 321 664</div>
+          </div>
+          <div className="w-fit">
+            <div>Prowadzi</div>
+            <div>Ela Jakubowska</div>
+          </div>
+          <div className="w-fit">
+            <div>Miejsce:</div>
+            <div>Chojnice, ul. 31 Stycznia</div>
+          </div>
         </div>
       </div>
       <Image

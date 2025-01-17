@@ -1,8 +1,10 @@
-"use client"
-import React, { useEffect, useState } from 'react';
+"use client";
+import React, { useEffect, useState } from "react";
 
 const Cursor = () => {
-  const [mousePositions, setMousePositions] = useState<{ x: number; y: number; time: number; opacity: number }[]>([]);
+  const [mousePositions, setMousePositions] = useState<
+    { x: number; y: number; time: number; opacity: number }[]
+  >([]);
 
   useEffect(() => {
     const handleMouseMove = (event: MouseEvent) => {
@@ -26,11 +28,11 @@ const Cursor = () => {
       );
     };
 
-    window.addEventListener('mousemove', handleMouseMove);
+    window.addEventListener("mousemove", handleMouseMove);
     const intervalId = setInterval(updatePositions, 40);
 
     return () => {
-      window.removeEventListener('mousemove', handleMouseMove);
+      window.removeEventListener("mousemove", handleMouseMove);
       clearInterval(intervalId);
     };
   }, []);
@@ -41,16 +43,16 @@ const Cursor = () => {
         <div
           key={index}
           style={{
-            position: 'absolute',
+            position: "absolute",
             top: pos.y,
             left: pos.x,
-            width: '44px',
-            height: '44px',
-            transform: 'translate(-50%, -50%)',
+            width: "44px",
+            height: "44px",
+            transform: "translate(-50%, -50%)",
             filter: `blur(${pos.opacity * 2}px)`,
-            backgroundColor: '#863AF1',
-            borderRadius: '50%',
-            pointerEvents: 'none',
+            backgroundColor: "#863AF1",
+            borderRadius: "50%",
+            pointerEvents: "none",
             opacity: pos.opacity,
           }}
         />

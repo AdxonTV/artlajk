@@ -47,10 +47,13 @@ const Option: React.FC<OptionProps> = ({ children }) => {
       onMouseLeave={handleMouseLeave}
       className="relative overflow-hidden px-3 py-2 h-fit text-white text-lg rounded"
     >
-      <div ref={textRef} className="relative text-white" style={{ textShadow: "0px 50px 0px rgba(255, 255, 255, 1)" }}>
+      <div
+        ref={textRef}
+        className="relative text-white"
+        style={{ textShadow: "0px 50px 0px rgba(255, 255, 255, 1)" }}
+      >
         {splitText(children as string)},
       </div>
-     
     </button>
   );
 };
