@@ -21,7 +21,7 @@ const Header = () => {
           scrub: true,
         },
       },
-      []
+    
     );
     gsap.to(".tracker", {
       scale: 1.2,
