@@ -2,20 +2,56 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
-  color: var(--foreground);
-  background: var(--background);
+  overflow-x: hidden;
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.nav-elements {
+  @apply hidden text-nav md:flex gap-[0.8vw];
+}
+.bg-img{
+
+  background-image: url("/img/bgimg.png");
+}
+@font-face {
+  font-family: soria;
+  src: url("/img/soria-font.ttf");
+}
+::selection {
+  background-color: #970fff;
+  color: #000;
+ 
+
+  background-size: cover;
+}.fontsoria{
+  font-family: soria;
+}
+
+button {
+  position: relative;
+  overflow: hidden;
+}
+.textal{
+  text-align: justify;
+}
+.char {
+  display: inline-block;
+  transition: transform 0.3s ease-out;
+}.slider-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%; /* Full width */
+  height: 50px; /* Adjust based on your design */
+}
+
+.slider {
+  display: flex;
+  white-space: nowrap; /* Prevent line breaks */
+}
+
+p {
+  margin: 0;
+ 
+  display: inline-block;
 }
