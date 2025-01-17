@@ -41,22 +41,22 @@ const Header = () => {
       <Cursor />
       <div className="w-[96vw] relative">
         <div className="w-full bottom-0 absolute text-center md:text-left">
-          <div className="text-[10vh] md:text-[20vh] leading-none">ARTLAJK</div>
-          <div className="text-[4vh] mb-[5vh] md:text-[6vh]">ZAJĘCIA Z MALATSTWA I RYSNKU</div>
+          <div className="text-[9vh] md:text-[21vh] leading-none font-bold">ARTLAJK</div>
+          <div className="text-[3vh] mb-[5vh] md:text-[6vh]">ZAJĘCIA Z MALATSTWA I RYSNKU</div>
           <div className="flex flex-col gap-[10vh] md:flex-row w-full justify-center items-center md:justify-between">
             <ScrollBtn />
-            <div className="flex text-left gap-8 md:text-right">
+            <div className="flex text-left mb-[2vh] gap-8 md:text-right">
               <div className="w-fit">
                 <div>Kontakt</div>
-                <div>512 321 664</div>
+                <div className="leading-none">512 321 664</div>
               </div>
               <div className="w-fit text-center md:text-right">
                 <div>Prowadzi</div>
-                <div>Ela Jakubowska</div>
+                <div className="leading-none">Ela Jakubowska</div>
               </div>
               <div className="w-fit  text-right md:text-right">
                 <div>Miejsce</div>
-                <div>Chojnice, ul. 31 Stycznia</div>
+                <div className="leading-none">Chojnice, ul. 31 Stycznia</div>
               </div>
             </div>
           </div>
