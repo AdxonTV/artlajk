@@ -11,7 +11,7 @@ const Btn: React.FC<face> = ({ id, title, rightIcon, leftIcon }) => {
   return (
     <button
       id={id}
-      className="group relative z-10 w-fit cursor-pointer o overflow-hidden rounded-full bg-violet-50 px-7 py-3 text-black"
+      className="group relative z-10 w-fit cursor-pointer o overflow-hidden rounded-full hover:bg-violet-700 duration-200 transition-all bg-violet-50 px-7 py-3 text-black"
     >
       {leftIcon}
 
@@ -19,7 +19,7 @@ const Btn: React.FC<face> = ({ id, title, rightIcon, leftIcon }) => {
         <div className="translate-y-0 font-medium skew-y-0  transition duration-500 group-hover:translate-y-[-160%] group-hover:skew-y-12">
           {title}
         </div>
-        <div className="absolute font-medium translate-y-[164%] skew-y-12 transition duration-500 group-hover:translate-y-0 group-hover:skew-y-0">
+        <div className="absolute font-medium translate-y-[164%] skew-y-12 transition text-white duration-500 group-hover:translate-y-0 group-hover:skew-y-0">
           {title}
         </div>
       </span>
