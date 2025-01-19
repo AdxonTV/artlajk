@@ -11,7 +11,7 @@ const Navbar = () => {
   const currentScrollY = useWindowScroll();
   useEffect(() => {
     setLastScrollY(scrollY);
-        const navelement = document.getElementById("nav-el");
+       
     if (currentScrollY === 0) {
   
 

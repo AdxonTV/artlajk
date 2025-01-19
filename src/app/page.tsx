@@ -13,7 +13,6 @@ export default function Home() {
       orientation: "vertical",
       gestureOrientation: "vertical",
       smoothWheel: true,
-    
       touchMultiplier: 2,
       infinite: false,
     });
