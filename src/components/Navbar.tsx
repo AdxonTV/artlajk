@@ -41,7 +41,7 @@ const Navbar = () => {
     >
       <div  className=" flex transition-all duration-1000 ease-out justify-between px-4 items-center w-[95vw] py-[15px]">
         <div className="font-bold ml-[1vw]">Malownia</div>
-        <div className="nav-elements">By ArtLaj©</div>
+        <div className="nav-elements opacity-50">By ArtLajk</div>
         <div className="nav-elements">
           <a  href="#malownia">
           <Option >Malownia</Option>
