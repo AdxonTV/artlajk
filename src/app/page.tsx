@@ -2,6 +2,7 @@
 import Navbar from "@/components/Navbar";
 import Header from "@/components/header";
 import Artlajk from "@/components/Artlajk";
+import Malownia from "@/components/Malownia";
 import { useEffect } from "react";
 import Lenis from "lenis";
 
@@ -27,7 +28,7 @@ export default function Home() {
     <div>
       <Navbar />
       <Header />
-     
+      <Malownia/>
       <Artlajk />
     </div>
   );

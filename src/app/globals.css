@@ -25,6 +25,7 @@ body {
 ::selection {
   background-color: #970fff;
   color: #000;
+  
  
 
   background-size: cover;
@@ -36,11 +37,11 @@ body {
 }
 
 .floating-nav>*{
-  background-color: rgba(174, 174, 174, 0.811);
-  box-shadow: 2px 2px 21px 2px rgba(0, 0, 0, 0.2);
+  background-color: rgb(137, 40, 255);
+  box-shadow: 2px 2px 21px 2px rgba(60, 39, 97, 0.2);
 
-  backdrop-filter: blur(10px);
-border-radius: 20px;
+
+border-radius: 40px;
 }
 .options-nav{
   color: #000;
