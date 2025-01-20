@@ -11,7 +11,7 @@ const MalowniaHeader = () => {
    const clipAnimation = gsap.timeline({
       scrollTrigger: {
         trigger: "#container-head",
-        start: "top top",
+        start: "center bottom",
         end: "bottom bottom",
         scrub: 0.5,
         pin: "#fix",
@@ -20,7 +20,7 @@ const MalowniaHeader = () => {
     });
 
     clipAnimation.to("#fix", {
-      // Define any additional animation properties here if needed
+    
     });
     gsap.to("#fix2", {
       scrollTrigger: {
@@ -38,9 +38,9 @@ const MalowniaHeader = () => {
     
   }, [ScrollTrigger]);
   return (
-    <div id="container-head" className=" w-full  flex relative h-[200vh] justify-center">
+    <div id="container-head" className=" w-full flex relative h-[200vh] justify-center">
       <div className="w-[96vw]  h-full ">
-        <div className="text-[8vw] my-[10vh] cc  leading-[100%]  tracking-normal ">
+        <div className="text-[8vw]  mb-[10vh] cc  leading-[100%]  tracking-normal ">
           <div>Studio Rysunku</div>
           <div>i Malarstwa</div>
         </div>

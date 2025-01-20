@@ -27,7 +27,9 @@ export default function Home() {
   return (
     <div>
       <Navbar />
+     
       <Header />
+      <div className="h-[20vh]"></div>
       <Malownia/>
       <Artlajk />
     </div>

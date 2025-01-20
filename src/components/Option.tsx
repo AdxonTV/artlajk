@@ -35,7 +35,11 @@ const Option: React.FC<OptionProps> = ({ children }) => {
   // Helper to split text into animated spans
   const splitText = (text: string) =>
     text.split("").map((char, index) => (
-      <span key={index} className="char inline-block">
+      <span
+        key={index}
+        className="char"
+        style={{ display: "inline-block", mixBlendMode: "difference" }}
+      >
         {char}
       </span>
     ));
@@ -49,10 +53,11 @@ const Option: React.FC<OptionProps> = ({ children }) => {
     >
       <div
         ref={textRef}
-        className="relative text-white"
+        className="relative  text-white"
         style={{ textShadow: "0px 50px 0px rgba(255, 255, 255, 1)" }}
+        
       >
-        {splitText(children as string)},
+        {splitText(children as string)} <span    style={{ display: "inline-block", mixBlendMode: "difference" }}>,</span>
       </div>
     </button>
   );
