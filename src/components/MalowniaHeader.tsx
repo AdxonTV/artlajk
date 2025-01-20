@@ -40,7 +40,7 @@ const MalowniaHeader = () => {
   return (
     <div id="container-head" className=" w-full flex relative h-[200vh] justify-center">
       <div className="w-[96vw]  h-full ">
-        <div className="text-[8vw]  mb-[10vh] cc  leading-[100%]  tracking-normal ">
+        <div className="text-[8vw]  mb-[10vh]   leading-[100%]  tracking-normal ">
           <div>Studio Rysunku</div>
           <div>i Malarstwa</div>
         </div>
@@ -52,7 +52,7 @@ const MalowniaHeader = () => {
         <div  className="top-[80vh] absolute">
         <Image id="fix2" className="opacity-100" src={"/img/Vector.png"} width={300} height={300} alt="xx"></Image>
         </div>
-        <div className="right-[3vw]  rotate-3 mt-[-20vh] absolute">
+        <div className="right-[5vw]  rotate-3 mt-[-20vh] absolute">
           <div>MALOWNIA WYSTAWA STYCZNIA 04 |  2025 </div>
       <video  className="rounded-[20px] w-[40vw] " autoPlay muted loop src="/img/malowniafilm.mp4"></video>
       </div>
