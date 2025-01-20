@@ -41,7 +41,7 @@ gsap.to(".x",{scrollTrigger:{
 
 
 },
-y:"-12vw",
+y:"-18vw",
 })
 
     
