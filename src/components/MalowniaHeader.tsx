@@ -11,7 +11,7 @@ const MalowniaHeader = () => {
    const clipAnimation = gsap.timeline({
       scrollTrigger: {
         trigger: "#container-head",
-        start: "center bottom",
+        start: "top top",
         end: "bottom bottom",
         scrub: 0.5,
         pin: "#fix",
@@ -41,13 +41,13 @@ gsap.to(".x",{scrollTrigger:{
 
 
 },
-y:"-30vh",
+y:"-50vh",
 })
 
     
   }, [ScrollTrigger]);
   return (
-    <div id="container-head" className=" w-full flex relative h-[180vh] justify-center">
+    <div id="container-head" className=" w-full flex relative bg-slate-400 h-[150vh] justify-center">
       <div className="w-[96vw]  h-full ">
         <div className="text-[8vw]  mb-[10vh]   leading-[100%]  tracking-normal ">
           <div>Studio Rysunku</div>
@@ -58,7 +58,7 @@ y:"-30vh",
           wspieramy rozwój artystyczny dzieci, młodzieży i dorosłych od 9. roku
           życia wzwyż.
         </div>
-        <div  className="top-[60vh] absolute">
+        <div  className="top-[80vh] absolute">
         <Image id="fix2" className="opacity-100" src={"/img/Vector.png"} width={300} height={300} alt="xx"></Image>
         </div>
         <div className="right-[5vw] h-[90vh] rounded-[20px]  overflow-hidden rotate-3 mt-[-20vh] absolute " >
