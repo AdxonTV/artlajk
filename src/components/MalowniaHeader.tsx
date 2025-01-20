@@ -22,17 +22,17 @@ const MalowniaHeader = () => {
     clipAnimation.to("#fix", {
     
     });
-    gsap.to("#fix2", {
-      scrollTrigger: {
-        trigger: "#container-head",
-        start: "top top",
-        end: "center 50vh",
-        scrub: 0.5,
+    // gsap.to("#fix2", {
+    //   scrollTrigger: {
+    //     trigger: "#container-head",
+    //     start: "top top",
+    //     end: "center 50vh",
+    //     scrub: 0.5,
       
     
-      },
-      opacity: 0,
-    });
+    //   },
+    //   opacity: 0,
+    // });
 gsap.to(".x",{scrollTrigger:{
   trigger: "#container-head",
   start: "top bottom",
@@ -41,13 +41,13 @@ gsap.to(".x",{scrollTrigger:{
 
 
 },
-y:"-50vh",
+y:"-12vw",
 })
 
     
   }, [ScrollTrigger]);
   return (
-    <div id="container-head" className=" w-full flex relative bg-slate-400 h-[150vh] justify-center">
+    <div id="container-head" className=" w-full flex relative  h-[150vh] justify-center">
       <div className="w-[96vw]  h-full ">
         <div className="text-[8vw]  mb-[10vh]   leading-[100%]  tracking-normal ">
           <div>Studio Rysunku</div>
@@ -58,12 +58,12 @@ y:"-50vh",
           wspieramy rozwój artystyczny dzieci, młodzieży i dorosłych od 9. roku
           życia wzwyż.
         </div>
-        <div  className="top-[80vh] absolute">
+        <div  className="top-[110vh] absolute">
         <Image id="fix2" className="opacity-100" src={"/img/Vector.png"} width={300} height={300} alt="xx"></Image>
         </div>
         <div className="right-[5vw] h-[90vh] rounded-[20px]  overflow-hidden rotate-3 mt-[-20vh] absolute " >
           <div>MALOWNIA WYSTAWA STYCZNIA 04 |  2025 </div>
-      <video  className="x w-[40vw]  " autoPlay muted loop  src="/img/malowniafilm.mp4"></video>
+      <video  className="x w-[40vw] rounded-[20px]  " autoPlay muted loop  src="/img/malowniafilm.mp4"></video>
       </div>
       </div>
      
