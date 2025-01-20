@@ -33,28 +33,37 @@ const MalowniaHeader = () => {
       },
       opacity: 0,
     });
+gsap.to(".x",{scrollTrigger:{
+  trigger: "#container-head",
+  start: "top bottom",
+  end: "bottom top",
+  scrub: true,
 
+
+},
+y:"-30vh",
+})
 
     
   }, [ScrollTrigger]);
   return (
-    <div id="container-head" className=" w-full flex relative h-[200vh] justify-center">
+    <div id="container-head" className=" w-full flex relative h-[180vh] justify-center">
       <div className="w-[96vw]  h-full ">
         <div className="text-[8vw]  mb-[10vh]   leading-[100%]  tracking-normal ">
           <div>Studio Rysunku</div>
-          <div>i Malarstwa</div>
+          <div className="text-violet-300">i Malarstwa</div>
         </div>
         <div id="fix" className="text-[25px] ml-[1vw] w-[30vw] ">
           Malownia to wyjątkowa pracownia kreatywna, w której od 2019 roku
           wspieramy rozwój artystyczny dzieci, młodzieży i dorosłych od 9. roku
           życia wzwyż.
         </div>
-        <div  className="top-[80vh] absolute">
+        <div  className="top-[60vh] absolute">
         <Image id="fix2" className="opacity-100" src={"/img/Vector.png"} width={300} height={300} alt="xx"></Image>
         </div>
-        <div className="right-[5vw]  rotate-3 mt-[-20vh] absolute">
+        <div className="right-[5vw] h-[90vh] rounded-[20px]  overflow-hidden rotate-3 mt-[-20vh] absolute " >
           <div>MALOWNIA WYSTAWA STYCZNIA 04 |  2025 </div>
-      <video  className="rounded-[20px] w-[40vw] " autoPlay muted loop src="/img/malowniafilm.mp4"></video>
+      <video  className="x w-[40vw]  " autoPlay muted loop  src="/img/malowniafilm.mp4"></video>
       </div>
       </div>
      
