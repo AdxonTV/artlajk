@@ -71,14 +71,24 @@ const MalowniaHeader = () => {
           ></Image>
         </div>
         <div className="right-[0vw] md:right-[5vw]  h-[90vh] rounded-[20px]  overflow-hidden rotate-3 mt-[0vh] md:mt-[-20vh] absolute ">
-  
+        <Image
+                  alt="x"
+                  width={2000}
+                  placeholder="blur"
+                  blurDataURL="/img/bgimg.png"
+                  height={2000}
+                  className=" block tracker   md:w-[40vw] md:hidden  w-[80vw]  z-[10]  rounded-[20px]  "
+                  src={"/img/bgimg.png"}
+                />
           <video
-            className="x md:w-[40vw]  w-[80vw]  z-[10]  rounded-[20px]  "
+            className="x md:w-[40vw] hidden md:block  w-[80vw]  z-[10]  rounded-[20px]  "
             autoPlay
             muted
             loop
             src="/img/malowniafilm.mp4"
           ></video>
+           
+          
         </div>
       </div>
       <div className="md:top-[-30vh] opacity-25 md:opacity-100 top-[-50vh] z-[-20] absolute   md:right-[5vw] right-[10vw]">
