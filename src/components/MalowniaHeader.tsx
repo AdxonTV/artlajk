@@ -70,7 +70,7 @@ const MalowniaHeader = () => {
             alt="xx"
           ></Image>
         </div>
-        <div className="right-[0vw] md:right-[5vw]  h-[90vh] rounded-[20px]  overflow-hidden rotate-3 mt-[0vh] md:mt-[-20vh] absolute ">
+        <div className="right-[0vw] md:right-[5vw] h-[70vh] md:h-[90vh] rounded-[20px]  overflow-hidden rotate-3 mt-[0vh] md:mt-[-20vh] absolute ">
         <Image
                   alt="x"
                   width={2000}
