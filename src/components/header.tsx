@@ -82,7 +82,7 @@ const Header = () => {
         placeholder="blur"
         blurDataURL="/public/img/bg_img2.png"
         height={2000}
-        className=" md:block hidden tracker absolute overflow-hidden w-full h-screen object-cover z-[-192]"
+        className=" md:block hidden tracker absolute overflow-hidden w-full h-[100dvh] object-cover z-[-192]"
         src={"/img/bg_img2.png"}
       />
     </div>
