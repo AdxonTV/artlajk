@@ -60,7 +60,7 @@ const MalowniaHeader = () => {
           wspieramy rozwój artystyczny dzieci, młodzieży i dorosłych od 9. roku
           życia wzwyż.
         </div>
-        <div className="top-[100vh] md:top-[120vh] absolute">
+        <div className="top-[120vh]  md:top-[120vh] absolute">
           <Image
             id="fix2"
             className="opacity-100"
