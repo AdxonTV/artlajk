@@ -88,14 +88,14 @@ const MalowniaHeader = () => {
             muted
             loop
             src="/img/malowniafilm.mp4"
-          ></video>
-          <Image
+          />
+           <Image
             ref={imageRef}
-            alt=""
-            width={2000}
-            height={2000}
-            className="block tracker x2 md:w-[40vw] md:hidden w-[80vw] z-[10] rounded-[20px]"
+            className="opacity-100 w-[70vw] z-[10] rounded-[20px] md:hidden"
             src={"/img/header-malownia-mobile.png"}
+            width={700}
+            height={700}
+            alt="xx"
           />
         </div>
       </div>
