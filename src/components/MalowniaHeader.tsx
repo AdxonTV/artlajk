@@ -45,7 +45,7 @@ const MalowniaHeader = () => {
   return (
     <div
       id="container-head"
-      className=" w-full  flex relative h-fit  md:h-[150vh] justify-center"
+      className=" w-full  flex relative h-[100vh]  md:h-[150vh] justify-center"
     >
       <div className="w-[96vw]  h-full ">
         <div className="text-[13vw] md:mb-[10vh]  mb-[5vh] md:text-[10vw]  leading-[100%]  tracking-normal ">
@@ -81,7 +81,7 @@ const MalowniaHeader = () => {
           ></video>
         </div>
       </div>
-      <div className="md:top-[-30vh] opacity-25 top-[-50vh] z-[-20] absolute   md:right-[5vw] right-[10vw]">
+      <div className="md:top-[-30vh] opacity-25 md:opacity-100 top-[-50vh] z-[-20] absolute   md:right-[5vw] right-[10vw]">
 
         <Ss></Ss>
       </div>
