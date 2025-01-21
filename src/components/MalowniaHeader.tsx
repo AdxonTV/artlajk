@@ -75,10 +75,10 @@ const MalowniaHeader = () => {
                   alt="x"
                   width={2000}
                   placeholder="blur"
-                  blurDataURL="/img/bgimg.png"
+                  blurDataURL="/img/header-malownia-mobile.png"
                   height={2000}
                   className=" block tracker   md:w-[40vw] md:hidden  w-[80vw]  z-[10]  rounded-[20px]  "
-                  src={"/img/bgimg.png"}
+                  src={"/img/header-malownia-mobile.png"}
                 />
           <video
             className="x md:w-[40vw] hidden md:block  w-[80vw]  z-[10]  rounded-[20px]  "
