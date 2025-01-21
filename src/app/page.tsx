@@ -25,7 +25,7 @@ export default function Home() {
     requestAnimationFrame(raf);
   }, []);
   return (
-    <div>
+    <div className="overflow-x-hidden">
       <Navbar />
      
       <Header />

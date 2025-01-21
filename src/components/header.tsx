@@ -41,7 +41,7 @@ const Header = () => {
   });
 
   return (
-    <div className="h-screen relative flex justify-center overflow-hidden text-white">
+    <div className="h-screen z-10 relative flex justify-center overflow-hidden text-white">
       <Cursor />
       <div className="w-[96vw] relative">
         <div className="w-full bottom-0 absolute  md:text-left">

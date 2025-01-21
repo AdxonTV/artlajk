@@ -12,18 +12,3 @@ const ScrollBtn = () => {
 };
 
 export default ScrollBtn;
-
-{/* <div className="flex gap-8">
-                <div className="w-fit">
-                  <div>Kontakt: </div>
-                  <div>512 321 664</div>
-                </div>
-                <div className="w-fit">
-                  <div>Prowadzi</div>
-                  <div>Ela Jakubowska</div>
-                </div>
-                <div className="w-fit">
-                  <div>Miejsce:</div>
-                  <div>Chojnice, ul. 31 Stycznia</div>
-                </div>
-              </div> */}
