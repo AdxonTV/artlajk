@@ -4,11 +4,8 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 
-
 gsap.registerPlugin(ScrollTrigger);
 const MalowniaHeader = () => {
-
-
   useGSAP(() => {
     const clipAnimation = gsap.timeline({
       scrollTrigger: {
@@ -41,6 +38,15 @@ const MalowniaHeader = () => {
       },
       y: "-18vw",
     });
+    gsap.to(".x2", {
+      scrollTrigger: {
+        trigger: "#container-head",
+        start: "top bottom",
+        end: "bottom top",
+        scrub: true,
+      },
+      scale: 1.8,
+    });
   }, [ScrollTrigger]);
   return (
     <div
@@ -71,15 +77,6 @@ const MalowniaHeader = () => {
           ></Image>
         </div>
         <div className="right-[0vw] md:right-[5vw] h-[70vh] md:h-[90vh] rounded-[20px]  overflow-hidden rotate-3 mt-[0vh] md:mt-[-20vh] absolute ">
-        <Image
-                  alt="x"
-                  width={2000}
-                  placeholder="blur"
-                  blurDataURL="/img/header-malownia-mobile.png"
-                  height={2000}
-                  className=" block tracker   md:w-[40vw] md:hidden  w-[80vw]  z-[10]  rounded-[20px]  "
-                  src={"/img/header-malownia-mobile.png"}
-                />
           <video
             className="x md:w-[40vw] hidden md:block  w-[80vw]  z-[10]  rounded-[20px]  "
             autoPlay
@@ -87,12 +84,16 @@ const MalowniaHeader = () => {
             loop
             src="/img/malowniafilm.mp4"
           ></video>
-           
-          
+          <Image
+            alt=""
+            width={2000}
+            height={2000}
+            className=" block tracker x2  md:w-[40vw] md:hidden  w-[80vw]  z-[10]  rounded-[20px]  "
+            src={"/img/header-malownia-mobile.png"}
+          />
         </div>
       </div>
       <div className="md:top-[-30vh] opacity-25 md:opacity-100 top-[-50vh] z-[-20] absolute   md:right-[5vw] right-[10vw]">
-
         <Ss></Ss>
       </div>
     </div>

@@ -34,7 +34,7 @@ const Ss = () => {
           ref={pathRef}
           d="M19.4982 17.4986C1367.01 1453 893.504 -603 310 1184.5"
           stroke="#863AF1"
-          stroke-width="51"
+          strokeWidth="51"
           fill="transparent"
         />
       </svg>
