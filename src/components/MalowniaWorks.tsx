@@ -1,5 +1,5 @@
 import React from "react";
-import ImgCarusel from "./ImgCarusel";
+
 import TextRev from "./TextRev";
 
 const MalowniaWorks = () => {
