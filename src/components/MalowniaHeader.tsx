@@ -79,9 +79,9 @@ const MalowniaHeader = () => {
             <TextRev>Studio</TextRev> &nbsp; <TextRev>Rysunku</TextRev>
           </div>
 
-          <div className="text-violet-300 cc flex">
+          <div className="text-violet-300 cc flex w-full md:justify-start justify-end">
           
-            <TextRev className="text-violet-300 md:text-left text-right ">
+            <TextRev className="text-violet-300 md:text-left  right-0 text-right ">
            
              i&nbsp;Malarstwa
             </TextRev>
