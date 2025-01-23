@@ -5,6 +5,7 @@ const Malownia = () => {
   return (
     <div>
         <MalowniaHeader/>
+        <div className="h-[25vh]"></div>
         <MalowniaWorks/>
     </div>
   )

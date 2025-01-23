@@ -70,7 +70,7 @@ const MalowniaHeader = () => {
           wspieramy rozwój artystyczny dzieci, młodzieży i dorosłych od 9. roku
           życia wzwyż.
         </div>
-        <div className="top-[120vh] w-full  md:top-[120vh] absolute">
+        <div className="md:top-[120vh] w-full  top-[103vh] absolute">
           <Image
             id="fix2"
             className="opacity-100"
@@ -81,7 +81,7 @@ const MalowniaHeader = () => {
           />
         </div>
         <div className="w-full flex justify-center bg-slate-500 h-fit relative">
-        <div className="  md:right-[5vw] h-[70vh] md:h-[90vh] rounded-[20px] overflow-hidden md:rotate-3 mt-[5vh] md:mt-[-20vh] absolute">
+        <div className="  md:right-[5vw] h-fit md:h-[90vh] rounded-[20px] overflow-hidden md:rotate-3 mt-[5vh] md:mt-[-20vh] absolute">
           <video
             ref={videoRef}
             className="x md:w-[40vw] hidden md:block w-[80vw] z-[10] rounded-[20px]"
@@ -92,7 +92,7 @@ const MalowniaHeader = () => {
           />
            <Image
             ref={imageRef}
-            className="opacity-100  z-[10] h-full   rounded-[20px] md:hidden"
+            className="opacity-100  z-[10] object-cover  rounded-[20px] md:hidden"
             src={"/img/header-malownia-mobile.png"}
             width={800}
             height={800}
@@ -101,7 +101,7 @@ const MalowniaHeader = () => {
         </div>
         </div>
       </div>
-      <div className="md:top-[-30vh] opacity-25 md:opacity-100 top-[-50vh] z-[-20] absolute md:right-[5vw] right-[10vw]">
+      <div className="xl:top-[-30vh] md:right-[-19vw] opacity-25 xl:opacity-100 top-[-50vh] z-[-20] absolute xl:right-[5vw] right-[10vw]">
         <Ss />
       </div>
     </div>
