@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-
+import Loading from "./loading";
+import { Suspense } from "react";
 import "./globals.css";
 
 
@@ -15,12 +16,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
+   
     <html lang="en">
+       <Suspense fallback={<Loading/>}>
       <body
         
       >
         {children}
       </body>
+      </Suspense>
     </html>
+  
   );
 }

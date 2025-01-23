@@ -1,10 +1,10 @@
-"use client"
+"use client";
 import Ss from "./Ss";
 import Image from "next/image";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect, useRef } from "react";
-
+import TextRev from "./TextRev";
 gsap.registerPlugin(ScrollTrigger);
 
 const MalowniaHeader = () => {
@@ -14,7 +14,13 @@ const MalowniaHeader = () => {
   const imageRef = useRef<HTMLImageElement>(null);
 
   useEffect(() => {
-    if (!containerRef.current || !fixClassRef.current || !videoRef.current || !imageRef.current) return;
+    if (
+      !containerRef.current ||
+      !fixClassRef.current ||
+      !videoRef.current ||
+      !imageRef.current
+    )
+      return;
 
     const clipAnimation = gsap.timeline({
       scrollTrigger: {
@@ -48,6 +54,16 @@ const MalowniaHeader = () => {
       },
       scale: 1.3,
     });
+
+    gsap.to(".cc", {
+      scrollTrigger: {
+        trigger: containerRef.current,
+        start: "top bottom",
+        end: "bottom top",
+        scrub: true,
+      },
+      y: "-1vw",
+    });
   }, []);
 
   return (
@@ -58,8 +74,18 @@ const MalowniaHeader = () => {
     >
       <div className="w-[96vw] h-full ">
         <div className="text-[13vw] md:mb-[10vh] tracking-tighter mb-[5vh] md:text-[10vw] leading-[110%] ">
-          <div>Studio Rysunku</div>
-          <div className="text-violet-300 md:text-left text-right ">i Malarstwa</div>
+          <div className="flex">
+            {" "}
+            <TextRev>Studio</TextRev> &nbsp; <TextRev>Rysunku</TextRev>
+          </div>
+
+          <div className="text-violet-300 cc flex">
+          
+            <TextRev className="text-violet-300 md:text-left text-right ">
+           
+             i&nbsp;Malarstwa
+            </TextRev>
+          </div>
         </div>
         <div
           id="fix"
@@ -70,7 +96,7 @@ const MalowniaHeader = () => {
           wspieramy rozwój artystyczny dzieci, młodzieży i dorosłych od 9. roku
           życia wzwyż.
         </div>
-        <div className="md:top-[120vh] w-full  top-[103vh] absolute">
+        <div className="md:top-[120vh] w-full hidden md:block  top-[103vh] absolute">
           <Image
             id="fix2"
             className="opacity-100"
@@ -81,24 +107,24 @@ const MalowniaHeader = () => {
           />
         </div>
         <div className="w-full flex justify-center bg-slate-500 h-fit relative">
-        <div className="  md:right-[5vw] h-fit md:h-[90vh] rounded-[20px] overflow-hidden md:rotate-3 mt-[5vh] md:mt-[-20vh] absolute">
-          <video
-            ref={videoRef}
-            className="x md:w-[40vw] hidden md:block w-[80vw] z-[10] rounded-[20px]"
-            autoPlay
-            muted
-            loop
-            src="/img/malowniafilm.mp4"
-          />
-           <Image
-            ref={imageRef}
-            className="opacity-100  z-[10] object-cover  rounded-[20px] md:hidden"
-            src={"/img/header-malownia-mobile.png"}
-            width={800}
-            height={800}
-            alt="xx"
-          />
-        </div>
+          <div className="  md:right-[5vw] h-fit md:h-[90vh] rounded-[20px] overflow-hidden md:rotate-3 mt-[5vh] md:mt-[-20vh] absolute">
+            <video
+              ref={videoRef}
+              className="x md:w-[40vw] hidden md:block w-[80vw] z-[10] rounded-[20px]"
+              autoPlay
+              muted
+              loop
+              src="/img/malowniafilm.mp4"
+            />
+            <Image
+              ref={imageRef}
+              className="opacity-100  z-[10] object-cover  rounded-[20px] md:hidden"
+              src={"/img/header-malownia-mobile.png"}
+              width={800}
+              height={800}
+              alt="xx"
+            />
+          </div>
         </div>
       </div>
       <div className="xl:top-[-30vh] md:right-[-19vw] opacity-25 xl:opacity-100 top-[-65vh] z-[-20] absolute xl:right-[5vw] right-[10vw]">

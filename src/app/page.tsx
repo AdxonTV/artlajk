@@ -25,6 +25,7 @@ export default function Home() {
     requestAnimationFrame(raf);
   }, []);
   return (
+
     <div className="overflow-x-hidden">
       <Navbar />
 
@@ -32,5 +33,6 @@ export default function Home() {
       <div className="h-[20vh]"></div>
       <Malownia />
     </div>
+    
   );
 }
