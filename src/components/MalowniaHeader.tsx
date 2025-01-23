@@ -101,7 +101,7 @@ const MalowniaHeader = () => {
         </div>
         </div>
       </div>
-      <div className="xl:top-[-30vh] md:right-[-19vw] opacity-25 xl:opacity-100 top-[-50vh] z-[-20] absolute xl:right-[5vw] right-[10vw]">
+      <div className="xl:top-[-30vh] md:right-[-19vw] opacity-25 xl:opacity-100 top-[-65vh] z-[-20] absolute xl:right-[5vw] right-[10vw]">
         <Ss />
       </div>
     </div>
