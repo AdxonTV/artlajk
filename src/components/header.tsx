@@ -66,14 +66,14 @@ const Header = () => {
           </div>
         </div>
       </div>
-      <div className="absolute overflow-hidden w-full h-screen object-cover z-[-192]" >
+      <div className="absolute overflow-hidden w-full h-[100dvh] object-cover z-[-192]" >
       <video
-            className="tracker "
-            autoPlay
-            muted
-            loop
-            src="/img/malowniafilm.mp4"
-          ></video>
+        className="tracker absolute top-0 left-0 w-full h-full object-cover"
+        autoPlay
+        muted
+        loop
+        src="/img/malowniafilm.mp4"
+      ></video>
           <div className="bg-black w-[100%] h-[40vh]  absolute bottom-[-20vh] blur-[100px]"> </div>
           </div>
       <Image

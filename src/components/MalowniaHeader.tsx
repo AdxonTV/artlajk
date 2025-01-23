@@ -46,7 +46,7 @@ const MalowniaHeader = () => {
         end: "bottom top",
         scrub: true,
       },
-      scale: 1.8,
+      scale: 1.3,
     });
   }, []);
 
@@ -56,21 +56,21 @@ const MalowniaHeader = () => {
       ref={containerRef}
       className="w-full flex relative h-[100vh] md:h-[150vh] justify-center"
     >
-      <div className="w-[96vw] h-full">
-        <div className="text-[13vw] md:mb-[10vh] mb-[5vh] md:text-[10vw] leading-[100%] tracking-normal">
+      <div className="w-[96vw] h-full ">
+        <div className="text-[13vw] md:mb-[10vh] tracking-tighter mb-[5vh] md:text-[10vw] leading-[110%] ">
           <div>Studio Rysunku</div>
-          <div className="text-violet-300">i Malarstwa</div>
+          <div className="text-violet-300 md:text-left text-right ">i Malarstwa</div>
         </div>
         <div
           id="fix"
           ref={fixClassRef}
-          className="text-[20px] md:text-[25px] z-[10] fixclass ml-[1vw] md:w-[30vw] w-[90vw]"
+          className="text-[20px] md:text-[25px] z-[10] md:text-left text-center fixclass ml-[1vw] md:w-[30vw] w-[90vw]"
         >
           Malownia to wyjątkowa pracownia kreatywna, w której od 2019 roku
           wspieramy rozwój artystyczny dzieci, młodzieży i dorosłych od 9. roku
           życia wzwyż.
         </div>
-        <div className="top-[120vh] md:top-[120vh] absolute">
+        <div className="top-[120vh] w-full  md:top-[120vh] absolute">
           <Image
             id="fix2"
             className="opacity-100"
@@ -80,7 +80,8 @@ const MalowniaHeader = () => {
             alt="xx"
           />
         </div>
-        <div className="right-[0vw] md:right-[5vw] h-[70vh] md:h-[90vh] rounded-[20px] overflow-hidden rotate-3 mt-[0vh] md:mt-[-20vh] absolute">
+        <div className="w-full flex justify-center bg-slate-500 h-fit relative">
+        <div className="  md:right-[5vw] h-[70vh] md:h-[90vh] rounded-[20px] overflow-hidden md:rotate-3 mt-[5vh] md:mt-[-20vh] absolute">
           <video
             ref={videoRef}
             className="x md:w-[40vw] hidden md:block w-[80vw] z-[10] rounded-[20px]"
@@ -91,12 +92,13 @@ const MalowniaHeader = () => {
           />
            <Image
             ref={imageRef}
-            className="opacity-100 w-[70vw] z-[10] rounded-[20px] md:hidden"
+            className="opacity-100  z-[10] h-full   rounded-[20px] md:hidden"
             src={"/img/header-malownia-mobile.png"}
-            width={700}
-            height={700}
+            width={800}
+            height={800}
             alt="xx"
           />
+        </div>
         </div>
       </div>
       <div className="md:top-[-30vh] opacity-25 md:opacity-100 top-[-50vh] z-[-20] absolute md:right-[5vw] right-[10vw]">
