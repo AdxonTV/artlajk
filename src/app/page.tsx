@@ -1,7 +1,7 @@
 "use client";
 import Navbar from "@/components/Navbar";
 import Header from "@/components/header";
-import Artlajk from "@/components/Artlajk";
+
 import Malownia from "@/components/Malownia";
 import { useEffect } from "react";
 import Lenis from "lenis";
@@ -27,11 +27,10 @@ export default function Home() {
   return (
     <div className="overflow-x-hidden">
       <Navbar />
-     
+
       <Header />
       <div className="h-[20vh]"></div>
-      <Malownia/>
-      
+      <Malownia />
     </div>
   );
 }
