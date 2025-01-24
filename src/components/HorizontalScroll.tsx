@@ -65,7 +65,14 @@ const HorizontalScroll = () => {
         <div ref={containersRef}>
             <div className="w-full relative h-[400vh] overflow-hidden ">
                 <section className="wrapper-404 h-[100vh] w-[400vw]">
-                    <h1 className="w-full text-[30vw] tracking-tight bottom-0 absolute  text-violet-500">Działamy Nieszablonowo.</h1>
+     
+                    <div className="w-full bg-violet-300 h-1 absolute opacity-20 bottom-[20vh]"></div>
+                    <div className="w-full bg-violet-300 h-1 absolute opacity-20 bottom-[40vh]"></div>
+                    <div className="w-full bg-violet-300 h-1 absolute opacity-20 bottom-[60vh]"></div>
+                    <div className="w-full bg-violet-300 h-1 absolute opacity-20 bottom-[80vh]"></div>
+                   
+                   
+                    <h1 className="w-full text-[30vw] tracking-tight bottom-0 absolute  text-violet-500">Działamy <b className="opacity-40">Nie</b>szablonowo.</h1>
                     {photos.map((photo, index) => (
                         <div className="card" key={photo} id={`card-${index + 1}`}>
                             <Image
