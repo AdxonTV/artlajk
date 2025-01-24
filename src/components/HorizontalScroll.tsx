@@ -2,7 +2,7 @@
 import Image from "next/image";
 import React, { useEffect, useRef } from "react";
 import ScrollTrigger from "gsap/src/ScrollTrigger";
-import { SlArrowLeftCircle } from "react-icons/sl";
+
 import gsap from "gsap";
 gsap.registerPlugin(ScrollTrigger);
 

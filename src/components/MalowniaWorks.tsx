@@ -1,6 +1,6 @@
 import React from "react";
 
-import TextRev from "./TextRev";
+
 
 const MalowniaWorks = () => {
   return (
