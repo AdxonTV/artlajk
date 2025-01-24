@@ -1,10 +1,11 @@
 "use client";
-import Navbar from "@/components/Navbar";
-import Header from "@/components/header";
-
-import Malownia from "@/components/Malownia";
-import { useEffect } from "react";
+import { useEffect, lazy, Suspense } from "react";
 import Lenis from "lenis";
+import Loading from "./loading";
+const HorizontalScroll = lazy(()=> import("@/components/HorizontalScroll"))
+const Navbar = lazy(() => import("@/components/Navbar"));
+const Header = lazy(() => import("@/components/header"));
+const Malownia = lazy(() => import("@/components/Malownia"));
 
 export default function Home() {
   useEffect(() => {
@@ -24,15 +25,16 @@ export default function Home() {
     }
     requestAnimationFrame(raf);
   }, []);
+
   return (
-
     <div className="overflow-x-hidden">
-      <Navbar />
-
-      <Header />
-      <div className="h-[20vh]"></div>
-      <Malownia />
+      <Suspense fallback={<Loading/>}>
+        <Navbar />
+        <Header />
+        <div className="h-[20vh]"></div>
+        <Malownia />
+        <HorizontalScroll></HorizontalScroll>
+      </Suspense>
     </div>
-    
   );
 }

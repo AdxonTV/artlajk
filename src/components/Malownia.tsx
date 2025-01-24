@@ -1,12 +1,13 @@
 import React from 'react'
 import MalowniaHeader from './MalowniaHeader'
 import MalowniaWorks from './MalowniaWorks'
+import HorizontalScroll from './HorizontalScroll'
 const Malownia = () => {
   return (
-    <div>
+    <div className='flex gap-[30vh] my-[2vh] md:gap-[5vh] relative flex-col'>
         <MalowniaHeader/>
-        <div className="h-[25vh]"></div>
         <MalowniaWorks/>
+       
     </div>
   )
 }
