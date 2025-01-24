@@ -30,7 +30,7 @@ const HorizontalScroll = () => {
       ScrollTrigger.create({
         trigger: ".wrapper-404",
         start: "top top",
-        end: "+=1500vh",
+        end: "+=1500dvh",
         scrub: 1,
         pin: true,
         onUpdate: (self) => {
@@ -46,7 +46,7 @@ const HorizontalScroll = () => {
         ScrollTrigger.create({
           trigger: card.id,
           start: "top top",
-          end: "+=1900vh",
+          end: "+=1900dvh",
           scrub: 1,
           onUpdate: (self) => {
             gsap.to(card.id, {
@@ -64,8 +64,8 @@ const HorizontalScroll = () => {
 
   return (
     <div ref={containersRef}>
-      <div className="w-full flex justify-start items-start flex-col relative h-[400vh]  overflow-hidden ">
-        <section className="wrapper-404  h-[100vh] w-[400vw]">
+      <div className="w-full m-0 flex justify-start items-start flex-col relative h-[400vh]  overflow-hidden ">
+        <section className="wrapper-404  h-[100dvh] w-[400vw]">
           <div className="md:hidden">
             <div className="w-full bg-violet-300 h-[2px] absolute opacity-20 bottom-[20vh]"></div>
             <div className="w-full bg-violet-300 h-[2px] absolute opacity-20 bottom-[40vh]"></div>

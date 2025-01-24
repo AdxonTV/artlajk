@@ -4,7 +4,7 @@ import React from "react";
 
 const MalowniaWorks = () => {
   return (
-    <div className="text-black h-fit md:mb-[-30vh]">
+    <div className="text-black h-fit mb-0 md:mb-[-30vh]">
       <div className="flex-col flex w-full md:flex-row items-center  justify-between px-[2vw]">
         <div className="text-[13vw] md:text-[10vw] text-center mb-[5vh] md:text-left">
           {" "}
