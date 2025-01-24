@@ -2,7 +2,6 @@
 import Image from "next/image";
 import React, { useEffect, useRef } from "react";
 import ScrollTrigger from "gsap/src/ScrollTrigger";
-
 import gsap from "gsap";
 gsap.registerPlugin(ScrollTrigger);
 
@@ -27,10 +26,12 @@ const HorizontalScroll = () => {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
+      const isMobile = window.innerWidth <= 768;
+
       ScrollTrigger.create({
         trigger: ".wrapper-404",
         start: "top top",
-        end: "+=1500dvh",
+        end: isMobile ? "+=1000dvh" : "+=1500dvh",
         scrub: 1,
         pin: true,
         onUpdate: (self) => {
@@ -46,7 +47,7 @@ const HorizontalScroll = () => {
         ScrollTrigger.create({
           trigger: card.id,
           start: "top top",
-          end: "+=1900dvh",
+          end: isMobile ? "+=1200dvh" : "+=1900dvh",
           scrub: 1,
           onUpdate: (self) => {
             gsap.to(card.id, {
@@ -64,8 +65,8 @@ const HorizontalScroll = () => {
 
   return (
     <div ref={containersRef}>
-      <div className="w-full m-0 flex justify-start items-start flex-col relative h-[400vh]  overflow-hidden ">
-        <section className="wrapper-404  h-[100dvh] w-[400vw]">
+      <div className="w-full m-0 flex justify-start items-start flex-col relative h-[400vh] overflow-hidden">
+        <section className="wrapper-404 h-[100dvh] w-[400vw]">
           <div className="md:hidden">
             <div className="w-full bg-violet-300 h-[2px] absolute opacity-20 bottom-[20vh]"></div>
             <div className="w-full bg-violet-300 h-[2px] absolute opacity-20 bottom-[40vh]"></div>
@@ -73,8 +74,8 @@ const HorizontalScroll = () => {
             <div className="w-full bg-violet-300 h-[2px] absolute opacity-20 bottom-[80vh]"></div>
           </div>
           <div>
-            <h1 className="w-full text-[30vw] tracking-tight bottom-0 absolute  text-violet-500">
-              Działamy <b className="opacity-40">Nie</b>szablonowo 
+            <h1 className="w-full text-[30vw] tracking-tight bottom-0 absolute text-violet-500">
+              Działamy <b className="opacity-40">Nie</b>szablonowo.
             </h1>
             {photos.map((photo, index) => (
               <div className="card" key={photo} id={`card-${index + 1}`}>
