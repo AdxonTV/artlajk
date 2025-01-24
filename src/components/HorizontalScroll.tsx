@@ -9,6 +9,8 @@ const photos = [
     "/img/carusel_1.jpeg",
     "/img/carusel_2.jpeg",
     "/img/carusel_3.jpeg",
+    "/img/carusel_4.jpeg",
+    "/img/carusel_5.jpeg",
 ];
 
 const HorizontalScroll = () => {
@@ -16,21 +18,23 @@ const HorizontalScroll = () => {
         { id: "#card-1", endTranslateX: -2000, rotate: 45 },
         { id: "#card-2", endTranslateX: -1000, rotate: -30 },
         { id: "#card-3", endTranslateX: -2000, rotate: 45 },
+        { id: "#card-4", endTranslateX: -1000, rotate: -30 },
+        { id: "#card-5", endTranslateX: -2000, rotate: 45 },
     ];
 
-    const containerRef = useRef(null);
+    const containersRef = useRef(null);
 
     useEffect(() => {
         const ctx = gsap.context(() => {
             ScrollTrigger.create({
                 trigger: ".wrapper-404",
                 start: "top top",
-                end: "+=900vh",
+                end: "+=1500vh",
                 scrub: 1,
                 pin: true,
                 onUpdate: (self) => {
                     gsap.to(".wrapper-404", {
-                        x: `${-350 * self.progress}vw`,
+                        x: `${-250 * self.progress}vw`,
                         duration: 0.5,
                         ease: "power3.out",
                     });
@@ -41,7 +45,7 @@ const HorizontalScroll = () => {
                 ScrollTrigger.create({
                     trigger: card.id,
                     start: "top top",
-                    end: "+=1200vh",
+                    end: "+=1900vh",
                     scrub: 1,
                     onUpdate: (self) => {
                         gsap.to(card.id, {
@@ -52,16 +56,16 @@ const HorizontalScroll = () => {
                     },
                 });
             });
-        }, containerRef);
+        }, containersRef);
 
         return () => ctx.revert();
     }, [cards]);
 
     return (
-        <div ref={containerRef}>
-            <div className="w-full relative h-[1200vh]">
+        <div ref={containersRef}>
+            <div className="w-full relative mt-[-40vh] h-[400vh] overflow-hidden ">
                 <section className="wrapper-404 h-[100vh] w-[400vw]">
-                    <h1 className="w-full text-[40vw]">Page Not Found</h1>
+                    <h1 className="w-full text-[30vw] tracking-tight bottom-0 absolute  text-violet-500">Działamy Nieszablonowo.</h1>
                     {photos.map((photo, index) => (
                         <div className="card" key={photo} id={`card-${index + 1}`}>
                             <Image
@@ -74,9 +78,7 @@ const HorizontalScroll = () => {
                         </div>
                     ))}
                 </section>
-                <section className="outro w-full h-[100dvh] bg-black text-white">
-                    <h1>OUTRO</h1>
-                </section>
+                
             </div>
         </div>
     );

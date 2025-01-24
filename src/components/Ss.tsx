@@ -10,7 +10,7 @@ const Ss = () => {
         const pathLength = pathRef.current.getTotalLength();
         const scrollPercentage =
           window.scrollY / (document.body.scrollHeight - window.innerHeight);
-        const drawLength = pathLength * scrollPercentage * 10;
+        const drawLength = pathLength * scrollPercentage * 3.5;
 
         pathRef.current.style.strokeDasharray = `${drawLength} ${pathLength}`;
       }

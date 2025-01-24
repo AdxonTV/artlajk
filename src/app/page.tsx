@@ -2,7 +2,7 @@
 import { useEffect, lazy, Suspense } from "react";
 import Lenis from "lenis";
 import Loading from "./loading";
-const HorizontalScroll = lazy(()=> import("@/components/HorizontalScroll"))
+
 const Navbar = lazy(() => import("@/components/Navbar"));
 const Header = lazy(() => import("@/components/header"));
 const Malownia = lazy(() => import("@/components/Malownia"));
@@ -33,7 +33,7 @@ export default function Home() {
         <Header />
         <div className="h-[20vh]"></div>
         <Malownia />
-        <HorizontalScroll></HorizontalScroll>
+  
       </Suspense>
     </div>
   );

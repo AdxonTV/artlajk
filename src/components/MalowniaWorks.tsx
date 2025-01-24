@@ -4,7 +4,7 @@ import TextRev from "./TextRev";
 
 const MalowniaWorks = () => {
   return (
-    <div className="text-black h-[100dvh]">
+    <div className="text-black h-fit mb-[10vh]">
       <div className="flex-col flex w-full md:flex-row items-center  justify-between px-[2vw]">
         <div className="text-[13vw] md:text-[10vw] text-center mb-[5vh] md:text-left">      <TextRev>O nas</TextRev></div>
         <div className="text-[18px] xl:w-[30vw]  md:w-[50vw] w-full text-center md:text-right">
