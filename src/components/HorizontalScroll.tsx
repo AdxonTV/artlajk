@@ -29,7 +29,15 @@ const HorizontalScroll = () => {
       const isMobile = window.innerWidth <= 768;
 
       // Enable scroll normalization
-      ScrollTrigger.normalizeScroll(true);
+      ScrollTrigger.create({
+        trigger: containersRef.current,
+        start: "top top",
+        end: "bottom bottom",
+        onEnter: () => ScrollTrigger.normalizeScroll(true),
+        onLeave: () => ScrollTrigger.normalizeScroll(false),
+        onEnterBack: () => ScrollTrigger.normalizeScroll(true),
+        onLeaveBack: () => ScrollTrigger.normalizeScroll(false),
+      });
 
       ScrollTrigger.create({
         trigger: ".wrapper-404",
@@ -72,7 +80,7 @@ const HorizontalScroll = () => {
 
   return (
     <div ref={containersRef}>
-      <div className="w-full m-0 flex justify-start items-start flex-col relative h-[400vh] overflow-hidden">
+      <div className="w-full m-0 flex items-start flex-col relative h-[400vh] overflow-hidden">
         <section className="wrapper-404 h-[100dvh] w-[400vw]">
           <div className="md:hidden">
             <div className="w-full bg-violet-300 h-[2px] absolute opacity-20 bottom-[20vh]"></div>
