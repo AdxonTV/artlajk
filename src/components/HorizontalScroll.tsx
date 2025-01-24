@@ -3,9 +3,8 @@ import Image from "next/image";
 import React, { useEffect, useRef } from "react";
 import ScrollTrigger from "gsap/src/ScrollTrigger";
 import gsap from "gsap";
-import { ScrollToPlugin } from "gsap/ScrollToPlugin";
-import { ScrollSmoother } from "gsap/ScrollSmoother";
-gsap.registerPlugin(ScrollTrigger, ScrollToPlugin, ScrollSmoother);
+
+
 
 const photos = [
   "/img/carusel_1.jpeg",
@@ -14,7 +13,7 @@ const photos = [
   "/img/carusel_4.jpeg",
   "/img/carusel_5.jpeg",
 ];
-
+gsap.registerPlugin(ScrollTrigger);
 const HorizontalScroll = () => {
   const cards = [
     { id: "#card-1", endTranslateX: -2000, rotate: 45 },
