@@ -14,17 +14,16 @@ const photos = [
 gsap.registerPlugin(ScrollTrigger);
 
 const HorizontalScroll = () => {
-  const cards = [
-    { id: "#card-1", endTranslateX: -2000, rotate: 45 },
-    { id: "#card-2", endTranslateX: -1000, rotate: -30 },
-    { id: "#card-3", endTranslateX: -2000, rotate: 45 },
-    { id: "#card-4", endTranslateX: -1000, rotate: -30 },
-    { id: "#card-5", endTranslateX: -2000, rotate: 45 },
-  ];
-
   const containersRef = useRef(null);
-
+  
   useEffect(() => {
+    const cards = [
+      { id: "#card-1", endTranslateX: -2000, rotate: 45 },
+      { id: "#card-2", endTranslateX: -1000, rotate: -30 },
+      { id: "#card-3", endTranslateX: -2000, rotate: 45 },
+      { id: "#card-4", endTranslateX: -1000, rotate: -30 },
+      { id: "#card-5", endTranslateX: -2000, rotate: 45 },
+    ];
     const ctx = gsap.context(() => {
       const isMobile = window.innerWidth <= 768;
 if(isMobile){ScrollTrigger.normalizeScroll(true)}
@@ -76,11 +75,11 @@ if(isMobile){ScrollTrigger.normalizeScroll(true)}
       // Disable scroll normalization
       ScrollTrigger.normalizeScroll(false);
     };
-  }, [cards]);
+  }, []);
 
   return (
     <div ref={containersRef}>
-      <div className="w-full m-0 flex items-start flex-col relative h-[400vh] overflow-hidden">
+      <div className="w-full m-0 flex items-start flex-col relative h-[250dvh] overflow-hidden">
         <section className="wrapper-404 h-[100dvh] w-[400vw]">
           <div className="md:hidden">
             <div className="w-full bg-violet-300 h-[2px] absolute opacity-20 bottom-[20vh]"></div>
