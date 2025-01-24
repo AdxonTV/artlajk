@@ -6,10 +6,12 @@ const Malownia = () => {
   return (
     <div className='flex gap-[30vh]  md:gap-[5vh] relative flex-col'>
         <MalowniaHeader/>
+        <div>
         <MalowniaWorks/>
-        <div className=''>
+       
        <HorizontalScroll></HorizontalScroll>
        </div>
+      
     </div>
   )
 }
