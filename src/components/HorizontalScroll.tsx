@@ -3,7 +3,9 @@ import Image from "next/image";
 import React, { useEffect, useRef } from "react";
 import ScrollTrigger from "gsap/src/ScrollTrigger";
 import gsap from "gsap";
-gsap.registerPlugin(ScrollTrigger);
+import { ScrollToPlugin } from "gsap/ScrollToPlugin";
+import { ScrollSmoother } from "gsap/ScrollSmoother";
+gsap.registerPlugin(ScrollTrigger, ScrollToPlugin, ScrollSmoother);
 
 const photos = [
   "/img/carusel_1.jpeg",
@@ -27,6 +29,8 @@ const HorizontalScroll = () => {
   useEffect(() => {
     const ctx = gsap.context(() => {
       const isMobile = window.innerWidth <= 768;
+
+      // gsap.normalizeScroll(); // Removed as it does not exist on gsap
 
       ScrollTrigger.create({
         trigger: ".wrapper-404",
