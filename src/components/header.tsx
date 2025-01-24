@@ -46,7 +46,7 @@ const Header = () => {
       <div className="w-[96vw] relative">
         <div className="w-full bottom-0 absolute  md:text-left">
      
-          <div className="text-[4vh] mb-[5vh] md:w-[40vw] leading-[110%] md:text-[7vh]">Rozwiń się na Zajęciach <br /> z Malartwa i Rysunku</div>
+          <div className="text-[4vh] mb-[5vh] md:w-[40vw] leading-[110%] md:text-[7vh]"> <div><div>Rozwiń się na Zajęciach </div> <div className="text-right">z Malartwa i Rysunku</div> </div></div>
           <div className="flex flex-col gap-[10vh] md:flex-row w-full justify-center items-center md:justify-between">
            <div className="md:block hidden"> <ScrollBtn /></div>
             <div className="flex text-left opacity-90 md:text-[18px] text-[10px] md:w-fit w-full justify-between mb-[2vh] gap-8 md:text-right">

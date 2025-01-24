@@ -63,7 +63,7 @@ const HorizontalScroll = () => {
 
     return (
         <div ref={containersRef}>
-            <div className="w-full relative mt-[-40vh] h-[400vh] overflow-hidden ">
+            <div className="w-full relative h-[400vh] overflow-hidden ">
                 <section className="wrapper-404 h-[100vh] w-[400vw]">
                     <h1 className="w-full text-[30vw] tracking-tight bottom-0 absolute  text-violet-500">Działamy Nieszablonowo.</h1>
                     {photos.map((photo, index) => (
