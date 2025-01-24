@@ -4,8 +4,6 @@ import React, { useEffect, useRef } from "react";
 import ScrollTrigger from "gsap/src/ScrollTrigger";
 import gsap from "gsap";
 
-
-
 const photos = [
   "/img/carusel_1.jpeg",
   "/img/carusel_2.jpeg",
@@ -14,6 +12,7 @@ const photos = [
   "/img/carusel_5.jpeg",
 ];
 gsap.registerPlugin(ScrollTrigger);
+
 const HorizontalScroll = () => {
   const cards = [
     { id: "#card-1", endTranslateX: -2000, rotate: 45 },
@@ -29,7 +28,8 @@ const HorizontalScroll = () => {
     const ctx = gsap.context(() => {
       const isMobile = window.innerWidth <= 768;
 
-      // gsap.normalizeScroll(); // Removed as it does not exist on gsap
+      // Enable scroll normalization
+      ScrollTrigger.normalizeScroll(true);
 
       ScrollTrigger.create({
         trigger: ".wrapper-404",
@@ -63,7 +63,11 @@ const HorizontalScroll = () => {
       });
     }, containersRef);
 
-    return () => ctx.revert();
+    return () => {
+      ctx.revert();
+      // Disable scroll normalization
+      ScrollTrigger.normalizeScroll(false);
+    };
   }, [cards]);
 
   return (
