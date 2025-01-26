@@ -102,7 +102,7 @@ if(isMobile){ScrollTrigger.normalizeScroll(true)}
          
           <div>
             <h1 ref={textSkew} className="w-full text-[30vw] tracking-tight top-0 absolute text-violet-500">
-              Działamy <b className="opacity-40">Nie</b>szablonowo.
+              Myślimy <b className="opacity-40">Nie</b>szablonowo.
             </h1>
             {photos.map((photo, index) => (
               <div className="card" key={photo} id={`card-${index + 1}`}>
