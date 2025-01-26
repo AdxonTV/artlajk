@@ -48,11 +48,13 @@ const Cursor = () => {
             left: pos.x,
             width: "100px",
             height: "100px",
+      
             transform: "translate(-50%, -50%)",
             filter: `blur(${(1 - pos.opacity) * 15}px)`, // Adjusted blur effect
             backgroundColor: "#863AF1",
             borderRadius: "50%",
             pointerEvents: "none",
+           
             opacity: pos.opacity,
           }}
         />

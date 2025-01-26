@@ -99,12 +99,7 @@ if(isMobile){ScrollTrigger.normalizeScroll(true)}
     <div ref={containersRef}>
       <div className="w-full m-0 flex items-start flex-col relative h-[250dvh] overflow-hidden">
         <section className="wrapper-404 h-[100dvh] w-[400vw]">
-          <div className="md:hidden">
-            <div className="w-full bg-violet-300 h-[2px] absolute opacity-20 bottom-[20vh]"></div>
-            <div className="w-full bg-violet-300 h-[2px] absolute opacity-20 bottom-[40vh]"></div>
-            <div className="w-full bg-violet-300 h-[2px] absolute opacity-20 bottom-[60vh]"></div>
-            <div className="w-full bg-violet-300 h-[2px] absolute opacity-20 bottom-[80vh]"></div>
-          </div>
+         
           <div>
             <h1 ref={textSkew} className="w-full text-[30vw] tracking-tight top-0 absolute text-violet-500">
               Działamy <b className="opacity-40">Nie</b>szablonowo.

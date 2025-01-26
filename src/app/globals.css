@@ -56,6 +56,10 @@ border-radius: 40px;
   transform-origin: 50% 50% -150px !important;
   will-change: opacity, transform;
 }
+
+.aboutrev{
+  @apply md:text-[5vw] text-[13vw] leading-[100%] tracking-tight
+}
 .card{
   position: absolute;
   width: 300px;
