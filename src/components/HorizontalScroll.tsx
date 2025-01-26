@@ -89,7 +89,7 @@ if(isMobile){ScrollTrigger.normalizeScroll(true)}
             <div className="w-full bg-violet-300 h-[2px] absolute opacity-20 bottom-[80vh]"></div>
           </div>
           <div>
-            <h1 className="w-full text-[30vw] tracking-tight bottom-0 absolute text-violet-500">
+            <h1 className="w-full text-[30vw] tracking-tight top-0 absolute text-violet-500">
               Działamy <b className="opacity-40">Nie</b>szablonowo.
             </h1>
             {photos.map((photo, index) => (

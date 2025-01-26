@@ -7,9 +7,9 @@ const Malownia = () => {
   return (
     <div className='flex gap-[30vh]  md:gap-[5vh] relative flex-col'>
         <MalowniaHeader/>
-        <div>
+      
         <MalowniaWorks/>
-       
+        <div className='md:mt-0 mt-[-60vh]'>
        <HorizontalScroll></HorizontalScroll>
        </div>
       <About></About>

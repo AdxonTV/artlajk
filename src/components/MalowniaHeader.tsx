@@ -35,7 +35,7 @@ const MalowniaHeader = () => {
 
     clipAnimation.to(fixClassRef.current, {});
 
-    gsap.to(videoRef.current, {
+    const videoAnimation = gsap.to(videoRef.current, {
       scrollTrigger: {
         trigger: containerRef.current,
         start: "top bottom",
@@ -45,7 +45,7 @@ const MalowniaHeader = () => {
       y: "-18vw",
     });
 
-    gsap.to(imageRef.current, {
+    const imageAnimation = gsap.to(imageRef.current, {
       scrollTrigger: {
         trigger: containerRef.current,
         start: "top bottom",
@@ -55,7 +55,7 @@ const MalowniaHeader = () => {
       scale: 1.3,
     });
 
-    gsap.to(".cc", {
+    const textAnimation = gsap.to(".cc", {
       scrollTrigger: {
         trigger: containerRef.current,
         start: "top bottom",
@@ -64,6 +64,14 @@ const MalowniaHeader = () => {
       },
       y: "-1vw",
     });
+
+    return () => {
+      clipAnimation.kill();
+      videoAnimation.kill();
+      imageAnimation.kill();
+      textAnimation.kill();
+      ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+    };
   }, []);
 
   return (
@@ -80,10 +88,8 @@ const MalowniaHeader = () => {
           </div>
 
           <div className="text-violet-300 cc flex w-full md:justify-start justify-end">
-          
             <TextRev className="text-violet-300 md:text-left  right-0 text-right ">
-           
-             i&nbsp;Malarstwa
+              i&nbsp;Malarstwa
             </TextRev>
           </div>
         </div>
