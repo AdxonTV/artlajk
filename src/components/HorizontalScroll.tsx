@@ -28,7 +28,7 @@ const HorizontalScroll = () => {
     ];
     const ctx = gsap.context(() => {
       const isMobile = window.innerWidth <= 768;
-if(isMobile){ScrollTrigger.normalizeScroll(true)}
+// if(isMobile){ScrollTrigger.normalizeScroll(true)}
       // Enable scroll normalization
       // ScrollTrigger.create({
       //   trigger: containersRef.current,
