@@ -14,6 +14,8 @@ const MalowniaHeader = () => {
   const imageRef = useRef<HTMLImageElement>(null);
 
   useEffect(() => {
+    ScrollTrigger.config({ ignoreMobileResize: true })
+    ScrollTrigger.normalizeScroll(true)
     if (
       !containerRef.current ||
       !fixClassRef.current ||

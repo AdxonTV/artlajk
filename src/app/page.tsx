@@ -1,16 +1,15 @@
 "use client";
-import { useEffect, lazy, Suspense } from "react";
+import { useEffect } from "react";
 import Lenis from "lenis";
 import Loading from "./loading";
-
-const Navbar = lazy(() => import("@/components/Navbar"));
-const Header = lazy(() => import("@/components/header"));
-const Malownia = lazy(() => import("@/components/Malownia"));
+import Navbar from "@/components/Navbar";
+import Header from "@/components/header";
+import Malownia from "@/components/Malownia";
 
 export default function Home() {
   useEffect(() => {
     const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-
+    
     if (!isMobile) {
       const lenis = new Lenis({
         duration: 1.2,
@@ -32,12 +31,10 @@ export default function Home() {
 
   return (
     <div className="overflow-x-hidden">
-      <Suspense fallback={<Loading />}>
-        <Navbar />
-        <Header />
-        <div className="h-[20vh]"></div>
-        <Malownia />
-      </Suspense>
+      <Navbar />
+      <Header />
+      <div className="h-[20vh]"></div>
+      <Malownia />
     </div>
   );
 }

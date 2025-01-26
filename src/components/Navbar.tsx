@@ -10,6 +10,7 @@ const Navbar = () => {
   const [isVisable, setisVisable] = useState(true);
   const currentScrollY = useWindowScroll();
   useEffect(() => {
+    
     setLastScrollY(scrollY);
        
     if (currentScrollY === 0) {
