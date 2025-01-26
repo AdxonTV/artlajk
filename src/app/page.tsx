@@ -9,7 +9,7 @@ const Malownia = lazy(() => import("@/components/Malownia"));
 
 export default function Home() {
   useEffect(() => {
-    const isMobile = /iPhone|iPod|Android/i.test(navigator.userAgent);
+    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
     if (!isMobile) {
       const lenis = new Lenis({
