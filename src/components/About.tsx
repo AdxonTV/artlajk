@@ -6,9 +6,9 @@ import TextRev from "./TextRev";
 const About = () => {
   return (
     <div className="w-full h-[100vh] mx-[2vw] ">
-      <div className="w-full ">
-        <div className=" w-full md:w-[50vw] mb-[50px]  flex justify-start md:justify-end">
-          <div >
+      <div className="w-full flex flex-col   justify-between">
+        <div className=" w-full md:w-[45vw] mb-[50px]  flex justify-start md:justify-end">
+          <div className="ml-[10vw]">
             <div className="flex flex-col ">
               <TextRev className="md:text-[5vw] text-[13vw] leading-[100%] tracking-tight">
                 Zajęcia w
@@ -27,33 +27,35 @@ const About = () => {
         </div>
         <div className="w-full md:flex justify-between ">
         <AboutFeature
-              title="Starts from $29,999"
+              title="Od 9 do ∞ roku życia"
+              icon={<MdAttachMoney />}
+              desc="Od 9 do ∞ roku życia"
+            />
+            <div className=" flex flex-wrap">
+          <div className=" ">
+            <AboutFeature
+              title="Zajęcia raz w tygodniu"
               icon={<MdAttachMoney />}
               desc="Qudrix base set includes solid basement, aluminium full-frame and few options of walls and windows."
             />
-          <div className="">
             <AboutFeature
-              title="Starts from $29,999"
-              icon={<MdAttachMoney />}
-              desc="Qudrix base set includes solid basement, aluminium full-frame and few options of walls and windows."
-            />
-            <AboutFeature
-              title="Starts from $29,999"
+              title="Płatność 150zł/msc"
               icon={<MdAttachMoney />}
               desc="Qudrix base set includes solid basement, aluminium full-frame and few options of walls and windows."
             />
           </div>
           <div>
             <AboutFeature
-              title="Starts from $29,999"
+              title="Gwarantujemy"
               icon={<MdAttachMoney />}
-              desc="Qudrix base set includes solid basement, aluminium full-frame and few options of walls and windows."
+              desc="Świetną zabawę i rozwój pasji"
             />
             <AboutFeature
-              title="Starts from $29,999"
+              title="Pomoc Kreatywna"
               icon={<MdAttachMoney />}
               desc="Qudrix base set includes solid basement, aluminium full-frame and few options of walls and windows."
             />
+          </div>
           </div>
         </div>
       </div>

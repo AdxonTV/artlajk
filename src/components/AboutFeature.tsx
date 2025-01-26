@@ -25,8 +25,8 @@ const AboutFeature: React.FC<AboutFeatureProps> = ({ title, desc, icon }) => {
           {icon}
         </svg>
       </div>
-      <div className="space-y-2 w-[300px]">
-        <h2 className="md:text-4xl text-[28px] mt-[13px] font-normal tracking-tight text-gray-900">
+      <div className="space-y-2 w-[350px]">
+        <h2 className="md:text-[35px] text-[28px] mt-[13px] font-normal tracking-tight text-gray-900">
           {title}
         </h2>
         <p className="text-sm text-gray-600 leading-tight max-w-lg  md:w-fit  tracking-wide">
