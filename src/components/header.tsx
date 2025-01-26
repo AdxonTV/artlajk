@@ -12,28 +12,32 @@ gsap.registerPlugin(ScrollTrigger);
 const Header = () => {
   useEffect(() => {
     const ctx = gsap.context(() => {
-      gsap.set(".tracker", {
-        scale: 1,
-        ease: "power2.inOut",
-        scrollTrigger: {
-          trigger: ".tracker",
-          start: "top top",
-          end: "bottom top",
-          scrub: true,
-        },
+      const trackerAnimation = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".tracker",
+        start: "top top",
+        end: "bottom top",
+        scrub: true,
+      },
       });
 
-      gsap.to(".tracker", {
+      trackerAnimation
+      .set(".tracker", {
+        scale: 1,
+        ease: "power2.inOut",
+      })
+      .to(".tracker", {
         scale: 1.2,
         y: "50%",
         filter: "blur(20px)",
         ease: "power2.inOut",
-        scrollTrigger: {
-          trigger: ".tracker",
-          start: "top top",
-          end: "bottom top",
-          scrub: true,
-        },
+      });
+
+      const imageAnimation = gsap.timeline({ repeat: -1, yoyo: true });
+      imageAnimation.to(".tracker", {
+      scale: 1.05,
+      duration: 10,
+      ease: "linear",
       });
     });
 
@@ -86,7 +90,7 @@ const Header = () => {
         alt="x"
         width={2000}
         placeholder="blur"
-        blurDataURL="/public/img/bg_img2.png"
+        blurDataURL="/img/bg_img2.png"
         height={2000}
         className="md:block hidden tracker absolute overflow-hidden w-full h-[100dvh] object-cover z-[-192]"
         src={"/img/bg_img2.png"}

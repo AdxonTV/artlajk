@@ -14,7 +14,7 @@ const About = () => {
     <div className="w-full h-screen mx-[2vw]">
       <div className="w-full flex flex-col justify-between">
         <div className="w-full md:w-[45vw] mb-12 flex justify-start md:justify-end">
-          <div className="ml-[10vw]">
+          <div className="ml-[82px]">
             <div className="flex flex-col">
               <TextRev className="aboutrev">Zajęcia w</TextRev>
               <div className="flex gap-5">

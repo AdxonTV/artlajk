@@ -98,8 +98,8 @@ if(isMobile){ScrollTrigger.normalizeScroll(true)}
 
   return (
     <div ref={containersRef}>
-      <div className="w-full m-0 flex items-start flex-col relative h-[250dvh] overflow-hidden">
-        <section className="wrapper-404 h-[100dvh] w-[400vw]">
+      <div className="w-full m-0 flex items-start flex-col relative mb:[-100px] md:mb-[-200px] h-[250dvh] overflow-hidden">
+        <section className="wrapper-404 h-[90dvh] w-[400vw]">
          
           <div>
             <h1 ref={textSkew} className="w-full text-[30vw] tracking-tight top-0 absolute text-violet-500">
