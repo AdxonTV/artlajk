@@ -81,6 +81,7 @@ border-radius: 40px;
   top: 15%;
   left: 40%;
 }
+
 #card-3{
   top: 60%;
   left: 60%;
@@ -92,6 +93,32 @@ border-radius: 40px;
 #card-5{
   top: 50%;
   left: 90%;
+}
+
+
+@media screen and (max-width: 768px) {
+  #card-1{
+    top: 50%;
+    left: 2%;
+  
+  }
+  #card-2{
+    top: 15%;
+    left: 30%;
+  }
+  #card-3{
+    top: 60%;
+    left: 40%;
+  }
+  #card-4{
+    top: 20%;
+    left: 67%;
+  }
+  #card-5{
+    top: 40%;
+    left: 72%;
+  }
+  
 }
 .outro{
   position: absolute;

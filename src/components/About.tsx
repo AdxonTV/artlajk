@@ -1,6 +1,6 @@
 "use client";
-import React from "react";
-import AboutFeature from "./AboutFeature";
+import React, { lazy, Suspense } from "react";
+const AboutFeature = lazy(() => import("./AboutFeature"));
 import { FaRegStar } from "react-icons/fa6";
 import { MdAttachMoney } from "react-icons/md";
 import { LuCalendar } from "react-icons/lu";
@@ -10,7 +10,8 @@ import TextRev from "./TextRev";
 
 const About = () => {
   return (
-    <div className="w-full h-screen mx-[2vw] mt-[-100px]">
+    
+    <div className="w-full h-screen mx-[2vw]">
       <div className="w-full flex flex-col justify-between">
         <div className="w-full md:w-[45vw] mb-12 flex justify-start md:justify-end">
           <div className="ml-[10vw]">
@@ -24,6 +25,7 @@ const About = () => {
             </div>
           </div>
         </div>
+        <Suspense fallback={<div>Loading...</div>}>
         <div className="w-full md:flex justify-between">
           <AboutFeature
             title="Od 9 do ∞ roku życia"
@@ -55,8 +57,11 @@ const About = () => {
                 desc="Qudrix base set includes solid basement, aluminium full-frame and few options of walls and windows."
               />
             </div>
+            
           </div>
+          
         </div>
+        </Suspense>
       </div>
     </div>
   );

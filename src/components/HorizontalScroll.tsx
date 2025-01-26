@@ -46,7 +46,7 @@ if(isMobile){ScrollTrigger.normalizeScroll(true)}
         end: isMobile ? "+=1000dvh" : "+=1500dvh",
         scrub: 1,
         pin: true,
-        pinSpacing:true,
+        pinSpacing:false,
         onUpdate: (self) => {
           gsap.to(".wrapper-404", {
             x: `${-250 * self.progress}vw`,
