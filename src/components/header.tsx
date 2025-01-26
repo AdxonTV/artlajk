@@ -68,7 +68,7 @@ const Header = () => {
       </div>
       <div className="absolute overflow-hidden w-full h-[100dvh] object-cover z-[-192]" >
       <video
-        className="tracker absolute top-0 left-0 w-full h-full object-cover"
+        className="tracker md:hidden  absolute top-0 left-0 w-full h-full object-cover"
         autoPlay
         muted
         loop

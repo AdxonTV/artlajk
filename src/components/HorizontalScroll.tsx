@@ -4,6 +4,7 @@ import React, { useEffect, useRef } from "react";
 import ScrollTrigger from "gsap/src/ScrollTrigger";
 import gsap from "gsap";
 
+
 const photos = [
   "/img/carusel_1.jpeg",
   "/img/carusel_2.jpeg",

@@ -39,7 +39,8 @@ body {
 }
 
 .floating-nav>*{
-  background-color: rgb(255, 255, 255);
+ 
+  background-color: rgba(255, 255, 255, 0.612);
   box-shadow: 2px 2px 21px 2px rgba(60, 39, 97, 0.2);
   backdrop-filter: blur(21px);
   color: #000;
