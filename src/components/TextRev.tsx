@@ -48,7 +48,7 @@ const TextRev: React.FC<OptionProps> = ({ children, className }) => {
     };
   }, []);
 
-  // Helper to split text into animated spans
+  // Helper to split text into animated spans, including spaces
   const splitText = (text: string) =>
     text.split("").map((char, index) => (
       <span
@@ -56,7 +56,7 @@ const TextRev: React.FC<OptionProps> = ({ children, className }) => {
         className="char"
         style={{
           display: "inline-block",
-    
+          whiteSpace: char === " " ? "pre" : "normal",
         }}
       >
         {char}
@@ -73,7 +73,7 @@ const TextRev: React.FC<OptionProps> = ({ children, className }) => {
         className={` relative text-black ${className}`}
        
       >
-        {splitText(children as string)}
+        {typeof children === 'string' ? splitText(children) : children}
         <span
           style={{
             display: "inline-block",

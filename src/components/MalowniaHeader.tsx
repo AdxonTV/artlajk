@@ -84,12 +84,12 @@ const MalowniaHeader = () => {
         <div className="text-[13vw] md:mb-[10vh] tracking-tighter mb-[5vh] md:text-[10vw] leading-[110%] ">
           <div className="flex">
             {" "}
-            <TextRev>Studio</TextRev> &nbsp; <TextRev>Rysunku</TextRev>
+            <TextRev>Studio Rysunku</TextRev>
           </div>
 
-          <div className="text-violet-300 cc flex w-full md:justify-start justify-end">
+          <div className="  text-violet-300 cc flex w-full md:justify-start justify-end">
             <TextRev className="text-violet-300 md:text-left ">
-              i&nbsp;Malarstwa
+              i Malarstwa
             </TextRev>
           </div>
         </div>
@@ -98,9 +98,9 @@ const MalowniaHeader = () => {
           ref={fixClassRef}
           className="text-[20px]  md:text-[25px] z-[10] md:text-left text-right tracking-tight fixclass ml-[1vw] md:w-[30vw] w-[90vw]"
         >
-          Malownia to wyjątkowa pracownia kreatywna, w której od 2019 roku
-          wspieramy rozwój artystyczny dzieci, młodzieży i dorosłych od 9. roku
-          życia wzwyż.
+         W naszej pracowni tworzymy atmosferę wzajemnego wsparcia, otwartości i
+          inspiracji, gdzie każdy czuje się swobodnie, by rozwijać swoje
+          zainteresowania.
         </div>
         <div className="md:top-[120vh] w-full hidden md:block  top-[103vh] absolute">
           <Image

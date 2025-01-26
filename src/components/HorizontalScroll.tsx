@@ -122,6 +122,7 @@ if(isMobile){ScrollTrigger.normalizeScroll(true)}
             ))}
           </div>
         </section>
+       
       </div>
     </div>
   );
