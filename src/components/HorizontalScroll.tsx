@@ -16,6 +16,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const HorizontalScroll = () => {
   const containersRef = useRef(null);
+  const textSkew = useRef(null);
   
   useEffect(() => {
     const cards = [
@@ -49,10 +50,26 @@ if(isMobile){ScrollTrigger.normalizeScroll(true)}
           gsap.to(".wrapper-404", {
             x: `${-250 * self.progress}vw`,
             duration: 0.5,
+           
             ease: "power3.out",
           });
         },
       });
+
+      ScrollTrigger.create({
+        trigger: ".wrapper-404",
+        start: "top top",
+        end: isMobile ? "+=1000dvh" : "+=1500dvh",
+        scrub: 1,
+        onUpdate: (self) => {
+          gsap.to(textSkew.current, {
+            skewX: `${-15 * self.progress}vw`,
+            duration: 0.5,
+           
+            ease: "power3.out",
+          });
+        },
+      })
 
       cards.forEach((card) => {
         ScrollTrigger.create({
@@ -89,7 +106,7 @@ if(isMobile){ScrollTrigger.normalizeScroll(true)}
             <div className="w-full bg-violet-300 h-[2px] absolute opacity-20 bottom-[80vh]"></div>
           </div>
           <div>
-            <h1 className="w-full text-[30vw] tracking-tight top-0 absolute text-violet-500">
+            <h1 ref={textSkew} className="w-full text-[30vw] tracking-tight top-0 absolute text-violet-500">
               Działamy <b className="opacity-40">Nie</b>szablonowo.
             </h1>
             {photos.map((photo, index) => (
