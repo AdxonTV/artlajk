@@ -1,7 +1,9 @@
 "use client";
-import { useEffect } from "react";
+import { useEffect, Suspense} from "react";
 import Lenis from "lenis";
 import Loading from "./loading";
+
+
 import Navbar from "@/components/Navbar";
 import Header from "@/components/header";
 import Malownia from "@/components/Malownia";
@@ -30,11 +32,13 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="overflow-x-hidden">
+    <div className="overflow-x-hidden">     
+ <Suspense fallback={<Loading />}>
       <Navbar />
       <Header />
       <div className="h-[20vh]"></div>
       <Malownia />
+      </Suspense>
     </div>
   );
 }

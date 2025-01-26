@@ -46,6 +46,7 @@ if(isMobile){ScrollTrigger.normalizeScroll(true)}
         end: isMobile ? "+=1000dvh" : "+=1500dvh",
         scrub: 1,
         pin: true,
+        pinSpacing:true,
         onUpdate: (self) => {
           gsap.to(".wrapper-404", {
             x: `${-250 * self.progress}vw`,
@@ -59,6 +60,7 @@ if(isMobile){ScrollTrigger.normalizeScroll(true)}
       ScrollTrigger.create({
         trigger: ".wrapper-404",
         start: "top top",
+
         end: isMobile ? "+=1000dvh" : "+=1500dvh",
         scrub: 1,
         onUpdate: (self) => {
@@ -90,8 +92,7 @@ if(isMobile){ScrollTrigger.normalizeScroll(true)}
 
     return () => {
       ctx.revert();
-      // Disable scroll normalization
-      ScrollTrigger.normalizeScroll(false);
+
     };
   }, []);
 
