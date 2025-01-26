@@ -33,12 +33,14 @@ const Header = () => {
         ease: "power2.inOut",
       });
 
-      const imageAnimation = gsap.timeline({ repeat: -1, yoyo: true });
-      imageAnimation.to(".tracker", {
-      scale: 1.05,
-      duration: 10,
-      ease: "linear",
-      });
+      if (window.innerWidth >= 768) {
+        const imageAnimation = gsap.timeline({ repeat: -1, yoyo: true });
+        imageAnimation.to(".tracker", {
+          scale: 1.05,
+          duration: 10,
+          ease: "linear",
+        });
+      }
     });
 
     return () => ctx.revert();
