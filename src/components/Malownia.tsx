@@ -5,7 +5,7 @@ import HorizontalScroll from './HorizontalScroll'
 import About from './About'
 const Malownia = () => {
   return (
-    <div className='flex mt-[-7vh]  md:gap-[5vh] relative flex-col'>
+    <div className='flex mt-[-7vh]  gap-[90px] md:gap-[100px] relative flex-col'>
         <MalowniaHeader/>
 
         <MalowniaWorks/>

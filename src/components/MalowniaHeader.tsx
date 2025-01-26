@@ -88,7 +88,7 @@ const MalowniaHeader = () => {
           </div>
 
           <div className="text-violet-300 cc flex w-full md:justify-start justify-end">
-            <TextRev className="text-violet-300 md:text-left  right-0 text-right ">
+            <TextRev className="text-violet-300 md:text-left ">
               i&nbsp;Malarstwa
             </TextRev>
           </div>
@@ -96,7 +96,7 @@ const MalowniaHeader = () => {
         <div
           id="fix"
           ref={fixClassRef}
-          className="text-[20px] md:text-[25px] z-[10] md:text-left text-center fixclass ml-[1vw] md:w-[30vw] w-[90vw]"
+          className="text-[20px]  md:text-[25px] z-[10] md:text-left text-right tracking-tight fixclass ml-[1vw] md:w-[30vw] w-[90vw]"
         >
           Malownia to wyjątkowa pracownia kreatywna, w której od 2019 roku
           wspieramy rozwój artystyczny dzieci, młodzieży i dorosłych od 9. roku
@@ -133,7 +133,7 @@ const MalowniaHeader = () => {
           </div>
         </div>
       </div>
-      <div className="xl:top-[-30vh] md:right-[-19vw] opacity-25 xl:opacity-100 top-[-440px] z-[-20] absolute xl:right-[5vw] right-[10vw]">
+      <div className="xl:top-[-30vh] md:right-[-19vw] opacity-40 xl:opacity-100 top-[-440px] z-[-20] absolute xl:right-[5vw] right-[10vw]">
         <Ss />
       </div>
     </div>
