@@ -63,7 +63,7 @@ const CirclesSection = () => {
             zainteresowania.
           </div>
 
-          <div className="flex md:flex-row flex-wrap  md:items-end md:h-[100vh] h-full  mt-[30px] md:overflow-hidden items-end md:mt-[-320px] 2xl:mt-[-450px] w-full justify-between">
+          <div className="flex md:flex-row flex-wrap  md:items-end md:h-[100vh] h-full  mt-[30px] md:overflow-hidden items-end md:mt-[-420px] 2xl:mt-[-450px] w-full justify-between">
           <Circle
             className="md:w-[10vw] w-[20vw] h-[20vw] md:h-[10vw]"
             imgid="#circleimg1"
