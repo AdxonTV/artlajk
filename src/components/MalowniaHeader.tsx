@@ -79,7 +79,7 @@ const MalowniaHeader = () => {
     <div
       id="container-head"
       ref={containerRef}
-      className="w-full flex relative  h-[100vh] md:h-[150vh] justify-center"
+      className="w-full flex relative  h-[100dvh] md:h-[150vh] justify-center"
     >
       <div className="w-[96vw] h-full ">
         <div className="text-[13vw] md:mb-[10vh] tracking-tighter mb-[5vh] md:text-[10vw] leading-[110%] ">
