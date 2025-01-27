@@ -20,7 +20,7 @@ const HorizontalScroll = () => {
   
   useEffect(() => {
     const cards = [
-      { id: "#card-1", endTranslateX: -2000, rotate: 45 },
+      { id: "#card-1", idimg: "#img-1",  endTranslateX: -2000, rotate: 45 },
       { id: "#card-2", endTranslateX: -1000, rotate: -30 },
       { id: "#card-3", endTranslateX: -2000, rotate: 45 },
       { id: "#card-4", endTranslateX: -1000, rotate: -30 },
@@ -98,7 +98,7 @@ if(isMobile){ScrollTrigger.normalizeScroll(true)}
 
   return (
     <div ref={containersRef}>
-      <div className="w-full m-0 flex items-start flex-col relative mb:[-100px] md:mb-[-200px] h-[250dvh] overflow-hidden">
+      <div className="w-full m-0  flex items-start flex-col relative  md:mb-[-200px] h-[250dvh] overflow-hidden">
         <section className="wrapper-404 h-[90dvh] w-[400vw]">
          
           <div>
@@ -113,6 +113,7 @@ if(isMobile){ScrollTrigger.normalizeScroll(true)}
                   alt={photo}
                   width={1000}
                   height={1000}
+                  id={`img-${index + 1}`}
                 />
               </div>
             ))}

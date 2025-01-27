@@ -27,10 +27,12 @@ const Header = () => {
         ease: "power2.inOut",
       })
       .to(".tracker", {
-        scale: 1.2,
+        
+        
         y: "50%",
         filter: "blur(20px)",
         ease: "power2.inOut",
+   
       });
 
       if (window.innerWidth >= 768) {

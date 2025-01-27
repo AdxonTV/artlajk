@@ -2,8 +2,6 @@
 import { useEffect, Suspense} from "react";
 import Lenis from "lenis";
 import Loading from "./loading";
-
-
 import Navbar from "@/components/Navbar";
 import Header from "@/components/header";
 import Malownia from "@/components/Malownia";

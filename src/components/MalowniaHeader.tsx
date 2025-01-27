@@ -79,7 +79,7 @@ const MalowniaHeader = () => {
     <div
       id="container-head"
       ref={containerRef}
-      className="w-full flex relative  h-[100dvh] md:h-[150vh] justify-center"
+      className="w-full flex relative  h-fit md:h-[150vh] justify-center"
     >
       <div className="w-[96vw] h-full ">
         <div className="text-[13vw] md:mb-[10vh] tracking-tighter mb-[5vh] md:text-[10vw] leading-[110%] ">
@@ -113,8 +113,8 @@ const MalowniaHeader = () => {
             alt="xx"
           />
         </div>
-        <div className="w-full flex justify-center bg-slate-500 h-fit relative">
-          <div className="  md:right-[5vw] h-fit md:h-[90vh] rounded-[20px] overflow-hidden md:rotate-3 mt-[5vh] md:mt-[-20vh] absolute">
+        <div className="w-full flex justify-center  h-fit relative">
+          <div className="  md:right-[5vw] h-fit md:h-[90vh] rounded-[20px] overflow-hidden md:rotate-3 mt-[3vh] md:mt-[-20vh] md:absolute">
             <video
               ref={videoRef}
               className="x md:w-[40vw] hidden md:block w-[80vw] z-[10] rounded-[20px]"
@@ -126,7 +126,7 @@ const MalowniaHeader = () => {
             <Image
               ref={imageRef}
               className="opacity-100  z-[10] object-cover  rounded-[20px] md:hidden"
-              src={"/img/header-malownia-mobile.png"}
+              src={"/img/carusel_5.jpeg"}
               width={800}
               height={800}
               alt="xx"
