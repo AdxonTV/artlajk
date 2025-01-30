@@ -81,9 +81,9 @@ const MalowniaHeader = () => {
       ref={containerRef}
       className="w-full flex relative  h-fit md:h-[150vh] justify-center"
     >
-      <div className="w-[96vw] h-full ">
-        <div className="text-[13vw] md:mb-[10vh] tracking-tighter mb-[5vh] md:text-[10vw] leading-[110%] ">
-          <div className="flex">
+      <div className="w-[94vw] h-full ">
+        <div className="text-[13vw] md:mb-[10vh] tracking-tighter mb-[5vh]  md:text-[10vw] leading-[110%] ">
+          <div className="flex text-black">
             {" "}
             <TextRev>Studio Rysunku</TextRev>
           </div>
@@ -97,13 +97,13 @@ const MalowniaHeader = () => {
         <div
           id="fix"
           ref={fixClassRef}
-          className="text-[20px]  md:text-[25px] z-[10] md:text-left text-right tracking-tight fixclass ml-[1vw] md:w-[30vw] w-[90vw]"
+          className="text-[20px] text-black  md:text-[32px] z-[10] md:text-left text-center  tracking-tight fixclass ml-[1vw] md:w-[40vw] w-[90vw]"
         >
          W naszej pracowni tworzymy atmosferę wzajemnego wsparcia, otwartości i
           inspiracji, gdzie każdy czuje się swobodnie, by rozwijać swoje
           zainteresowania.
         </div>
-        <div className="md:top-[120vh] w-full hidden md:block  top-[103vh] absolute">
+        <div className="md:top-[120vh] w-full hidden md:block  top-[110vh] absolute">
           <Image
             id="fix2"
             className="opacity-100"
@@ -114,10 +114,10 @@ const MalowniaHeader = () => {
           />
         </div>
         <div className="w-full flex justify-center  h-fit relative">
-          <div className="  md:right-[5vw] h-fit md:h-[90vh] rounded-[20px] overflow-hidden md:rotate-3 mt-[3vh] md:mt-[-20vh] md:absolute">
+          <div className="  md:right-[5vw]   drop-shadow-xl h-fit md:h-[90vh] rounded-[20px] overflow-hidden md:rotate-3 mt-[3vh] md:mt-[-20vh] md:absolute">
             <video
               ref={videoRef}
-              className="x md:w-[40vw] hidden md:block w-[80vw] z-[10] rounded-[20px]"
+              className="x md:w-[40vw]  hidden md:block w-[80vw] z-[10] rounded-[20px]"
               autoPlay
               muted
               loop
@@ -134,7 +134,7 @@ const MalowniaHeader = () => {
           </div>
         </div>
       </div>
-      <div className="xl:top-[-30vh] md:right-[-19vw] opacity-40 xl:opacity-100 top-[-440px] z-[-20] absolute xl:right-[5vw] right-[10vw]">
+      <div className="xl:top-[-30vh] md:right-[-19vw] opacity-40 xl:opacity-100 top-[-440px] z-[-20] absolute xl:right-[5vw] right-[-10vw]">
         <Ss />
       </div>
     </div>

@@ -13,6 +13,7 @@ export default {
         "nav": "16px"
       },
       colors: {
+        black: "#1A0F2B",
         blue: {
           50: "#130D1B",
           75: "#dfdff2",

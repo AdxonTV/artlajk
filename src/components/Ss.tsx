@@ -3,14 +3,15 @@ import React from "react";
 
 const Ss = () => {
   const pathRef = useRef<SVGPathElement>(null);
-
+const isMobile = window.innerWidth < 768;
+const heightDoc = document.body.scrollHeight;
   useEffect(() => {
     const handleScroll = () => {
       if (pathRef.current) {
         const pathLength = pathRef.current.getTotalLength();
         const scrollPercentage =
           window.scrollY / (document.body.scrollHeight - window.innerHeight);
-        const drawLength = pathLength * scrollPercentage * 4;
+        const drawLength = pathLength * scrollPercentage * heightDoc/290;
 
         pathRef.current.style.strokeDasharray = `${drawLength} ${pathLength}`;
       }
@@ -24,7 +25,7 @@ const Ss = () => {
     <div>
   
       <svg
-        width="916"
+        width="950"
         height="1193"
         viewBox="0 0 916 1193"
         fill="none"
@@ -40,7 +41,7 @@ const Ss = () => {
           ref={pathRef}
           d="M19.4982 17.4986C1367.01 1453 893.504 -603 310 1184.5"
           stroke="url(#gradient)"
-          strokeWidth="50"
+          strokeWidth={isMobile ? 14 : 52 }
           fill="transparent"
         />
       </svg>

@@ -102,11 +102,11 @@ if(isMobile){ScrollTrigger.normalizeScroll(true)}
         <section className="wrapper-404 h-[90dvh] w-[400vw]">
          
           <div>
-            <h1 ref={textSkew} className="w-full text-[30vw] tracking-tight top-0 absolute text-violet-500">
+            <h1 ref={textSkew} className="w-full text-[30vw] tracking-tight top-0 absolute text-violet-300">
               Myślimy <b className="opacity-40">Nie</b>szablonowo.
             </h1>
             {photos.map((photo, index) => (
-              <div className="card" key={photo} id={`card-${index + 1}`}>
+              <div className="card drop-shadow-2xl" key={photo} id={`card-${index + 1}`}>
                 <Image
                   className="w-full h-full object-cover"
                   src={photo}

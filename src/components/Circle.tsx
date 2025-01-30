@@ -19,7 +19,7 @@ const Circle: React.FC<Props> = ({ img, imgid, className, id }) => {
       // GSAP Hover Animation
       const handleMouseEnter = () => {
         gsap.to(element, {
-          scale: 1.4, // Zoom in
+          scale: 1.2, // Zoom in
 
           duration: 0.7,
           ease: "power2.out",
@@ -71,7 +71,7 @@ const Circle: React.FC<Props> = ({ img, imgid, className, id }) => {
             alt={img}
             width={1200}
             height={1200}
-            className="object-cover scale-150 w-full h-full klaza"
+            className="object-cover  scale-[1.2] w-full h-full klaza"
           />
         </div>
       </div>
