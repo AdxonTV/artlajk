@@ -4,7 +4,7 @@ import React from "react";
 const Ss = () => {
   const pathRef = useRef<SVGPathElement>(null);
 const isMobile = window.innerWidth < 768;
-const heightDoc = document.body.scrollHeight;
+
   useEffect(() => {
     const handleScroll = () => {
       if (pathRef.current) {
