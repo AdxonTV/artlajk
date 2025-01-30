@@ -43,7 +43,7 @@ const CirclesSection = () => {
             <TextRev className="text-[13vw] md:text-[6vw] tracking-tighter leading-[110%]">
               Prowadzi
             </TextRev>
-            <TextRev className="text-violet-300 text-[13vw] md:text-[6vw] tracking-tighter leading-[110%]">
+            <TextRev className="text-[13vw] md:text-[6vw] tracking-tighter leading-[110%] bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent">
               Ela Jakubowska
             </TextRev>
           </div>
