@@ -5,7 +5,7 @@ import ScrollTrigger from "gsap/dist/ScrollTrigger";
 
 interface OptionProps {
   children: React.ReactNode;
-  className?: string
+  className?: string;
 }
 
 const TextRev: React.FC<OptionProps> = ({ children, className }) => {
@@ -53,7 +53,7 @@ const TextRev: React.FC<OptionProps> = ({ children, className }) => {
     text.split("").map((char, index) => (
       <span
         key={index}
-        className="char"
+        className={`char ${className}`}
         style={{
           display: "inline-block",
           whiteSpace: char === " " ? "pre" : "normal",
@@ -68,20 +68,13 @@ const TextRev: React.FC<OptionProps> = ({ children, className }) => {
       ref={buttonRef}
       className="text-[13vw] tracking-tighter  md:text-[10vw] leading-[110%] "
     >
-      <div
-        ref={textRef}
-        className={` relative text-black ${className}`}
-       
-      >
-        {typeof children === 'string' ? splitText(children) : children}
+      <div ref={textRef} className={` relative  ${className}`}>
+        {typeof children === "string" ? splitText(children) : children}
         <span
           style={{
             display: "inline-block",
-
           }}
-        >
-         
-        </span>
+        ></span>
       </div>
     </div>
   );

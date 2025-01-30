@@ -26,7 +26,7 @@ const Circle: React.FC<Props> = ({ img, imgid, className, id }) => {
         });
         gsap.to(containerRef.current, {
           scale: 1.05, // Zoom in
-
+          border: "20px solid white", // Add white border
           duration: 0.7,
           ease: "power2.out",
         });
@@ -42,7 +42,7 @@ const Circle: React.FC<Props> = ({ img, imgid, className, id }) => {
         });
         gsap.to(containerRef.current, {
           scale: 1, // Zoom in
-
+          border: "0px solid white", // Add white border
           duration: 0.7,
           ease: "power2.out",
         });

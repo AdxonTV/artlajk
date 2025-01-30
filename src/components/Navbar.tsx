@@ -37,10 +37,10 @@ const Navbar = () => {
       ref={navContainerRef}
       className={` ${
         isVisable ? "top-4 " : "skew-x-[30deg]  top-[-10vh] "
-      } w-full justify-center  transition-all duration-500 ease-out z-[10000] text-white flex fixed`}  
+      } w-full justify-center transition-all duration-500 ease-out z-[10000] text-white flex fixed`}  
       // className="w-full justify-center absolute  z-[10000] text-white flex"  
     >
-      <div  className=" flex transition-all duration-1000 ease-out justify-between px-4 items-center w-[95vw] py-[15px]">
+      <div  className=" flex transition-all  rounded-full duration-1000 ease-out justify-between px-4 items-center w-[95vw] py-[15px]">
         <div className="font-bold ml-[1vw]">Malownia</div>
         <div className="nav-elements opacity-50">By ArtLajk</div>
         <div className="nav-elements">
