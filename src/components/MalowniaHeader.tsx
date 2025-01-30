@@ -53,7 +53,7 @@ const MalowniaHeader = () => {
         end: "bottom top",
         scrub: true,
       },
-      scale: 1.3,
+      y: "-18vw",
     });
 
     const textAnimation = gsap.to(".cc", {
@@ -125,10 +125,10 @@ const MalowniaHeader = () => {
             />
             <Image
               ref={imageRef}
-              className="opacity-100  z-[10] object-cover  rounded-[20px] md:hidden"
-              src={"/img/carusel_5.jpeg"}
-              width={800}
-              height={800}
+              className="opacity-100  z-[10] object-cover h-[400px]  rounded-[20px] md:hidden"
+              src={"/img/carusel_4.jpeg"}
+              width={1000}
+              height={1000}
               alt="xx"
             />
           </div>
