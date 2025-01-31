@@ -1,5 +1,5 @@
 import React from "react";
-
+import ComponentAppear from "./ComponentAppear";
 interface AboutFeatureProps {
   title: string;
   desc: string;
@@ -8,7 +8,8 @@ interface AboutFeatureProps {
 
 const AboutFeature: React.FC<AboutFeatureProps> = ({ title, desc, icon }) => {
   return (
-    <div className="flex md:w-[25vw] w-[96vw] my-[20px]   items-start gap-6 bg-[#ffffff00] rounded-lg max-w-2xl">
+    <ComponentAppear>
+    <div className=" flex feature-item md:w-[25vw] w-[96vw] my-[20px]  items-start gap-6 bg-[#ffffff00] rounded-lg max-w-2xl">
       <div className="w-16 h-16 flex items-center justify-center rounded-full border-[#0000001a] border-2 ">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -34,6 +35,7 @@ const AboutFeature: React.FC<AboutFeatureProps> = ({ title, desc, icon }) => {
         </p>
       </div>
     </div>
+    </ComponentAppear>
   );
 };
 

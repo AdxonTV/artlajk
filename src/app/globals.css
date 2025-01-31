@@ -34,10 +34,14 @@ body {
 }.fontsoria{
   font-family: soria;
 }
+
 .fontsail{
   font-family: sail;
 }
 
+.circlepath{
+  clip-path: circle(0.4% at 50% 50%);
+}
 
 .floating-nav>*{
  

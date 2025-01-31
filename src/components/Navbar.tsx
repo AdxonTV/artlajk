@@ -37,7 +37,7 @@ const Navbar = () => {
       ref={navContainerRef}
       className={` ${
         isVisable ? "top-4 " : "skew-x-[30deg]  top-[-10vh] "
-      } w-full justify-center transition-all duration-500 ease-out z-[10000] text-white flex fixed`}  
+      } w-full justify-center transition-all delay-[200ms] duration-500 ease-out z-[10000] text-white flex fixed`}  
       // className="w-full justify-center absolute  z-[10000] text-white flex"  
     >
       <div  className=" flex transition-all  rounded-full duration-1000 ease-out justify-between px-4 items-center w-[95vw] py-[15px]">
@@ -47,8 +47,8 @@ const Navbar = () => {
           <a  href="#malownia">
           <Option >Malownia</Option>
           </a>
-          <a href="#onas">
-          <Option>O nas</Option>
+          <a href="#Prowadząca">
+          <Option>Prowadząca</Option>
           </a>
           <a href="#warsztaty">
           <Option>Warsztaty</Option>

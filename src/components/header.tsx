@@ -3,7 +3,7 @@
 import ScrollBtn from "./ScrollBtn";
 import Cursor from "./cursor";
 import Image from "next/image";
-
+import ComponentAppear from "./ComponentAppear";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { useEffect } from "react";
@@ -30,7 +30,7 @@ const Header = () => {
         
         
         y: "50%",
-        filter: "blur(20px)",
+        filter: "blur(10px)",
         ease: "power2.inOut",
    
       });
@@ -80,6 +80,7 @@ const Header = () => {
           </div>
         </div>
       </div>
+
       <div className="absolute overflow-hidden w-full h-[100dvh] object-cover z-[-192]">
         <video
           className="tracker md:hidden absolute top-0 left-0 w-full h-full object-cover"

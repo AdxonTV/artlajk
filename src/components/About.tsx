@@ -1,5 +1,5 @@
 "use client";
-import React, { lazy, Suspense } from "react";
+import React, { lazy, Suspense, useEffect, useRef } from "react";
 const AboutFeature = lazy(() => import("./AboutFeature"));
 import { FaRegStar } from "react-icons/fa6";
 import { MdAttachMoney } from "react-icons/md";
@@ -7,10 +7,16 @@ import { LuCalendar } from "react-icons/lu";
 import { MdOutlineChildFriendly } from "react-icons/md";
 import { BiBrain } from "react-icons/bi";
 import TextRev from "./TextRev";
+import ScrollTrigger from "gsap/ScrollTrigger";
+import { gsap } from "gsap";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const About = () => {
+  const containerRef = useRef<HTMLDivElement>(null);
+
+
   return (
-    
     <div className="w-full h-screen md:h-fit bg mx-[2vw]">
       <div className="w-full flex flex-col justify-between">
         <div className="w-full md:w-[45vw] mb-12 flex justify-start md:justify-end">
@@ -26,41 +32,49 @@ const About = () => {
           </div>
         </div>
         <Suspense fallback={<div>Loading...</div>}>
-        <div className="w-full md:flex justify-between">
-          <AboutFeature
-            title="Od 9 do ∞ roku życia"
-            icon={<MdOutlineChildFriendly />}
-            desc="wspieramy rozwój artystyczny dzieci, młodzieży i dorosłych od 9. roku życia wzwyż."
-          />
-          <div className="flex flex-wrap">
-            <div>
+          <div ref={containerRef} className="w-full opac md:flex justify-between">
+            <div className="box-f">
               <AboutFeature
-                title="Zajęcia raz w tygodniu"
-                icon={<LuCalendar />}
-                desc="Qudrix base set includes solid basement, aluminium full-frame and few options of walls and windows."
-              />
-              <AboutFeature
-                title="Płatność 150zł/msc"
-                icon={<MdAttachMoney />}
-                desc="Qudrix base set includes solid basement, aluminium full-frame and few options of walls and windows."
+                title="Od 9 do ∞ roku życia"
+                icon={<MdOutlineChildFriendly />}
+                desc="wspieramy rozwój artystyczny dzieci, młodzieży i dorosłych od 9. roku życia wzwyż."
               />
             </div>
-            <div>
-              <AboutFeature
-                title="Gwarantujemy"
-                icon={<FaRegStar />}
-                desc="Świetną zabawę i rozwój pasji"
-              />
-              <AboutFeature
-                title="Pomoc Kreatywna"
-                icon={<BiBrain />}
-                desc="Qudrix base set includes solid basement, aluminium full-frame and few options of walls and windows."
-              />
+            <div className="flex flex-wrap">
+              <div>
+                <div className="box-f">
+                  <AboutFeature
+                    title="Zajęcia raz w tygodniu"
+                    icon={<LuCalendar />}
+                    desc="Qudrix base set includes solid basement, aluminium full-frame and few options of walls and windows."
+                  />
+                </div>
+                <div className="box-f ">
+                  <AboutFeature
+                    title="Płatność 150zł/msc"
+                    icon={<MdAttachMoney />}
+                    desc="Qudrix base set includes solid basement, aluminium full-frame and few options of walls and windows."
+                  />
+                </div>
+              </div>
+              <div>
+                <div className="box-f">
+                  <AboutFeature
+                    title="Trwają 90 minut"
+                    icon={<FaRegStar />}
+                    desc="Świetną zabawę i rozwój pasji"
+                  />
+                </div>
+                <div className="box-f">
+                  <AboutFeature
+                    title="Grupy na Zajęciach"
+                    icon={<BiBrain />}
+                    desc="Zajęcia podzielone są grupami set includes solid basement, aluminium full-frame and few options of walls and windows."
+                  />
+                </div>
+              </div>
             </div>
-            
           </div>
-          
-        </div>
         </Suspense>
       </div>
     </div>

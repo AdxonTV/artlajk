@@ -1,4 +1,5 @@
 "use client";
+import Contact from "@/components/Contact";
 import { useEffect, Suspense} from "react";
 import Lenis from "lenis";
 import Loading from "./loading";
@@ -36,6 +37,9 @@ export default function Home() {
       <Header />
       <div className="h-[20vh]"></div>
       <Malownia />
+      <section id="kontakt">
+      <Contact></Contact>
+      </section>
       </Suspense>
     </div>
   );

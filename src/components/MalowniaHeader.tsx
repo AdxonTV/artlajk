@@ -1,6 +1,7 @@
 "use client";
 import Ss from "./Ss";
 import Image from "next/image";
+import ComponentAppear from "./ComponentAppear";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect, useRef } from "react";
@@ -104,6 +105,7 @@ const MalowniaHeader = () => {
           zainteresowania.
         </div>
         <div className="md:top-[120vh] w-full hidden md:block  top-[110vh] absolute">
+
           <Image
             id="fix2"
             className="opacity-100"
@@ -114,7 +116,9 @@ const MalowniaHeader = () => {
           />
         </div>
         <div className="w-full flex justify-center  h-fit relative">
+ 
           <div className="  md:right-[5vw]   drop-shadow-xl h-fit md:h-[90vh] rounded-[20px] overflow-hidden md:rotate-3 mt-[3vh] md:mt-[-20vh] md:absolute">
+          <ComponentAppear>
             <video
               ref={videoRef}
               className="x md:w-[40vw]  hidden md:block w-[80vw] z-[10] rounded-[20px]"
@@ -123,6 +127,8 @@ const MalowniaHeader = () => {
               loop
               src="/img/malowniafilm.mp4"
             />
+               </ComponentAppear>
+               <ComponentAppear>
             <Image
               ref={imageRef}
               className="opacity-100  z-[10] object-cover h-[400px]  rounded-[20px] md:hidden"
@@ -131,7 +137,9 @@ const MalowniaHeader = () => {
               height={1000}
               alt="xx"
             />
+              </ComponentAppear>
           </div>
+       
         </div>
       </div>
       <div className="xl:top-[-30vh] md:right-[-19vw] opacity-40 xl:opacity-100 top-[-440px] z-[-20] absolute xl:right-[5vw] right-[-10vw]">

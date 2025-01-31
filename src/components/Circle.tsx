@@ -2,80 +2,106 @@ import React, { useRef, useEffect } from "react";
 import Image from "next/image";
 import gsap from "gsap";
 
+
 interface Props {
   img: string;
   className: string;
   id: string;
+  textclass?: string;
   imgid: string;
 }
 
-const Circle: React.FC<Props> = ({ img, imgid, className, id }) => {
+const Circle: React.FC<Props> = ({ img, imgid, className, textclass, id }) => {
   const imageRef = useRef<HTMLDivElement>(null);
+  const clipElement = useRef<HTMLDivElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
+
   useEffect(() => {
-    if (imageRef.current) {
-      const element = imageRef.current;
+    const imageEl = imageRef.current;
+    const containerEl = containerRef.current;
+    const clipEl = clipElement.current;
 
-      // GSAP Hover Animation
-      const handleMouseEnter = () => {
-        gsap.to(element, {
-          scale: 1.2, // Zoom in
+    if (!imageEl || !containerEl || !clipEl) return;
 
-          duration: 0.7,
-          ease: "power2.out",
-        });
-        gsap.to(containerRef.current, {
-          scale: 1.05, // Zoom in
-          border: "20px solid white", // Add white border
-          duration: 0.7,
-          ease: "power2.out",
-        });
-      };
+    const handleMouseEnter = () => {
+      gsap.to(imageEl, {
+        scale: 1.5,
+        duration: 0.7,
+        ease: "power2.out",
+      });
 
-      const handleMouseLeave = () => {
-        gsap.to(element, {
-          scale: 1, // Reset scale (match initial scale)
-          rotate: "0deg",
+      gsap.to(containerEl, {
+        scale: 1.05,
+        boxShadow: "0px 0px 30px white", // zamiast border
+        duration: 0.7,
+        ease: "power2.out",
+      });
 
-          duration: 0.6,
-          ease: "power2.in",
-        });
-        gsap.to(containerRef.current, {
-          scale: 1, // Zoom in
-          border: "0px solid white", // Add white border
-          duration: 0.7,
-          ease: "power2.out",
-        });
-      };
+      gsap.to(clipEl, {
+        clipPath: "circle(100% at 50% 50%)",
+        duration: 0.7,
+        ease: "power2.out",
+      });
+    };
 
-      element.addEventListener("mouseenter", handleMouseEnter);
-      element.addEventListener("mouseleave", handleMouseLeave);
+    const handleMouseLeave = () => {
+      gsap.to(imageEl, {
+        scale: 1,
+        rotate: "0deg",
+        duration: 0.6,
+        ease: "power2.in",
+      });
+      gsap.to(clipEl, {
+        clipPath: "circle(0% at 50% 50%)",
+        duration: 0.7,
+        ease: "power2.out",
+      });
+      gsap.to(containerEl, {
+        scale: 1,
+        boxShadow: "none",
+        duration: 0.7,
+        ease: "power2.out",
+      });
+    };
 
-      return () => {
-        element.removeEventListener("mouseenter", handleMouseEnter);
-        element.removeEventListener("mouseleave", handleMouseLeave);
-      };
-    }
+    imageEl.addEventListener("mouseenter", handleMouseEnter);
+    imageEl.addEventListener("mouseleave", handleMouseLeave);
+
+    return () => {
+      imageEl.removeEventListener("mouseenter", handleMouseEnter);
+      imageEl.removeEventListener("mouseleave", handleMouseLeave);
+    };
   }, []);
 
   return (
+
     <div id={id}>
-      <div ref={containerRef} className={`${className} rounded-full md:mb-[2vh] overflow-hidden`}>
+      <div
+        ref={containerRef}
+        className={`${className} rounded-full md:mb-[2vh] overflow-hidden relative`}
+      >
         <div
           ref={imageRef}
           id={imgid}
-          className="w-full rounded-full h-full bg-slate-950 "
+          className="w-full rounded-full h-full bg-slate-950 justify-center items-center flex relative"
         >
+          <div
+            ref={clipElement}
+            className={`${textclass} tracking-tighter w-full h-full bg-violet-300 text-white  font-semibold absolute z-10 flex justify-center items-center circlepath`}
+          >
+            Zobacz więcej
+          </div>
           <Image
             src={img}
-            alt={img}
+            alt="circle image"
             width={1200}
             height={1200}
-            className="object-cover  scale-[1.2] w-full h-full klaza"
+            className="object-cover opacity-100 scale-[1.2] w-full h-full"
           />
         </div>
       </div>
     </div>
+  
   );
 };
 

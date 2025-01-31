@@ -16,7 +16,7 @@ const Malownia = () => {
   
       <About></About>
       <CirclesSection></CirclesSection>
-      <div className='h-[100vh]'></div>
+   
     </div>
   )
 }
