@@ -29,17 +29,7 @@ const HorizontalScroll = () => {
     const ctx = gsap.context(() => {
       const isMobile = window.innerWidth <= 768;
 if(isMobile){ScrollTrigger.normalizeScroll(true)}
-      // Enable scroll normalization
-      // ScrollTrigger.create({
-      //   trigger: containersRef.current,
-      //   start: "top top",
-      //   end: "bottom bottom",
-      //   onEnter: () => ScrollTrigger.normalizeScroll(true),
-      //   onLeave: () => ScrollTrigger.normalizeScroll(false),
-      //   onEnterBack: () => ScrollTrigger.normalizeScroll(true),
-      //   onLeaveBack: () => ScrollTrigger.normalizeScroll(false),
-      // });
-
+      
       ScrollTrigger.create({
         trigger: ".wrapper-404",
         start: "top top",

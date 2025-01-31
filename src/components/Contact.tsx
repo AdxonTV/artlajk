@@ -1,9 +1,9 @@
 import React from "react";
 import TextRev from "./TextRev";
 import Btn from "./Btn";
-import { BsArrowReturnRight } from "react-icons/bs";
+
 import ContactFeature from "./ContactFeature";
-import { MdSubdirectoryArrowRight } from "react-icons/md";
+
 
 const Contact = () => {
   return (

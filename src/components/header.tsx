@@ -3,7 +3,7 @@
 import ScrollBtn from "./ScrollBtn";
 import Cursor from "./cursor";
 import Image from "next/image";
-import ComponentAppear from "./ComponentAppear";
+
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { useEffect } from "react";

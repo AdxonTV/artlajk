@@ -1,5 +1,5 @@
 "use client";
-import React, { lazy, Suspense, useEffect, useRef } from "react";
+import React, { lazy, Suspense, useRef } from "react";
 const AboutFeature = lazy(() => import("./AboutFeature"));
 import { FaRegStar } from "react-icons/fa6";
 import { MdAttachMoney } from "react-icons/md";
