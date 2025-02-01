@@ -60,10 +60,10 @@ const Navbar = () => {
         <button className="absolute top-6 right-6 " onClick={() => setMenuOpen(false)}>
           ✖
         </button>
-        <a href="#malownia" className="text-2xl my-4 text-black " onClick={() => setMenuOpen(false)}>Malownia</a>
-        <a href="#Prowadząca" className="text-2xl my-4 text-black " onClick={() => setMenuOpen(false)}>Prowadząca</a>
-        <a href="#warsztaty" className="text-2xl my-4 text-black " onClick={() => setMenuOpen(false)}>Warsztaty</a>
-        <a href="#kontakt" className="text-2xl my-4 text-black " onClick={() => setMenuOpen(false)}>Kontakt</a>
+        <a href="#malownia" className="text-2xl my-2 text-black " onClick={() => setMenuOpen(false)}>Malownia</a>
+        <a href="#Prowadząca" className="text-2xl my-2 text-black " onClick={() => setMenuOpen(false)}>Prowadząca</a>
+        <a href="#warsztaty" className="text-2xl my-2 text-black " onClick={() => setMenuOpen(false)}>Warsztaty</a>
+        <a href="#kontakt" className="text-2xl my-2 mb-[10vh] text-black " onClick={() => setMenuOpen(false)}>Kontakt</a>
         <Btn id="nav-btn" title="Zapisz się" />
       </div>
     </div>

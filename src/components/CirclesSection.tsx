@@ -36,17 +36,17 @@ const CirclesSection = () => {
   return (
     <div
       ref={container}
-      className="flex w-full justify-center mt-[30vh] md:mt-[5vh]"
+      className="flex w-full justify-center mt-[50vh] md:mt-[5vh]"
     >
       <div className="w-[94vw]">
         <div>
           {" "}
-          <div className="flex justify-between">
+          <div className="flex  justify-between">
             <div>
               <TextRev className="text-[13vw] md:text-[6vw] tracking-tighter leading-[110%]">
                 Prowadzi
               </TextRev>
-              <TextRev className=" text-violet-300 text-[13vw] md:text-[6vw] tracking-tighter leading-[110%]">
+              <TextRev className=" text-violet-300 text-[11vw] md:text-[6vw] tracking-tighter leading-[110%]">
                 Elżbieta Jakubowska
               </TextRev>
             </div>
@@ -58,7 +58,7 @@ const CirclesSection = () => {
             </div>
             </ComponentAppear>
           </div>
-          <div className="md:my-[5vh] gap-[4vw] h-fit flex mt-[4vw] md:gap-[3vh] md:mt-[3vh]  flex-col-reverse ">
+          <div className="mb-[100px]  md:my-[5vh] gap-[4vw] h-fit flex mt-[4vw] md:gap-[3vh] md:mt-[3vh]  flex-col-reverse ">
           
             <Btn title="Zobacz więcej"  id="searcg" />
         
@@ -111,10 +111,10 @@ const CirclesSection = () => {
           </div>
           </ComponentAppear>
           <ComponentAppear>
-          <div className="w-full md:w-[33vw] mt-[50px] md:hidden   text-left text-[24px]">
-            W naszej pracowni tworzymy atmosferę wzajemnego wsparcia, otwartości
+          <div className="w-full md:w-[33vw] mb-[15vh]  md:hidden  leading-[110%] tracking-tight  text-center text-[24px]">
+          "  W naszej pracowni tworzymy atmosferę wzajemnego wsparcia, otwartości
             i inspiracji, gdzie każdy czuje się swobodnie, by rozwijać swoje
-            zainteresowania.
+            zainteresowania. "
           </div>
           </ComponentAppear>
         </div>
