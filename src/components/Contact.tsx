@@ -22,8 +22,8 @@ const Contact = () => {
             </TextRev>
           </div>
         </div>
-        <div className="flex justify-center gap-[2vw]">
-          <div className="md:w-[9vw]">
+        <div className="flex justify-center gap-[1vw] md:gap-[3vw]">
+          <div className="md:w-[9vw] w-[28vw]">
             <ContactFeature
               className="text-left"
               subtitle="Adres"
@@ -31,16 +31,15 @@ const Contact = () => {
               title2="Jana Pawła 29"
             />
           </div>
-          <div className="md:w-[9vw]">
+          <div className="md:w-[9vw] w-[28vw]">
             <ContactFeature
               className="text-center"
               subtitle="Email"
               title="Malownia"
               title2="@gmail.com"
             />
-
           </div>
-          <div className="md:w-[9vw]">
+          <div className="md:w-[9vw] w-[28vw]">
             <ContactFeature
               className="text-right"
               subtitle="Number"

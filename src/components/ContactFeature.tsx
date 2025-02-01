@@ -8,10 +8,10 @@ interface Props {
 const ContactFeature:React.FC<Props> = ({title, subtitle, title2, className}) => {
     
   return (
-    <div className={className}>
-        <div className='text-[16px]'>{subtitle}</div>
-        <div className='text-[24px]'>{title}</div>
-        <div className='leading-[90%] text-[24px]'>{title2}</div>
+    <div className={className} >
+        <div className='md:text-[16px] text-[10px]'>{subtitle}</div>
+        <div className='md:text-[24px] text-[14px]'>{title}</div>
+        <div className='leading-[90%] md:text-[24px] text-[14px]'>{title2}</div>
     </div>
   )
 }
