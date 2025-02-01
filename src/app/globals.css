@@ -31,6 +31,11 @@ body {
  
 
   background-size: cover;
+}
+
+
+.clippathscroll{
+  clip-path: polygon(0 0, 83% 0, 82% 100%, 0% 100%);
 }.fontsoria{
   font-family: soria;
 }

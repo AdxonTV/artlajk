@@ -15,12 +15,18 @@ const Navbar = () => {
     setLastScrollY(scrollY);
 
     if (currentScrollY === 0) {
+
       navContainerRef.current?.classList.remove("floating-nav");
     } else {
       navContainerRef.current?.classList.add("floating-nav");
     }
-
-    setIsVisible(lastScrollY > currentScrollY);
+    if (lastScrollY < currentScrollY) {
+      setIsVisible(false);
+    
+   
+    } else {
+      setIsVisible(true);
+    }
   }, [currentScrollY]);
 
   return (
@@ -30,7 +36,7 @@ const Navbar = () => {
       ${isVisible ? "top-4" : "top-[-100px]"} `}
     >
       <div className="flex items-center justify-between w-[95vw] px-4 py-3 bg-opacity-70 rounded-full transition-all duration-700 ease-out">
-        <div className="font-bold ml-4 text-white bg-violet-300 p-2 rounded-lg">Malownia</div>
+        <div className="font-bold ml-4 text-white bg-violet-300 p-2 rounded-lg skew-x-[-7deg]">Malownia</div>
         <div className="font-bold ml-4 text-white  p-2 rounded-lg">By Artlajk</div>
         <div className="nav-elements hidden md:flex gap-4">
           <a href="#malownia"><Option>Malownia</Option></a>

@@ -1,13 +1,13 @@
 "use client";
-
-import { useEffect} from "react";
+import ReusablePage from "@/components/ReusablePage";
+import { useEffect } from "react";
 import Lenis from "lenis";
 
-
 export default function Home() {
+  
   useEffect(() => {
     const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-    
+
     if (!isMobile) {
       const lenis = new Lenis({
         duration: 1.2,
@@ -28,8 +28,10 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="overflow-x-hidden">     
-
+    <div className="overflow-x-hidden">
+      <ReusablePage
+     
+      />
     </div>
   );
 }

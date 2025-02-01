@@ -1,13 +1,20 @@
 import React from "react";
 import TextRev from "./TextRev";
 import Btn from "./Btn";
-
+import Carrier from "../../public/svg/carrier";
+import ComponentAppear from "./ComponentAppear";
 import ContactFeature from "./ContactFeature";
 
 const Contact = () => {
   return (
-    <div className="bg-gradient-to-t ">
-      <div className="flex flex-col items-center justify-center gap-[6vh] h-[80dvh]">
+    <div className="  ">
+      <div className="flex flex-col items-center justify-start mt-[-2vh] gap-[6vh] h-[90dvh]">
+        <div className="mb-[-110px] z-[10] scale-[0.6]">
+          <ComponentAppear>
+          <Carrier />
+          </ComponentAppear>
+        </div>
+
         <div>
           <TextRev className="md:text-[128px] text-[68px] tracking-tight md:mb-[3vh] md:leading-[100%]">
             Skontaktuj
