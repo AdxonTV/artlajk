@@ -2,6 +2,7 @@
 import React from "react";
 import Btn from "./Btn";
 import Option from "./Option";
+import gsap from "gsap";
 import { HiOutlineMenuAlt4 } from "react-icons/hi";
 import useWindowScroll from "@react-hook/window-scroll";
 import { ImCross } from "react-icons/im";
@@ -22,6 +23,10 @@ const Navbar = () => {
     }
 
     if (lastScrollY < currentScrollY) {
+      gsap.to(navContainerRef.current, {
+        height: "10vh",
+        duration: 0.2,
+      })
       setisVisable(false);
       setisMenu(false);
     } else {
@@ -32,18 +37,30 @@ const Navbar = () => {
   }, [currentScrollY]);
 
   const handleClick = () => {
-    setisMenu(!isMenu);
-  };
+    setisMenu((prev)=>!prev);
+    if(isMenu === false){
+      gsap.to(navContainerRef.current, {
+        height: "50vh",
+        duration: 0.2,
+      })
+
+  }else
+  gsap.to(navContainerRef.current, {
+    height: "10vh",
+    duration: 0.2,
+  })
+  }
+  
   return (
     <div
       ref={navContainerRef}
       className={` ${
-        isVisable ? "top-4  " : "skew-x-[30deg]  top-[-10vh] "
-      } w-full justify-center transition-all delay-[200ms] duration-500 ease-out z-[10000] text-white flex fixed`}
+        isVisable ? "top-4  " : " top-[-10vh] "
+      } w-full justify-center transition-all h-fit delay-[200ms] overflow-hidden duration-500 ease-out z-[10000] text-white flex fixed`}
       // className="w-full justify-center absolute  z-[10000] text-white flex"
     >
-      <div className=" flex transition-all   rounded-full duration-1000 ease-out  justify-between px-4 items-start w-[95vw] py-[15px]">
-        <div className="font-bold mt-[2vh] ml-[1vw]">Malownia</div>
+      <div className={`${isMenu ? "items-start" : "items-center"}  flex transition-all   rounded-full duration-1000 ease-out  justify-between px-4  w-[95vw] py-[15px]`}>
+        <div className="font-bold ml-[1vw] h-full py-[1vh]">Malownia</div>
         <div className="nav-elements mt-[2vh] opacity-50">By ArtLajk</div>
         <div className="nav-elements">
           <a href="#malownia">
@@ -61,9 +78,9 @@ const Navbar = () => {
          
         </div>
         {isMenu && (
-        <div className="h-[20vh] w-full justify-center items-end flex flex-col ">
+        <div className="h-[50vh] w-full justify-center items-end flex flex-col ">
           {["Malownia", "Prowadząca", "Warsztaty", "Kontakt"].map((item, index) => (
-            <div key={index} className="flex items-center w-[35vw] justify-between">
+            <div key={index} className="flex items-center w- justify-between">
               <div className="opacity-40">0{index + 1}</div>
               <a href={`#${item}`}>
                 <Option>{item}</Option>
