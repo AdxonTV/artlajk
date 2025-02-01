@@ -54,7 +54,7 @@ const Header = () => {
     
       <div className="w-[96vw] relative">
         <div className="w-full bottom-0 absolute  md:text-left">
-          <div className="text-[5vh] mb-[5vh] md:w-[40vw] leading-[110%] md:text-[7vh]">
+          <div className="text-[8vw] mb-[5vh] md:w-[40vw] leading-[110%] md:text-[7vh]">
             <div>
               <div>Rozwiń się na Zajęciach </div>
               <div className="md:text-left text-right">z Malartwa i Rysunku</div>
