@@ -16,13 +16,12 @@ body {
 
   background-image: url("/img/bgimg.png");
 }
-@font-face {
-  font-family: soria;
-  src: url("/img/soria-font.ttf");
+.petit{
+  font-family: petit;
 }
 @font-face {
-  font-family: sail;
-  src: url("/img/sail.otf");
+  font-family: petit;
+  src: url("/font/PetitFormalScript-Regular.ttf");
 }
 ::selection {
   background-color: #970fff;
@@ -57,6 +56,14 @@ body {
 
 border-radius: 40px;
 }
+
+
+
+
+
+
+
+
 .animated-title {
   @apply flex flex-col gap-1 text-7xl uppercase leading-[.8] text-white sm:px-32 md:text-[6rem];
 }

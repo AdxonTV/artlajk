@@ -112,7 +112,7 @@ const CirclesSection = () => {
           </ComponentAppear>
           <ComponentAppear>
           <div className="w-full md:w-[33vw] mb-[15vh]  md:hidden  leading-[110%] tracking-tight  text-center text-[24px]">
-          &ldquo; W naszej pracowni tworzymy atmosferę wzajemnego wsparcia, otwartości
+          `&ldquo; W naszej pracowni tworzymy atmosferę wzajemnego wsparcia, otwartości
             i inspiracji, gdzie każdy czuje się swobodnie, by rozwijać swoje
             zainteresowania. &ldquo;
           </div>
