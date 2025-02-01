@@ -51,6 +51,7 @@ const Header = () => {
   return (
     <div className="h-[100dvh]  cursor-context-menu z-10 relative flex justify-center overflow-hidden text-white">
       <Cursor />
+    
       <div className="w-[96vw] relative">
         <div className="w-full bottom-0 absolute  md:text-left">
           <div className="text-[4vh] mb-[5vh] md:w-[40vw] leading-[110%] md:text-[7vh]">
@@ -66,15 +67,15 @@ const Header = () => {
             <div className="flex text-left opacity-90 md:text-[18px] text-[10px] md:w-fit w-full justify-between mb-[2vh] gap-8 md:text-right">
               <div className="w-fit">
                 <div className="font-semibold">Kontakt</div>
-                <div className="leading-none">512 321 664</div>
+                <div className="leading-none text-[20px]">512 321 664</div>
               </div>
               <div className="w-fit text-left md:text-right">
                 <div className="font-semibold">Prowadzi</div>
-                <div className="leading-none">Ela Jakubowska</div>
+                <div className="leading-none  text-[20px]">Ela Jakubowska</div>
               </div>
               <div className="w-fit text-right md:text-right">
                 <div className="font-semibold">Miejsce</div>
-                <div className="leading-none">Chojnice, ul. 31 Stycznia</div>
+                <div className="leading-none  text-[20px]">Chojnice, ul. 31 Stycznia</div>
               </div>
             </div>
           </div>

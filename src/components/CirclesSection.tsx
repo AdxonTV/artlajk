@@ -43,15 +43,15 @@ const CirclesSection = () => {
           {" "}
           <div className="flex justify-between">
             <div>
-              <TextRev className="text-[13vw] md:text-[8vw] tracking-tighter leading-[110%]">
+              <TextRev className="text-[13vw] md:text-[6vw] tracking-tighter leading-[110%]">
                 Prowadzi
               </TextRev>
-              <TextRev className=" text-violet-300 text-[13vw] md:text-[8vw] tracking-tighter leading-[110%]">
-                Ela Jakubowska
+              <TextRev className=" text-violet-300 text-[13vw] md:text-[6vw] tracking-tighter leading-[110%]">
+                Elżbieta Jakubowska
               </TextRev>
             </div>
             <ComponentAppear>
-            <div className="w-full md:w-[39vw] md:text-[32px] text-black text-right leading-[130%] md:block hidden text-[24px]">
+            <div className="w-full md:w-[39vw] md:text-[32px] mt-[5vh] tracking-tight  text-black text-right leading-[130%] md:block hidden text-[24px]">
               W naszej pracowni tworzymy atmosferę wzajemnego wsparcia,
               otwartości i inspiracji, gdzie każdy czuje się swobodnie, by
               rozwijać swoje zainteresowania.

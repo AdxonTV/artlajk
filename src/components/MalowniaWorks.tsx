@@ -10,7 +10,7 @@ const MalowniaWorks = () => {
           {" "}
           {/* <TextRev>{`O\u00A0nas`}</TextRev> */}
         </div>
-        <div className="xl:w-[30vw] md:block hidden  text-[20px] md:text-[25px] md:w-[50vw] w-full text-center md:text-right">
+        <div className="xl:w-[40vw] md:block hidden  text-[20px] md:text-[32px] md:w-[50vw] w-full text-center tracking-tight  md:text-right">
           W naszej pracowni tworzymy atmosferę wzajemnego wsparcia, otwartości i
           inspiracji, gdzie każdy czuje się swobodnie, by rozwijać swoje
           zainteresowania.
