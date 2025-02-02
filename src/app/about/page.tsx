@@ -1,6 +1,6 @@
 "use client";
 import ReusablePage from "@/components/ReusablePage";
-import { useEffect, useRef } from "react";
+import { useEffect} from "react";
 import Lenis from "lenis";
 import Image from "next/image";
 import Navbar from "@/components/Navbar";

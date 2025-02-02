@@ -67,7 +67,7 @@ const Circle: React.FC<Props> = ({ img, className, textclass, id }) => {
       >
         <div
           ref={imageRef}
-          className="w-full rounded-full h-full bg-slate-950 flex justify-center items-center relative"
+          className="w-full h-full bg-slate-950 flex justify-center items-center "
         >
           
           <a
@@ -84,9 +84,9 @@ const Circle: React.FC<Props> = ({ img, className, textclass, id }) => {
           <Image
             src={img}
             alt="circle"
-            width={800}
-            height={800}
-            unoptimized
+            width={700}
+            height={700}
+            
             className="object-cover w-full h-full"
           />
         </div>

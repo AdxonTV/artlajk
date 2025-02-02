@@ -2,6 +2,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import Btn from "./Btn";
 import Option from "./Option";
+import Link from "next/link";
 import useWindowScroll from "@react-hook/window-scroll";
 
 const Navbar = () => {
@@ -39,8 +40,8 @@ const Navbar = () => {
         <div className="font-bold ml-4 text-white bg-violet-300 p-2 rounded-lg skew-x-[-7deg]">Malownia</div>
         <div className="font-bold ml-4 text-white  p-2 rounded-lg">By Artlajk</div>
         <div className="nav-elements hidden md:flex gap-4">
-          <a href="/"><Option>Malownia</Option></a>
-          <a href="/about"><Option>Prowadząca</Option></a>
+        <Link href="/"><Option>Malownia</Option></Link>
+            <Link href="/about"><Option>Prowadząca</Option></Link>
           <a href="#warsztaty"><Option>Warsztaty</Option></a>
           <a href="#kontakt"><Option>Kontakt</Option></a>
         </div>
