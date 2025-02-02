@@ -71,7 +71,7 @@ export default function Home() {
       <div className="w-full h-[50vh] flex flex-col justify-center items-center">
         <div>
           <div>
-          
+          (Artlajks)
           </div>
           <div className="w-[50vw] text-[24px]">
             The main idea of these buttons is that they are magnetic and follow
