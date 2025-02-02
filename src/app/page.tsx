@@ -10,9 +10,9 @@ import Malownia from "@/components/Malownia";
 
 export default function Home() {
   useEffect(() => {
-    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+    // const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
     
-    if (!isMobile) {
+    // if (!isMobile) {
       const lenis = new Lenis({
         duration: 1.2,
         easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
@@ -28,7 +28,7 @@ export default function Home() {
         requestAnimationFrame(raf);
       }
       requestAnimationFrame(raf);
-    }
+    // }
   }, []);
   useEffect(() => {
    

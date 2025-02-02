@@ -43,7 +43,7 @@ export default function Home() {
         end: "bottom top",
         scrub: true,
       },
-      y: "-15vh",
+      y: "-20vh",
     });
   }, []);
   return (
