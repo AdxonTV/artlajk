@@ -86,7 +86,7 @@ const CirclesSection = () => {
                   className="md:w-[10vw] w-[45vw] drop-shadow-xl h-[45vw] md:h-[10vw]"
                   img="/img/carusel_2.jpeg"
                   id="circle2"
-                  textclass="text-[30px]"
+                  textclass="text-[12px]"
                 />
               </Suspense>
               <Suspense fallback={<div>Loading circle...</div>}>
