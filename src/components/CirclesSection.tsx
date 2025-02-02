@@ -68,6 +68,7 @@ const CirclesSection = () => {
           </div>
           <ComponentAppear>
           <div className="flex md:flex-row md:flex-nowrap flex-wrap  md:items-end md:h-[100vh] h-full  mt-[30px] items-end md:mt-[-420px] 2xl:mt-[-500px] w-full justify-between">
+       
             <Circle
               className="md:w-[19vw] w-[20vw] drop-shadow-xl h-[20vw] md:h-[19vw]"
               imgid="#circleimg1"
@@ -108,6 +109,7 @@ const CirclesSection = () => {
               id="circle4"
               textclass="text-[50px]"
             />
+       
           </div>
           </ComponentAppear>
           <ComponentAppear>

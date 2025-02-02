@@ -43,7 +43,7 @@ const ComponentAppear:React.FC<Props> = ({children}) => {
         
     },[])
   return (
-    <div ref={objRef} className='opacity-0 translate-y-20'>
+    <div ref={objRef} className='opacity-0 '>
         {children}
     </div>
   )

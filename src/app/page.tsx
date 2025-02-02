@@ -4,6 +4,7 @@ import { useEffect, Suspense} from "react";
 import Lenis from "lenis";
 import Loading from "./loading";
 import Navbar from "@/components/Navbar";
+import CirclesSection from "@/components/CirclesSection";
 import Header from "@/components/header";
 import Malownia from "@/components/Malownia";
 
@@ -29,6 +30,9 @@ export default function Home() {
       requestAnimationFrame(raf);
     }
   }, []);
+  useEffect(() => {
+   
+  })
 
   return (
     <div className="overflow-x-hidden">     
@@ -37,6 +41,9 @@ export default function Home() {
       <Header />
       <div className="h-[20vh]"></div>
       <Malownia />
+      <div className="mt-[20vh]">
+      <CirclesSection />
+      </div>
       <section id="kontakt">
       <Contact></Contact>
       </section>
