@@ -92,7 +92,7 @@ const Circle: React.FC<Props> = ({ img, imgid, className, textclass, id }) => {
             ref={clipElement}
             className={`${textclass} tracking-tighter w-full h-full bg-violet-300 text-white font-semibold absolute z-10 flex justify-center items-center circlepath`}
           >
-              <Magnetics> <div>  <a href="/about"  className={`${textclass} p-4`}> Zobacz więcej </a> </div>  </Magnetics>
+              <Magnetics> <div>  <a href="/about"  className={`${textclass} `}> Zobacz więcej </a> </div>  </Magnetics>
           </div>
         
           <Image

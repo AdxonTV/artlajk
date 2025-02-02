@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Loading from "./loading";
 import { Suspense } from "react";
+
 import "./globals.css";
 
 
@@ -22,6 +23,7 @@ export default function RootLayout({
       <body
         
       >
+    
         {children}
       </body>
       </Suspense>

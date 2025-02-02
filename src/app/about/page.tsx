@@ -2,7 +2,7 @@
 import ReusablePage from "@/components/ReusablePage";
 import { useEffect } from "react";
 import Lenis from "lenis";
-
+import Navbar from "@/components/Navbar";
 export default function Home() {
   
   useEffect(() => {
@@ -29,7 +29,8 @@ export default function Home() {
 
   return (
     <div className="overflow-x-hidden flex justify-center">
-      
+      <div className="bg-black"><Navbar></Navbar></div>
+          
       <ReusablePage
      
       />
