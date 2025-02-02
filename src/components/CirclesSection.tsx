@@ -38,7 +38,7 @@ const CirclesSection = () => {
   return (
     <div
       ref={container}
-      className="flex w-full justify-center mt-[50vh] md:mt-[5vh]"
+      className="flex w-full justify-center mt-[50vh]  md:mt-[5vh]"
     >
       <div className="w-[94vw]">
         <div>
@@ -66,45 +66,44 @@ const CirclesSection = () => {
               W naszej pracowni tworzymy atmosferę wzajemnego wsparcia,
             </div>
           </div>
-          <ComponentAppear>
-            <div className="flex md:flex-row md:flex-nowrap flex-wrap  md:items-end md:h-fit h-full  mt-[30px] items-end md:mt-[-150px] w-full justify-between">
+      
+            <div className="flex  md:flex-row md:flex-nowrap flex-wrap  md:items-end md:h-fit h-full  mt-[30px] items-end md:mt-[-150px] w-full justify-between">
               <Circle
                 className="md:w-[19vw] w-[20vw] drop-shadow-xl h-[20vw] md:h-[19vw]"
-                imgid="#circleimg1"
                 img="/img/carusel_1.jpeg"
                 id="circle1"
                 textclass="text-[30px]"
               />
               <Circle
                 className="md:w-[10vw] w-[45vw] drop-shadow-xl h-[45vw] md:h-[10vw]"
-                imgid="#circleimg2"
                 img="/img/carusel_2.jpeg"
                 id="circle2"
-                       textclass="text-[30px]"
+                textclass="text-[30px]"
               />
               <Circle
                 className="w-[20vw] drop-shadow-xl hidden md:block h-[20vw]"
-                imgid="#circleimg5"
                 img="/img/carusel_5.jpeg"
                 id="circle3"
                 textclass="text-[30px]"
               />{" "}
               <Circle
                 className="md:w-[35vw] drop-shadow-xl w-[70vw] h-[70vw] md:h-[35vw]"
-                imgid="#circleimg4"
                 img="/img/carusel_4.jpeg"
                 id="circle4"
                 textclass="text-[50px]"
               />
             </div>
+       
             <ComponentAppear>
               <div className="w-full md:w-[33vw] mb-[15vh]  md:hidden  leading-[110%] tracking-tight  text-center text-[24px]">
-                “W naszej pracowni tworzymy atmosferę wzajemnego wsparcia,
-                otwartości i inspiracji, gdzie każdy czuje się swobodnie, by
-                rozwijać swoje zainteresowania.”
+                <q>
+                  W naszej pracowni tworzymy atmosferę wzajemnego wsparcia,
+                  otwartości i inspiracji, gdzie każdy czuje się swobodnie, by
+                  rozwijać swoje zainteresowania.
+                </q>
               </div>
             </ComponentAppear>
-          </ComponentAppear>
+         
         </div>
       </div>
     </div>

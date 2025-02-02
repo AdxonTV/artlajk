@@ -1,107 +1,93 @@
-"use client"
-import React, { useRef, useEffect } from "react";
+"use client";
+import React, { useRef } from "react";
 import Image from "next/image";
 import Magnetics from "./Magnetics";
 import gsap from "gsap";
-
 
 interface Props {
   img: string;
   className: string;
   id: string;
   textclass?: string;
-  imgid: string;
 }
 
-const Circle: React.FC<Props> = ({ img, imgid, className, textclass, id }) => {
+const Circle: React.FC<Props> = ({ img, className, textclass, id }) => {
   const imageRef = useRef<HTMLDivElement>(null);
-  const clipElement = useRef<HTMLDivElement>(null);
+  const clipRef = useRef<HTMLAnchorElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    const imageEl = imageRef.current;
-    const containerEl = containerRef.current;
-    const clipEl = clipElement.current;
+  const handleMouseEnter = () => {
+    if (!imageRef.current || !clipRef.current || !containerRef.current) return;
+    gsap.to(imageRef.current, {
+      scale: 1.4,
+      duration: 0.7,
+      ease: "power2.out",
+    });
+    gsap.to(containerRef.current, {
+      scale: 1.05,
 
-    if (!imageEl || !containerEl || !clipEl) return;
+      duration: 0.7,
+      ease: "power2.out",
+    });
+    gsap.to(clipRef.current, {
+      clipPath: "circle(100% at 50% 50%)",
 
-    const handleMouseEnter = () => {
-      gsap.to(imageEl, {
-        scale: 1.5,
-        duration: 0.7,
-        ease: "power2.out"
-      });
-      gsap.to(containerEl, {
-        scale: 1.05,
-        boxShadow: "0px 0px 30px white",
-        duration: 0.7,
-        ease: "power2.out"
-      });
-      gsap.to(clipEl, {
-        clipPath: "circle(100% at 50% 50%)",
-        duration: 0.7,
-        ease: "power2.out"
-      });
-    };
+      duration: 0.7,
+      ease: "power2.out",
+    });
+  };
 
-    const handleMouseLeave = () => {
-      gsap.to(imageEl, {
-        scale: 1,
-        rotate: "0deg",
-        duration: 0.6,
-        ease: "power2.in"
-      });
-      gsap.to(clipEl, {
-        clipPath: "circle(0% at 50% 50%)",
-        duration: 0.7,
-        ease: "power2.out"
-      });
-      gsap.to(containerEl, {
-        scale: 1,
-        boxShadow: "none",
-        duration: 0.7,
-        ease: "power2.out"
-      });
-    };
-
-    imageEl.addEventListener("mouseenter", handleMouseEnter);
-    imageEl.addEventListener("mouseleave", handleMouseLeave);
-
-    return () => {
-      imageEl.removeEventListener("mouseenter", handleMouseEnter);
-      imageEl.removeEventListener("mouseleave", handleMouseLeave);
-    };
-  }, []);
+  const handleMouseLeave = () => {
+    if (!imageRef.current || !clipRef.current || !containerRef.current) return;
+    gsap.to(imageRef.current, {
+      scale: 1,
+      duration: 0.6,
+      ease: "power2.in",
+    });
+    gsap.to(containerRef.current, {
+      scale: 1,
+      boxShadow: "none",
+      duration: 0.7,
+      ease: "power2.out",
+    });
+    gsap.to(clipRef.current, {
+      clipPath: "circle(0% at 50% 50%)",
+      duration: 0.7,
+      ease: "power2.out",
+    });
+  };
 
   return (
-    
-    <div id={id} >
+    <div id={id}>
       <div
-      
         ref={containerRef}
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
         className={`${className} rounded-full md:mb-[2vh] overflow-hidden relative`}
-       
       >
         <div
           ref={imageRef}
-          id={imgid}
-          className="w-full rounded-full h-full bg-slate-950 justify-center items-center flex relative"
+          className="w-full rounded-full h-full bg-slate-950 flex justify-center items-center relative"
         >
-        
-          <div
-            ref={clipElement}
+          
+          <a
+            ref={clipRef}
             className={`${textclass} tracking-tighter w-full h-full bg-violet-300 text-white font-semibold absolute z-10 flex justify-center items-center circlepath`}
+            href="/about"
+         
           >
-              <Magnetics> <div>  <a href="/about"  className={`${textclass} `}> Zobacz więcej </a> </div>  </Magnetics>
-          </div>
-        
+          <Magnetics>
+            Zobacz więcej
+            </Magnetics>
+          </a>
+
           <Image
             src={img}
-            alt="circle image"
-            width={1000}
-            height={1000}
-            className="object-cover opacity-100  w-full h-full"
+            alt="circle"
+            width={800}
+            height={800}
             unoptimized
+            className="object-cover w-full h-full"
           />
         </div>
       </div>
