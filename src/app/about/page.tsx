@@ -70,7 +70,9 @@ export default function Home() {
       </div>
       <div className="w-full h-[50vh] flex flex-col justify-center items-center">
         <div>
-          (Artlajk's)
+          <div>
+          
+          </div>
           <div className="w-[50vw] text-[24px]">
             The main idea of these buttons is that they are magnetic and follow
             the mouse pointer. Along with that, there’s lots of room to play
