@@ -39,8 +39,8 @@ const Navbar = () => {
         <div className="font-bold ml-4 text-white bg-violet-300 p-2 rounded-lg skew-x-[-7deg]">Malownia</div>
         <div className="font-bold ml-4 text-white  p-2 rounded-lg">By Artlajk</div>
         <div className="nav-elements hidden md:flex gap-4">
-          <a href="#malownia"><Option>Malownia</Option></a>
-          <a href="#Prowadząca"><Option>Prowadząca</Option></a>
+          <a href="/"><Option>Malownia</Option></a>
+          <a href="/about"><Option>Prowadząca</Option></a>
           <a href="#warsztaty"><Option>Warsztaty</Option></a>
           <a href="#kontakt"><Option>Kontakt</Option></a>
         </div>
@@ -60,7 +60,7 @@ const Navbar = () => {
         <button className="absolute top-6 right-6 " onClick={() => setMenuOpen(false)}>
           ✖
         </button>
-        <a href="#malownia" className="text-2xl my-2 text-black " onClick={() => setMenuOpen(false)}>Malownia</a>
+        <a href="#Malownia" className="text-2xl my-2 text-black " onClick={() => setMenuOpen(false)}>Malownia</a>
         <a href="#Prowadząca" className="text-2xl my-2 text-black " onClick={() => setMenuOpen(false)}>Prowadząca</a>
         <a href="#warsztaty" className="text-2xl my-2 text-black " onClick={() => setMenuOpen(false)}>Warsztaty</a>
         <a href="#kontakt" className="text-2xl my-2 mb-[10vh] text-black " onClick={() => setMenuOpen(false)}>Kontakt</a>
