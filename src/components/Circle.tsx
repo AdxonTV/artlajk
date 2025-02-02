@@ -100,7 +100,7 @@ const Circle: React.FC<Props> = ({ img, imgid, className, textclass, id }) => {
             alt="circle image"
             width={1000}
             height={1000}
-            className="object-cover opacity-100 scale-[1.2] w-full h-full"
+            className="object-cover opacity-100  w-full h-full"
             unoptimized
           />
         </div>

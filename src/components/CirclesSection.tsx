@@ -12,26 +12,27 @@ const CirclesSection = () => {
   const container = useRef<HTMLDivElement>(null);
   const circles = [
     { id: "#circle1", imgid: "#circleimg1", endTranslateY: -240 },
-    { id: "#circle2", imgid: "#circleimg2", endTranslateY: -200 },
-    { id: "#circle3", imgid: "#circleimg3", endTranslateY: -350 },
+    { id: "#circle2", imgid: "#circleimg2", endTranslateY: -400 },
+    { id: "#circle3", imgid: "#circleimg3", endTranslateY: -280 },
     { id: "#circle4", imgid: "#circleimg4", endTranslateY: -100 },
     { id: "#circle5", imgid: "#circleimg5", endTranslateY: -120 },
   ];
 
   useEffect(() => {
-    circles.forEach((circle) => {
-      ScrollTrigger.create({
-        trigger: container.current,
-        start: "top bottom",
-        end: "bottom top",
-        scrub: 1,
-        onUpdate: (self) => {
+    const trigger = ScrollTrigger.create({
+      trigger: container.current,
+      start: "top bottom",
+      end: "bottom top",
+      scrub: 1,
+      onUpdate: (self) => {
+        circles.forEach((circle) => {
           gsap.set(circle.id, {
             y: `${circle.endTranslateY * self.progress}px`,
           });
-        },
-      });
+        });
+      },
     });
+    return () => trigger.kill();
   }, []);
 
   return (
@@ -79,6 +80,7 @@ const CirclesSection = () => {
                 imgid="#circleimg2"
                 img="/img/carusel_2.jpeg"
                 id="circle2"
+                       textclass="text-[30px]"
               />
               <Circle
                 className="w-[20vw] drop-shadow-xl hidden md:block h-[20vw]"
@@ -95,13 +97,13 @@ const CirclesSection = () => {
                 textclass="text-[50px]"
               />
             </div>
-          </ComponentAppear>
-          <ComponentAppear>
-            <div className="w-full md:w-[33vw] mb-[15vh]  md:hidden  leading-[110%] tracking-tight  text-center text-[24px]">
-              `&ldquo; W naszej pracowni tworzymy atmosferę wzajemnego wsparcia,
-              otwartości i inspiracji, gdzie każdy czuje się swobodnie, by
-              rozwijać swoje zainteresowania. &ldquo;
-            </div>
+            <ComponentAppear>
+              <div className="w-full md:w-[33vw] mb-[15vh]  md:hidden  leading-[110%] tracking-tight  text-center text-[24px]">
+                “W naszej pracowni tworzymy atmosferę wzajemnego wsparcia,
+                otwartości i inspiracji, gdzie każdy czuje się swobodnie, by
+                rozwijać swoje zainteresowania.”
+              </div>
+            </ComponentAppear>
           </ComponentAppear>
         </div>
       </div>
