@@ -42,12 +42,12 @@ export default function Home() {
         end: "bottom top",
         scrub: true,
       },
- 
+
       y: "-10vh",
     });
   }, []);
   return (
-    <div className="overflow-x-hidden w-full  flex flex-col items-center justify-center">
+    <div className="overflow-x-hidden w-full text-black  flex flex-col items-center justify-center">
       <Navbar className="text-black" truth="true" />
       <div className="flex w-[96vw]">
         <div>
@@ -91,46 +91,87 @@ export default function Home() {
           ></Image>
         </div>
       </div>
-      <div >
-        <div className="w-[96vw] bg-[#445885] flex justify-center items-center h-[120vh] mt-[10vh]">
-          <div className="w-[40vw] h-[90vh]">
+  
+      <div>
+        <div className="w-[96vw] bg-[#445885] flex justify-center items-center h-[80vh] mt-[10vh]">
+          <div className="w-[30vw] h-[65vh]">
             <Image
-            src="/img/Praca3.jpg"
-            className="object-cover  h-full w-full"
-            height={1900}
-            alt="dd"
-            width={1900}
+              src="/img/Praca3.jpg"
+              className="object-cover  h-full w-full"
+              height={1900}
+              alt="dd"
+              width={1900}
             ></Image>
-            </div>
+          </div>
         </div>
+        <div className="flex items-start mt-[2vh] justify-between">
+          <div className="text-[2vw]">Tytuł Pracy</div>{" "}
+          <div className="text-[1vw] opacity-50">
+            {" "}
+            <div>Wymiary 20cm x 20cm</div>
+            <div className="w-[25vw]">
+              oglądałem to ale chociaż opacity od 0-100 bym dał na switchu paga
+              zobaczyc jak to wygląda
+            </div>
+          </div>{" "}
+          <div className="text-[1vw] ">(2012)</div>
+        </div>
+        
       </div>
       <div>
-        <div className="w-[96vw] bg-[#a4d3e9] flex justify-center items-center h-[120vh] mt-[10vh]">
-          <div className="w-[40vw] h-[90vh]">
+        <div className="w-[96vw] bg-[#a4d3e9] flex justify-center items-center h-[80vh] mt-[10vh]">
+          <div className="w-[30vw] h-[70vh]">
             <Image
-            src="/img/Praca5.jpg"
-            className="object-cover h-full w-full"
-            height={1900}
-            alt="dd"
-            width={1900}
+              src="/img/Praca5.jpg"
+              className="object-cover h-full w-full"
+              height={1900}
+              alt="dd"
+              width={1900}
             ></Image>
+          </div>
+        </div>
+        <div className="flex items-start mt-[2vh] justify-between">
+          <div className="text-[2vw]">Tytuł Pracy</div>{" "}
+          <div className="text-[1vw] opacity-50">
+            {" "}
+            <div>Wymiary 20cm x 20cm</div>
+            <div className="w-[25vw]">
+              oglądałem to ale chociaż opacity od 0-100 bym dał na switchu paga
+              zobaczyc jak to wygląda
             </div>
+          </div>{" "}
+          <div className="text-[1vw] ">(2012)</div>
+        </div>
+        
+      </div>
+      <div>
+        <div className="w-[96vw] bg-[#b561e2] flex justify-center items-center h-[80vh] mt-[10vh]">
+          <div className="w-[40vw] h-[50vh] ">
+            <Image
+              src="/img/Praca4.jpg"
+              className="object-cover h-full w-full"
+              height={1900}
+              alt="dd"
+              width={1900}
+            ></Image>
+          </div>
+        </div>
+        <div className="flex items-start mt-[2vh] justify-between">
+          <div className="text-[2vw]">Tytuł Pracy</div>{" "}
+          <div className="text-[1vw] opacity-50">
+            {" "}
+         
+            <div className="w-[25vw]">
+              oglądałem to ale chociaż opacity od 0-100 bym dał na switchu paga
+              zobaczyc jak to wygląda
+            </div>
+          </div>{" "}
+          <div className="text-[1vw] ">(2012)</div>
         </div>
       </div>
-      <div >
-        <div className="w-[96vw] bg-[#b561e2] flex justify-center items-center h-[120vh] mt-[10vh]">
-          <div className="w-[70vw] h-[90vh] ">
-            <Image
-            src="/img/Praca4.jpg"
-            className="object-cover h-full w-full"
-            height={1900}
-            alt="dd"
-            width={1900}
-            ></Image>
-            </div>
-        </div>
+      <div className="mt-[50vh]">
+        <Contact></Contact>
       </div>
-      <Contact></Contact>
     </div>
   );
 }
