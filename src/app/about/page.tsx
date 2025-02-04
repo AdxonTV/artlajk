@@ -7,6 +7,7 @@ import Navbar from "@/components/Navbar";
 import { gsap } from "gsap";
 import Contact from "@/components/Contact";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import ComponentAppear from "@/components/ComponentAppear";
 gsap.registerPlugin(ScrollTrigger);
 export default function Home() {
   useEffect(() => {
@@ -49,25 +50,26 @@ export default function Home() {
   return (
     <div className="overflow-x-hidden w-full text-black  flex flex-col items-center justify-center">
       <Navbar className="text-black" truth="true" />
+
       <div className="flex w-[96vw]">
         <div>
-          <div className="w-[96vw] h-[100vh] flex justify-center items-center">
+          <div className="w-[96vw] h-[95vh] flex justify-center items-center">
             <ReusablePage />
           </div>
         </div>
       </div>
-      <div className="w-[96vw] mt-[5vh] h-[100vh] overflow-hidden flex justify-center items-center">
+      <div className="w-[96vw] mt-[5vh] rounded-xl h-[100vh] overflow-hidden flex justify-center items-center">
         <div className="w-[96vw] h-[120vh] mt-[10vh]">
           <Image
             src="/img/Praca2.jpg"
-            className="object-cover imgparalaxa  h-full w-full"
+            className="object-cover rounded-xl imgparalaxa  h-full w-full"
             height={1900}
             alt="dd"
             width={1900}
           ></Image>
         </div>
       </div>
-      <div className="w-full h-[50vh] flex flex-col justify-center items-center">
+      <div className="w-full h-[50vh]  flex flex-col justify-center items-center">
         <div>
           <div>(Artlajks)</div>
           <div className="w-[50vw] text-[24px]">
@@ -80,24 +82,14 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="w-[96vw] mt-[5vh] h-[100vh] overflow-hidden flex justify-center items-center">
-        <div className="w-[96vw] h-[120vh] mt-[10vh]">
-          <Image
-            src="/img/Praca1.jpg"
-            className="object-cover imgparalaxa  h-full w-full"
-            height={1900}
-            alt="dd"
-            width={1900}
-          ></Image>
-        </div>
-      </div>
+      
   
       <div>
-        <div className="w-[96vw] bg-[#445885] flex justify-center items-center h-[80vh] mt-[10vh]">
-          <div className="w-[30vw] h-[65vh]">
+        <div className="w-[96vw] bg-[#445885] rounded-xl flex justify-center items-center h-[80vh] mt-[10vh]">
+          <div className="w-[30vw]  h-[65vh]">
             <Image
               src="/img/Praca3.jpg"
-              className="object-cover  h-full w-full"
+              className="object-cover rounded-xl  h-full w-full"
               height={1900}
               alt="dd"
               width={1900}
@@ -119,11 +111,11 @@ export default function Home() {
         
       </div>
       <div>
-        <div className="w-[96vw] bg-[#a4d3e9] flex justify-center items-center h-[80vh] mt-[10vh]">
+        <div className="w-[96vw] bg-[#a4d3e9] rounded-xl flex justify-center items-center h-[80vh] mt-[10vh]">
           <div className="w-[30vw] h-[70vh]">
             <Image
               src="/img/Praca5.jpg"
-              className="object-cover h-full w-full"
+              className="object-cover rounded-xl h-full w-full"
               height={1900}
               alt="dd"
               width={1900}
@@ -145,11 +137,11 @@ export default function Home() {
         
       </div>
       <div>
-        <div className="w-[96vw] bg-[#b561e2] flex justify-center items-center h-[80vh] mt-[10vh]">
+        <div className="w-[96vw] bg-[#b561e2] rounded-xl flex justify-center items-center h-[80vh] mt-[10vh]">
           <div className="w-[40vw] h-[50vh] ">
             <Image
               src="/img/Praca4.jpg"
-              className="object-cover h-full w-full"
+              className="object-cover rounded-xl h-full w-full"
               height={1900}
               alt="dd"
               width={1900}
@@ -169,7 +161,7 @@ export default function Home() {
           <div className="text-[1vw] ">(2012)</div>
         </div>
       </div>
-      <div className="mt-[50vh]">
+      <div className="mt-[30vh]">
         <Contact></Contact>
       </div>
     </div>
