@@ -7,7 +7,7 @@ import Navbar from "@/components/Navbar";
 import { gsap } from "gsap";
 import Contact from "@/components/Contact";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import ComponentAppear from "@/components/ComponentAppear";
+
 gsap.registerPlugin(ScrollTrigger);
 export default function Home() {
   useEffect(() => {
