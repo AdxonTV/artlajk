@@ -5,7 +5,7 @@ import Lenis from "lenis";
 import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import { gsap } from "gsap";
-
+import Contact from "@/components/Contact";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 export default function Home() {
@@ -80,10 +80,57 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="h-[100vh] bg-violet-300 w-full">
- 
+      <div className="w-[96vw] mt-[5vh] h-[100vh] overflow-hidden flex justify-center items-center">
+        <div className="w-[96vw] h-[120vh] mt-[10vh]">
+          <Image
+            src="/img/Praca1.jpg"
+            className="object-cover imgparalaxa  h-full w-full"
+            height={1900}
+            alt="dd"
+            width={1900}
+          ></Image>
+        </div>
       </div>
-     
+      <div >
+        <div className="w-[96vw] bg-[#445885] flex justify-center items-center h-[120vh] mt-[10vh]">
+          <div className="w-[40vw] h-[90vh]">
+            <Image
+            src="/img/Praca3.jpg"
+            className="object-cover  h-full w-full"
+            height={1900}
+            alt="dd"
+            width={1900}
+            ></Image>
+            </div>
+        </div>
+      </div>
+      <div>
+        <div className="w-[96vw] bg-[#a4d3e9] flex justify-center items-center h-[120vh] mt-[10vh]">
+          <div className="w-[40vw] h-[90vh]">
+            <Image
+            src="/img/Praca5.jpg"
+            className="object-cover h-full w-full"
+            height={1900}
+            alt="dd"
+            width={1900}
+            ></Image>
+            </div>
+        </div>
+      </div>
+      <div >
+        <div className="w-[96vw] bg-[#b561e2] flex justify-center items-center h-[120vh] mt-[10vh]">
+          <div className="w-[70vw] h-[90vh] ">
+            <Image
+            src="/img/Praca4.jpg"
+            className="object-cover h-full w-full"
+            height={1900}
+            alt="dd"
+            width={1900}
+            ></Image>
+            </div>
+        </div>
+      </div>
+      <Contact></Contact>
     </div>
   );
 }
