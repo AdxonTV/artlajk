@@ -1,9 +1,9 @@
-import React, { useEffect } from "react";
+
 import Image from "next/image";
 import gsap from "gsap";
 
 import ScrollTrigger from "gsap/ScrollTrigger";
-import StoryTiltExp from "./StoryTiltExp";
+
 import SsAuto from "@/components/SsAuto";
 import StoryTilt from "@/components/StoryTilt";
 gsap.registerPlugin(ScrollTrigger);
