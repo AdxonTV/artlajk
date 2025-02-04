@@ -143,7 +143,7 @@ const MalowniaHeader = () => {
         </div>
       </div>
       <div className="xl:top-[-30vh] md:right-[-19vw] opacity-40 xl:opacity-100 top-[-440px] z-[-20] absolute xl:right-[5vw] right-[-10vw]">
-        <Ss />
+        <Ss path="M19.4982 17.4986C1367.01 1453 893.504 -603 310 1184.5" value={6.5} />
       </div>
     </div>
   );

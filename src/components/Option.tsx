@@ -3,8 +3,10 @@ import React, { useRef } from "react";
 import gsap from "gsap";
 interface OptionProps {
   children: React.ReactNode;
+  className?: string;
+  shadow?: boolean;
 }
-const Option: React.FC<OptionProps> = ({ children }) => {
+const Option: React.FC<OptionProps> = ({ children, shadow, className }) => {
   const buttonRef = useRef<HTMLButtonElement>(null);
   const textRef = useRef<HTMLDivElement>(null);
 
@@ -37,8 +39,8 @@ const Option: React.FC<OptionProps> = ({ children }) => {
     text.split("").map((char, index) => (
       <span
         key={index}
-        className="char"
-        style={{ display: "inline-block", mixBlendMode: "difference" }}
+        className={`char ${className}`}
+        style={{ display: "inline-block" }}
       >
         {char}
       </span>
@@ -49,15 +51,18 @@ const Option: React.FC<OptionProps> = ({ children }) => {
       ref={buttonRef}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      className="relative overflow-hidden px-3 py-2 h-fit text-white text-lg rounded"
+      className="relative overflow-hidden px-3 py-2 h-fit  text-lg rounded"
     >
       <div
         ref={textRef}
-        className="relative  text-white"
-        style={{ textShadow: "0px 50px 0px rgba(255, 255, 255, 1)" }}
-        
+        className={` relative ${
+          shadow ? "text-shadow-white" : "text-shadow-black"
+        } `}
       >
-        {splitText(children as string)} <span    style={{ display: "inline-block", mixBlendMode: "difference" }}>,</span>
+        {splitText(children as string)}{" "}
+        <span className={`${className}`} style={{ display: "inline-block" }}>
+          ,
+        </span>
       </div>
     </button>
   );

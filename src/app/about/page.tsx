@@ -1,15 +1,14 @@
 "use client";
 import ReusablePage from "@/components/ReusablePage";
-import { useEffect} from "react";
+import { useEffect } from "react";
 import Lenis from "lenis";
 import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import { gsap } from "gsap";
+
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 export default function Home() {
-
-
   useEffect(() => {
     const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
@@ -43,12 +42,13 @@ export default function Home() {
         end: "bottom top",
         scrub: true,
       },
-      y: "-20vh",
+ 
+      y: "-10vh",
     });
   }, []);
   return (
     <div className="overflow-x-hidden w-full  flex flex-col items-center justify-center">
-      <Navbar></Navbar>
+      <Navbar className="text-black" truth="true" />
       <div className="flex w-[96vw]">
         <div>
           <div className="w-[96vw] h-[100vh] flex justify-center items-center">
@@ -57,7 +57,7 @@ export default function Home() {
         </div>
       </div>
       <div className="w-[96vw] mt-[5vh] h-[100vh] overflow-hidden flex justify-center items-center">
-        <div className="w-[96vw] h-[120vh] mt-[22vh]">
+        <div className="w-[96vw] h-[120vh] mt-[10vh]">
           <Image
             src="/img/Praca2.jpg"
             className="object-cover imgparalaxa  h-full w-full"
@@ -65,14 +65,11 @@ export default function Home() {
             alt="dd"
             width={1900}
           ></Image>
-          
         </div>
       </div>
       <div className="w-full h-[50vh] flex flex-col justify-center items-center">
         <div>
-          <div>
-          (Artlajks)
-          </div>
+          <div>(Artlajks)</div>
           <div className="w-[50vw] text-[24px]">
             The main idea of these buttons is that they are magnetic and follow
             the mouse pointer. Along with that, there’s lots of room to play
@@ -81,9 +78,12 @@ export default function Home() {
             line. The parallax effect created by moving the button’s elements
             differently, gives a nice twist to the animation.
           </div>
-        </div> 
-     </div>
-  
+        </div>
+      </div>
+      <div className="h-[100vh] bg-violet-300 w-full">
+ 
+      </div>
+     
     </div>
   );
 }

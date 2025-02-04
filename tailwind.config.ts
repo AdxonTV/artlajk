@@ -8,10 +8,15 @@ export default {
   ],
   theme: {
     extend: {
-      fontSize: {
-        "git": "20px",
-        "nav": "16px"
+      textShadow: {
+        white: "0px 50px 0px rgba(255, 255, 255, 1)",
+        black: "0px 50px 0px rgba(0, 0, 0, 1)",
       },
+      fontSize: {
+        git: "20px",
+        nav: "16px",
+      },
+
       colors: {
         black: "#1A0F2B",
         blue: {

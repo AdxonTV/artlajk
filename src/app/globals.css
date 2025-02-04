@@ -32,6 +32,13 @@ body {
   background-size: cover;
 }
 
+.text-shadow-white {
+  text-shadow: 0px 50px 0px rgba(255, 255, 255, 1);
+}
+
+.text-shadow-black {
+  text-shadow: 0px 50px 0px rgba(0, 0, 0, 1);
+}
 
 .clippathscroll{
   clip-path: polygon(0 0, 83% 0, 82% 100%, 0% 100%);
