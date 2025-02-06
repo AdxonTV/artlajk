@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import ScrollTrigger from "gsap/src/ScrollTrigger";
 import gsap from "gsap";
 
@@ -15,10 +15,14 @@ const photos = [
 gsap.registerPlugin(ScrollTrigger);
 
 const HorizontalScroll = () => {
+  const [height, setheight] = useState(false)
   const containersRef = useRef(null);
   const textSkew = useRef(null);
-  
+  const windowHeight = window.innerHeight;
   useEffect(() => {
+    if(windowHeight<=900){
+setheight(true)
+    }
     const cards = [
       { id: "#card-1", idimg: "#img-1",  endTranslateX: -2000, rotate: 45 },
       { id: "#card-2", endTranslateX: -1000, rotate: -30 },
@@ -88,7 +92,7 @@ if(isMobile){ScrollTrigger.normalizeScroll(true)}
 
   return (
     <div ref={containersRef}>
-      <div className="w-full m-0  flex items-start flex-col relative  md:mb-[-200px] h-[250dvh] overflow-hidden">
+      <div className={`${height ? "h-[310dvh]" : "h-[240dvh]"} w-full m-0  flex items-start flex-col relative  md:mb-[-200px] overflow-hidden`}>
         <section className="wrapper-404 h-[90dvh] w-[400vw]">
          
           <div>
