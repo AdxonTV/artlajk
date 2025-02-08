@@ -15,7 +15,7 @@ const WorkPresentation: React.FC<Props> = ({ img, desc, title, date }) => {
         className={`w-[96vw]  rounded-xl flex relative justify-center items-center h-[80vh] mt-[10vh]`}
       >
 
-          <div className="md:w-[40vw] w-full h-full md:h-[50vh] ">
+          <div className="md:w-[50vw] w-full h-full right-0 md:h-[60vh] ">
             <Image
               src={img}
               className="object-cover md:ml-[20vw] rounded-xl h-full w-full"
@@ -29,7 +29,7 @@ const WorkPresentation: React.FC<Props> = ({ img, desc, title, date }) => {
           </div>
 
       </div>
-
+ 
       <div className="flex items-start mt-[2vh] justify-between">
         <div className=" text-[5vw] md:text-[2vw] leading-[110%] w-[30vw]">
           {title} <span className="opacity-30">(Painting)</span>
