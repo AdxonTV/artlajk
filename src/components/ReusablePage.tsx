@@ -9,7 +9,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const ReusablePage = () => {
   return (
-    <div className=" overflow-hidden h-[100vh] ">
+    <div className=" overflow-hidden h-[100vh]  ">
       <div className="absolute  top-[-10vh] left-[10vw] w-full h-full">
         <SsAuto
           path="M6.08558 -153.12C6.08558 -153.12 1014.15 802.335 1567.36 638.536C1849.77 554.919 1520.04 245.404 1411.72 499.512L1100.5 1273.5"
@@ -26,15 +26,15 @@ const ReusablePage = () => {
         <div className="w-[96vw] mb-[10vh] flex items-center  h-[100vh] ">
           <div className="w-full absolute h-full"></div>
           <div className=" w-full  h-full  flex items-center justify-center">
-            <div className="flex flex-col items-center  z-[100] h-fit text-[7vw] mb-[10vh]   leading-[85%] tracking-tight">
+            <div className="flex flex-col items-end md:items-center  z-[100] h-fit md:text-[7vw] text-[15vw]  mb-[10vh]   leading-[85%] tracking-tight">
               <div className="text-[20px] tracking-tight  absolute leading-none">
                 Właścicielka <br />
                 Artlajk
               </div>
               <div>
-                <div className="flex  h-[30vh]  w-[40vw] relative items-end">
+                <div className="flex   h-[30vh]  w-[40vw] relative items-end">
                   <div>Elżbieta</div>
-                  <div className="w-[15vw]  rounded-xl h-[15vw] top-0 b-[10vh] absolute right-0 bottom-[-100%] overflow-hidden">
+                  <div className="md:w-[15vw] w-[40vw] h-[40vw] rounded-xl md:h-[15vw] top-0 b-[10vh] absolute right-0 bottom-[-100%] overflow-hidden">
                     <StoryTilt>
                       <Image
                         src="/img/Praca2.jpg"
@@ -47,7 +47,7 @@ const ReusablePage = () => {
                   </div>
                 </div>
                 <div>
-                  <span className="petit ml-[-1vw] text-[6.8vw] tracking-[-0.15em]">
+                  <span className="petit ml-[-1vw] text-[15vw] md:text-[6.8vw] tracking-[-0.15em]">
                     J
                   </span>
                   <span className="italic">akubowska</span>
@@ -55,7 +55,7 @@ const ReusablePage = () => {
               </div>
             </div>
           </div>
-          <div className=" absolute bottom-[2vh] justify-between leading-[110%] top  w-[100vw] text-[20px] flex tracking-[-1px] ">
+          <div className=" absolute bottom-[2vh] text-[3vw] justify-between leading-[110%] top  w-[100vw] md:text-[20px] flex tracking-[-1px] ">
             <div className="flex  gap-[10vw]">
               <div>
                 <div className="opacity-50 uppercase">doświadczenie</div>

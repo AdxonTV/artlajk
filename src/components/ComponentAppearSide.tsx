@@ -6,7 +6,7 @@ import { useEffect, useRef } from 'react'
 interface Props {
     children: React.ReactNode
 }
-const ComponentAppear:React.FC<Props> = ({children}) => {
+const ComponentAppearSide:React.FC<Props> = ({children}) => {
     const objRef = useRef<HTMLDivElement>(null)
 
     useEffect(()=>{
@@ -19,8 +19,8 @@ const ComponentAppear:React.FC<Props> = ({children}) => {
                
                 onEnter:()=>{
                     gsap.to(objRef.current, {
-                        opacity: 1,
-                        y: 0,
+                
+                        x: 0,
                         delay: 0.5,
                         duration: 0.5,
                         ease: "power2.out",
@@ -28,8 +28,8 @@ const ComponentAppear:React.FC<Props> = ({children}) => {
                 },
                 onLeaveBack:()=>{
                     gsap.to(objRef.current, {
-                        opacity: 0,
-                        y: 100,
+                      
+                        x: "100vw",
                         duration: 0.5,
                         ease: "power2.out",
                     })
@@ -43,10 +43,10 @@ const ComponentAppear:React.FC<Props> = ({children}) => {
         
     },[])
   return (
-    <div ref={objRef} className='translate-y-7 opacity-0 '>
+    <div ref={objRef} className='translate-x-[100%]  '>
         {children}
     </div>
   )
 }
 
-export default ComponentAppear
+export default ComponentAppearSide

@@ -92,7 +92,7 @@ if(isMobile){ScrollTrigger.normalizeScroll(true)}
 
   return (
     <div ref={containersRef}>
-      <div className={`${height ? "h-[310dvh]" : "h-[240dvh]"} w-full m-0  flex items-start flex-col relative  md:mb-[-200px] overflow-hidden`}>
+      <div className={`${height ? "h-[280dvh]" : "h-[240dvh]"} w-full m-0  flex items-start flex-col relative  md:mb-[-200px] overflow-hidden`}>
         <section className="wrapper-404 h-[90dvh] w-[400vw]">
          
           <div>
@@ -105,8 +105,8 @@ if(isMobile){ScrollTrigger.normalizeScroll(true)}
                   className="w-full h-full object-cover"
                   src={photo}
                   alt={photo}
-                  width={1000}
-                  height={1000}
+                  width={500}
+                  height={500}
                   id={`img-${index + 1}`}
                 />
               </div>

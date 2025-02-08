@@ -1,6 +1,7 @@
 "use client";
 import React, { useRef } from "react";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import Magnetics from "./Magnetics";
 import gsap from "gsap";
 
@@ -12,8 +13,9 @@ interface Props {
 }
 
 const Circle: React.FC<Props> = ({ img, className, textclass, id }) => {
+  const router = useRouter();
   const imageRef = useRef<HTMLDivElement>(null);
-  const clipRef = useRef<HTMLAnchorElement>(null);
+  const clipRef = useRef<HTMLButtonElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
 
   const handleMouseEnter = () => {
@@ -25,13 +27,11 @@ const Circle: React.FC<Props> = ({ img, className, textclass, id }) => {
     });
     gsap.to(containerRef.current, {
       scale: 1.05,
-
       duration: 0.7,
       ease: "power2.out",
     });
     gsap.to(clipRef.current, {
       clipPath: "circle(100% at 50% 50%)",
-
       duration: 0.7,
       ease: "power2.out",
     });
@@ -57,6 +57,11 @@ const Circle: React.FC<Props> = ({ img, className, textclass, id }) => {
     });
   };
 
+  const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+    router.push("/about");
+  };
+
   return (
     <div id={id}>
       <div
@@ -67,26 +72,23 @@ const Circle: React.FC<Props> = ({ img, className, textclass, id }) => {
       >
         <div
           ref={imageRef}
-          className="w-full h-full bg-slate-950 flex justify-center items-center "
+          className="w-full h-full bg-slate-950 flex justify-center items-center"
         >
-          
-          <a
+          <button
             ref={clipRef}
+            onClick={handleClick}
             className={`${textclass} tracking-tighter w-full h-full bg-violet-300 text-white font-semibold absolute z-10 flex justify-center items-center circlepath`}
-            href="/about"
-         
           >
-          <Magnetics>
-            Zobacz więcej
+            <Magnetics>
+              Zobacz więcej
             </Magnetics>
-          </a>
+          </button>
 
           <Image
             src={img}
             alt="circle"
             width={700}
             height={700}
-            
             className="object-cover w-full h-full"
           />
         </div>

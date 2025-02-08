@@ -124,23 +124,27 @@ border-radius: 40px;
   #card-1{
     top: 50%;
     left: 2%;
-  
+    scale: 0.8;
   }
   #card-2{
     top: 15%;
     left: 30%;
+    scale: 0.8;
   }
   #card-3{
     top: 60%;
     left: 40%;
+    scale: 0.8;
   }
   #card-4{
     top: 20%;
     left: 67%;
+    scale: 0.8;
   }
   #card-5{
     top: 40%;
-    left: 72%;
+    left: 100%;
+    scale: 0.8;
   }
   
 }
