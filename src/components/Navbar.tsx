@@ -20,6 +20,18 @@ const Navbar: React.FC<NavbarProps> = ({ className, truth }) => {
   const currentScrollY = useWindowScroll();
   const [isColor, setIsColor] = useState("");
   const [isTruth, setIsTruth] = useState(false);
+   const [isClient, setIsClient] = useState(false);
+
+    useEffect(() => {
+       setIsClient(true);
+     }, []);
+   
+     const handleClickMore = () => {
+      if (isClient) {
+        const router = require("next/router").useRouter();
+        router.push("/about");
+      }
+    };
 
   useEffect(() => {
     if (truth === "true") {
@@ -46,10 +58,7 @@ const Navbar: React.FC<NavbarProps> = ({ className, truth }) => {
   }, [currentScrollY]);
 
   // Utility function to scroll to top and close mobile menu if open
-  const handleLinkClick = () => {
-    window.scrollTo(0, 0);
-    setMenuOpen(false);
-  };
+
 
   return (
     <div
@@ -63,22 +72,22 @@ const Navbar: React.FC<NavbarProps> = ({ className, truth }) => {
         </div>
         <div className={`${className} font-bold ml-4 p-2 rounded-lg`}>By Artlajk</div>
         <div className="nav-elements hidden md:flex gap-4">
-          <Link href="/" onClick={handleLinkClick}>
+          <Link href="/" onClick={handleClickMore} scroll={true}>
             <Option shadow={isTruth ? false : isShadow} className={`${isTruth ? className : isColor}`}>
               Malownia
             </Option>
           </Link>
-          <Link href="/about" onClick={handleLinkClick}>
+          <Link href="/about" onClick={handleClickMore} scroll={true}>
             <Option shadow={isTruth ? false : isShadow} className={`${isTruth ? className : isColor}`}>
               Prowadząca
             </Option>
           </Link>
-          <Link href="/#warsztaty" onClick={handleLinkClick}>
+          <Link href="/rad" onClick={handleClickMore} scroll={true}>
             <Option shadow={isTruth ? false : isShadow} className={`${isTruth ? className : isColor}`}>
               Warsztaty
             </Option>
           </Link>
-          <Link href="/#kontakt" onClick={handleLinkClick}>
+          <Link href="/" onClick={handleClickMore} scroll={true}>
             <Option shadow={isTruth ? false : isShadow} className={`${isTruth ? className : isColor}`}>
               Kontakt
             </Option>
@@ -103,22 +112,22 @@ const Navbar: React.FC<NavbarProps> = ({ className, truth }) => {
         <button className="absolute top-6 right-6" onClick={() => setMenuOpen(false)}>
           ✖
         </button>
-        <Link href="/#Malownia" onClick={handleLinkClick}>
+        <Link href="/" onClick={handleClickMore} scroll={true}>
           <span className="text-2xl my-2 text-black">
             Malownia
           </span>
         </Link>
-        <Link href="/about" onClick={handleLinkClick}>
+        <Link href="/about" onClick={handleClickMore} scroll={true}>
           <span className="text-2xl my-2 text-black">
             Prowadząca
           </span>
         </Link>
-        <Link href="/#warsztaty" onClick={handleLinkClick}>
+        <Link href="/" onClick={handleClickMore} scroll={true}>
           <span className="text-2xl my-2 text-black">
             Warsztaty
           </span>
         </Link>
-        <Link href="/#kontakt" onClick={handleLinkClick}>
+        <Link href="/" onClick={handleClickMore} scroll={true}>
           <span className="text-2xl my-2 mb-[10vh] text-black">
             Kontakt
           </span>

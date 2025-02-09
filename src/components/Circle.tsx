@@ -1,10 +1,9 @@
-"use client";
-import React, { useRef } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import Image from "next/image";
-
 import Magnetics from "./Magnetics";
 import gsap from "gsap";
 import Link from "next/link";
+
 interface Props {
   img: string;
   className: string;
@@ -13,10 +12,15 @@ interface Props {
 }
 
 const Circle: React.FC<Props> = ({ img, className, textclass, id }) => {
-
   const imageRef = useRef<HTMLDivElement>(null);
   const clipRef = useRef<HTMLButtonElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
+  const [isClient, setIsClient] = useState(false);
+
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
 
   const handleMouseEnter = () => {
     if (!imageRef.current || !clipRef.current || !containerRef.current) return;
@@ -57,41 +61,43 @@ const Circle: React.FC<Props> = ({ img, className, textclass, id }) => {
     });
   };
 
-  
+  const handleClickMore = () => {
+    if (isClient) {
+      const router = require("next/router").useRouter();
+      router.push("/about");
+    }
+  };
 
   return (
-    <Link href="/about">
-    <div id={id}>
-      <div
-        ref={containerRef}
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}
-        className={`${className} rounded-full md:mb-[2vh] overflow-hidden relative`}
-      >
+    <Link href="/about" onClick={handleClickMore} scroll={true}>
+      <div id={id}>
         <div
-          ref={imageRef}
-          className="w-full h-full bg-slate-950 flex justify-center items-center"
+          ref={containerRef}
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+          className={`${className} rounded-full md:mb-[2vh] overflow-hidden relative`}
         >
-          <button
-            ref={clipRef}
-        
-            className={`${textclass || ""} tracking-tighter w-full h-full bg-violet-300 text-white font-semibold absolute z-10 flex justify-center items-center circlepath`}
+          <div
+            ref={imageRef}
+            className="w-full h-full bg-slate-950 flex justify-center items-center"
           >
-            <Magnetics>
-              Zobacz więcej
-            </Magnetics>
-          </button>
+            <button
+              ref={clipRef}
+              className={`${textclass || ""} tracking-tighter w-full h-full bg-violet-300 text-white font-semibold absolute z-10 flex justify-center items-center circlepath`}
+            >
+              <Magnetics>Zobacz więcej</Magnetics>
+            </button>
 
-          <Image
-            src={img}
-            alt="circle"
-            width={700}
-            height={700}
-            className="object-cover w-full h-full"
-          />
+            <Image
+              src={img}
+              alt="circle"
+              width={700}
+              height={700}
+              className="object-cover w-full h-full"
+            />
+          </div>
         </div>
       </div>
-    </div>
     </Link>
   );
 };
