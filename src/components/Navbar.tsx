@@ -21,16 +21,14 @@ const Navbar: React.FC<NavbarProps> = ({ className, truth }) => {
   const [isTruth, setIsTruth] = useState(false);
 
   useEffect(() => {
-    if (typeof window !== "undefined") {
-      console.log("Window width:", window.innerWidth);
+    if (truth === "true") {
+      setIsTruth(true);
+    } else {
+      setIsTruth(false);
     }
-  }, []);
-
-  useEffect(() => {
-    setIsTruth(truth === "true");
     setLastScrollY(scrollY);
 
-    if (currentScrollY === 0) {
+    if (currentScrollY < 100) {
       setIsColor("text-white");
       setIsShadow(true);
       navContainerRef.current?.classList.remove("floating-nav");
@@ -44,23 +42,21 @@ const Navbar: React.FC<NavbarProps> = ({ className, truth }) => {
     } else {
       setIsVisible(true);
     }
-  }, [currentScrollY, truth, lastScrollY]);
+  }, [currentScrollY]);
 
   return (
     <div
       ref={navContainerRef}
-      className={`fixed w-full z-[10000] transition-all duration-500 ease-out 
-      ${isVisible ? "top-4" : "top-[-100px]"} flex justify-center text-white`}
+      className={`fixed w-full z-[10000] text-white flex justify-center transition-all duration-500 ease-out 
+      ${isVisible ? "top-4" : "top-[-100px]"}`}
     >
       <div className="flex items-center justify-between w-[95vw] px-4 py-3 bg-opacity-70 rounded-full transition-all duration-700 ease-out">
         <div className="font-bold ml-4 text-white bg-violet-300 p-2 rounded-lg skew-x-[-7deg]">
           Malownia
         </div>
-        <div className={`${className} font-bold ml-4 p-2 rounded-lg`}>
-          By Artlajk
-        </div>
+        <div className={`${className} font-bold ml-4 p-2 rounded-lg`}>By Artlajk</div>
         <div className="nav-elements hidden md:flex gap-4">
-          <a href="/about">
+          <a href="/">
             <Option shadow={isTruth ? false : isShadow} className={`${isTruth ? className : isColor}`}>
               Malownia
             </Option>
@@ -70,12 +66,12 @@ const Navbar: React.FC<NavbarProps> = ({ className, truth }) => {
               Prowadząca
             </Option>
           </a>
-          <a href="/about">
+          <a href="/#warsztaty">
             <Option shadow={isTruth ? false : isShadow} className={`${isTruth ? className : isColor}`}>
               Warsztaty
             </Option>
           </a>
-          <a href="/about">
+          <a href="/#kontakt">
             <Option shadow={isTruth ? false : isShadow} className={`${isTruth ? className : isColor}`}>
               Kontakt
             </Option>
@@ -100,22 +96,20 @@ const Navbar: React.FC<NavbarProps> = ({ className, truth }) => {
         <button className="absolute top-6 right-6" onClick={() => setMenuOpen(false)}>
           ✖
         </button>
-        <div className="text-2xl my-2 text-black">
-          <a href="/about" onClick={() => setMenuOpen(false)}>
-            Malownia
-          </a>
-          <a href="/about" onClick={() => setMenuOpen(false)}>
-            Prowadząca
-          </a>
-          <a href="/about" onClick={() => setMenuOpen(false)}>
-            Warsztaty
-          </a>
-          <a href="/about" onClick={() => setMenuOpen(false)}>
-            Kontakt
-          </a>
-        </div>
+        <a href="/#Malownia" className="text-2xl my-2 text-black" onClick={() => setMenuOpen(false)}>
+          Malownia
+        </a>
+        <a href="/about" className="text-2xl my-2 text-black" onClick={() => setMenuOpen(false)}>
+          Prowadząca
+        </a>
+        <a href="/#warsztaty" className="text-2xl my-2 text-black" onClick={() => setMenuOpen(false)}>
+          Warsztaty
+        </a>
+        <a href="/#kontakt" className="text-2xl my-2 mb-[10vh] text-black" onClick={() => setMenuOpen(false)}>
+          Kontakt
+        </a>
         <Btn id="nav-btn" title="Zapisz się" />
-      </div>
+      </div> 
     </div>
   );
 };

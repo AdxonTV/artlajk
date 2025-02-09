@@ -32,9 +32,9 @@ const ReusablePage = () => {
                 Artlajk
               </div>
               <div>
-                <div className="flex   h-[30vh]  w-[40vw] relative items-end">
-                  <div>Elżbieta</div>
-                  <div className="md:w-[15vw] w-[40vw] h-[40vw] rounded-xl md:h-[15vw] top-0 b-[10vh] absolute right-0 bottom-[-100%] overflow-hidden">
+                <div className="flex   h-[30vh]   w-[40vw] relative items-end">
+                  <div >Elżbieta</div>
+                  <div className="md:w-[15vw]  w-[40vw]  h-[35vw] rounded-xl md:h-[15vw] top-0 b-[10vh] absolute right-0 bottom-[-100%] overflow-hidden">
                     <StoryTilt>
                       <Image
                         src="/img/Praca2.jpg"

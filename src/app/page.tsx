@@ -41,7 +41,7 @@ export default function Home() {
 
   return (
     <div className="overflow-x-hidden">     
-       <Navbar className="text-black" truth="true"></Navbar>
+       <Navbar className="" truth="false"></Navbar>
  <Suspense fallback={<Loading />}>
 
       <Header />

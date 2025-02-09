@@ -66,7 +66,7 @@ const CirclesSection = () => {
           </div>
 
           <div className="mb-[100px] md:my-[5vh] gap-[4vw] h-fit flex mt-[4vw] md:gap-[3vh] md:mt-[3vh] flex-col-reverse">
-            <Btn title="Zobacz więcej" id="searcg" />
+            <Btn title="Zobacz więcej" id="searcg" link="/about" />
             <div className="uppercase md:w-[20vw]">
               W naszej pracowni tworzymy atmosferę wzajemnego wsparcia,
             </div>

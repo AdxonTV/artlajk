@@ -21,8 +21,8 @@ const ComponentAppearSide:React.FC<Props> = ({children}) => {
                     gsap.to(objRef.current, {
                 
                         x: 0,
-                        delay: 0.5,
-                        duration: 0.5,
+                        delay: 0.2,
+                        duration: 0.4,
                         ease: "power2.out",
                     })
                 },
@@ -30,7 +30,7 @@ const ComponentAppearSide:React.FC<Props> = ({children}) => {
                     gsap.to(objRef.current, {
                       
                         x: "100vw",
-                        duration: 0.5,
+                        duration: 0.4,
                         ease: "power2.out",
                     })
                 }

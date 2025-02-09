@@ -56,11 +56,12 @@ const Circle: React.FC<Props> = ({ img, className, textclass, id }) => {
       ease: "power2.out",
     });
   };
-
   const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
     router.push("/about");
+    window.scrollTo(0, 0);
   };
+  
 
   return (
     <div id={id}>
@@ -77,7 +78,7 @@ const Circle: React.FC<Props> = ({ img, className, textclass, id }) => {
           <button
             ref={clipRef}
             onClick={handleClick}
-            className={`${textclass} tracking-tighter w-full h-full bg-violet-300 text-white font-semibold absolute z-10 flex justify-center items-center circlepath`}
+            className={`${textclass || ""} tracking-tighter w-full h-full bg-violet-300 text-white font-semibold absolute z-10 flex justify-center items-center circlepath`}
           >
             <Magnetics>
               Zobacz więcej

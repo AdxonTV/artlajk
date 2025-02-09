@@ -53,7 +53,7 @@ export default function Home() {
     });
   }, []);
   return (
-    <div className="overflow-x-hidden w-[100vw] text-black  flex flex-col items-center justify-center">
+    <div className="overflow-x-hidden w-[100vw] text-black h-fit  flex flex-col items-center justify-center">
     <Navbar className="text-black" truth="true"></Navbar>
 
       <div className="flex w-[96vw]">

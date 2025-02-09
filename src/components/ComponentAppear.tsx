@@ -21,7 +21,7 @@ const ComponentAppear:React.FC<Props> = ({children}) => {
                     gsap.to(objRef.current, {
                         opacity: 1,
                         y: 0,
-                        delay: 0.5,
+                        delay: 0.4,
                         duration: 0.5,
                         ease: "power2.out",
                     })
