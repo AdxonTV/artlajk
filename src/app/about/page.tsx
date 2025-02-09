@@ -13,6 +13,8 @@ import ComponentAppear from "@/components/ComponentAppear";
 
 gsap.registerPlugin(ScrollTrigger);
 export default function Home() {
+
+  
   useEffect(() => {
     const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 

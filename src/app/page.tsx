@@ -11,7 +11,9 @@ import Malownia from "@/components/Malownia";
 export default function Home() {
   useEffect(() => {
     // const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-    
+    if (typeof window !== "undefined") {
+      // kod działający tylko po stronie klienta
+    }
     // if (!isMobile) {
       const lenis = new Lenis({
         duration: 1.2,
