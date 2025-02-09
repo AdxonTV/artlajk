@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useRef, useEffect } from "react";
 import Link from "next/link";
-
+import { usePathname } from "next/navigation";
 import Btn from "./Btn";
 import Option from "./Option";
 
@@ -21,8 +21,8 @@ const Navbar: React.FC<NavbarProps> = ({ className, truth }) => {
   const currentScrollY = useWindowScroll();
   const [isColor, setIsColor] = useState("");
   const [isTruth, setIsTruth] = useState(false);
- 
-
+  const pathname = usePathname();
+pathname
   useEffect(() => {
     if (typeof window !== "undefined") {
       console.log("Window width:", window.innerWidth);
