@@ -1,7 +1,7 @@
 "use client";
 import React, { useRef } from "react";
 import Image from "next/image";
-import { useRouter } from "next/navigation";
+
 import Magnetics from "./Magnetics";
 import gsap from "gsap";
 import Link from "next/link";
