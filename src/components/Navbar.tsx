@@ -1,8 +1,9 @@
 "use client";
 import React, { useState, useRef, useEffect } from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import Btn from "./Btn";
 import Option from "./Option";
-import Link from "next/link";
 
 import useWindowScroll from "@react-hook/window-scroll";
 
@@ -20,19 +21,16 @@ const Navbar: React.FC<NavbarProps> = ({ className, truth }) => {
   const currentScrollY = useWindowScroll();
   const [isColor, setIsColor] = useState("");
   const [isTruth, setIsTruth] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     if (typeof window !== "undefined") {
-      console.log(window.innerWidth);
+      console.log("Window width:", window.innerWidth);
     }
   }, []);
 
   useEffect(() => {
-    if (truth === "true") {
-      setIsTruth(true);
-    } else {
-      setIsTruth(false);
-    }
+    setIsTruth(truth === "true");
     setLastScrollY(scrollY);
 
     if (currentScrollY === 0) {
@@ -49,13 +47,13 @@ const Navbar: React.FC<NavbarProps> = ({ className, truth }) => {
     } else {
       setIsVisible(true);
     }
-  }, [currentScrollY]);
+  }, [currentScrollY, truth, lastScrollY]);
 
   return (
     <div
       ref={navContainerRef}
-      className={`fixed w-full z-[10000] text-white flex justify-center transition-all duration-500 ease-out 
-      ${isVisible ? "top-4" : "top-[-100px]"}`}
+      className={`fixed w-full z-[10000] transition-all duration-500 ease-out 
+      ${isVisible ? "top-4" : "top-[-100px]"} flex justify-center text-white`}
     >
       <div className="flex items-center justify-between w-[95vw] px-4 py-3 bg-opacity-70 rounded-full transition-all duration-700 ease-out">
         <div className="font-bold ml-4 text-white bg-violet-300 p-2 rounded-lg skew-x-[-7deg]">
@@ -65,35 +63,23 @@ const Navbar: React.FC<NavbarProps> = ({ className, truth }) => {
           By Artlajk
         </div>
         <div className="nav-elements hidden md:flex gap-4">
-          <Link href={"/about"}>
-            <Option
-              shadow={isTruth ? false : isShadow}
-              className={`${isTruth ? className : isColor}`}
-            >
+          <Link href="/about">
+            <Option shadow={isTruth ? false : isShadow} className={`${isTruth ? className : isColor}`}>
               Malownia
             </Option>
           </Link>
-          <Link href={"/about"}>
-            <Option
-              shadow={isTruth ? false : isShadow}
-              className={`${isTruth ? className : isColor}`}
-            >
+          <Link href="/about">
+            <Option shadow={isTruth ? false : isShadow} className={`${isTruth ? className : isColor}`}>
               Prowadząca
             </Option>
           </Link>
-          <Link href={"/about"}>
-            <Option
-              shadow={isTruth ? false : isShadow}
-              className={`${isTruth ? className : isColor}`}
-            >
+          <Link href="/about">
+            <Option shadow={isTruth ? false : isShadow} className={`${isTruth ? className : isColor}`}>
               Warsztaty
             </Option>
           </Link>
-          <Link href={"/about"}>
-            <Option
-              shadow={isTruth ? false : isShadow}
-              className={`${isTruth ? className : isColor}`}
-            >
+          <Link href="/about">
+            <Option shadow={isTruth ? false : isShadow} className={`${isTruth ? className : isColor}`}>
               Kontakt
             </Option>
           </Link>
@@ -102,9 +88,7 @@ const Navbar: React.FC<NavbarProps> = ({ className, truth }) => {
           <Btn id="nav-btn" title="Zapisz się" />
         </div>
         <div
-          className={`${
-            menuOpen && "text-black"
-          } z-[50] md:hidden cursor-pointer`}
+          className={`${menuOpen && "text-black"} z-[50] md:hidden cursor-pointer`}
           onClick={() => setMenuOpen(!menuOpen)}
         >
           {menuOpen ? "✖" : "☰"}
@@ -116,23 +100,20 @@ const Navbar: React.FC<NavbarProps> = ({ className, truth }) => {
         className={`fixed top-0 left-0 w-full h-full bg-white flex flex-col items-center justify-center transition-transform duration-500 
         ${menuOpen ? "translate-x-0" : "-translate-x-full"}`}
       >
-        <button
-          className="absolute top-6 right-6"
-          onClick={() => setMenuOpen(false)}
-        >
+        <button className="absolute top-6 right-6" onClick={() => setMenuOpen(false)}>
           ✖
         </button>
         <div className="text-2xl my-2 text-black">
-          <Link href={"/about"} onClick={() => setMenuOpen(false)}>
+          <Link href="/about" onClick={() => setMenuOpen(false)}>
             Malownia
           </Link>
-          <Link href={"/about"} onClick={() => setMenuOpen(false)}>
+          <Link href="/about" onClick={() => setMenuOpen(false)}>
             Prowadząca
           </Link>
-          <Link href={"/about"} onClick={() => setMenuOpen(false)}>
+          <Link href="/about" onClick={() => setMenuOpen(false)}>
             Warsztaty
           </Link>
-          <Link href={"/about"} onClick={() => setMenuOpen(false)}>
+          <Link href="/about" onClick={() => setMenuOpen(false)}>
             Kontakt
           </Link>
         </div>
