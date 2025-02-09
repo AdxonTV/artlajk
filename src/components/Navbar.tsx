@@ -1,7 +1,5 @@
 "use client";
 import React, { useState, useRef, useEffect } from "react";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
 import Btn from "./Btn";
 import Option from "./Option";
 
@@ -21,10 +19,7 @@ const Navbar: React.FC<NavbarProps> = ({ className, truth }) => {
   const currentScrollY = useWindowScroll();
   const [isColor, setIsColor] = useState("");
   const [isTruth, setIsTruth] = useState(false);
-  const pathname = usePathname();
-  if (pathname === "/about") {
-    console.log("User is on the About page.");
-  }
+
   useEffect(() => {
     if (typeof window !== "undefined") {
       console.log("Window width:", window.innerWidth);
@@ -65,26 +60,26 @@ const Navbar: React.FC<NavbarProps> = ({ className, truth }) => {
           By Artlajk
         </div>
         <div className="nav-elements hidden md:flex gap-4">
-          <Link href="/about">
+          <a href="/about">
             <Option shadow={isTruth ? false : isShadow} className={`${isTruth ? className : isColor}`}>
               Malownia
             </Option>
-          </Link>
-          <Link href="/about">
+          </a>
+          <a href="/about">
             <Option shadow={isTruth ? false : isShadow} className={`${isTruth ? className : isColor}`}>
               Prowadząca
             </Option>
-          </Link>
-          <Link href="/about">
+          </a>
+          <a href="/about">
             <Option shadow={isTruth ? false : isShadow} className={`${isTruth ? className : isColor}`}>
               Warsztaty
             </Option>
-          </Link>
-          <Link href="/about">
+          </a>
+          <a href="/about">
             <Option shadow={isTruth ? false : isShadow} className={`${isTruth ? className : isColor}`}>
               Kontakt
             </Option>
-          </Link>
+          </a>
         </div>
         <div className="nav-elements hidden md:flex">
           <Btn id="nav-btn" title="Zapisz się" />
@@ -106,18 +101,18 @@ const Navbar: React.FC<NavbarProps> = ({ className, truth }) => {
           ✖
         </button>
         <div className="text-2xl my-2 text-black">
-          <Link href="/about" onClick={() => setMenuOpen(false)}>
+          <a href="/about" onClick={() => setMenuOpen(false)}>
             Malownia
-          </Link>
-          <Link href="/about" onClick={() => setMenuOpen(false)}>
+          </a>
+          <a href="/about" onClick={() => setMenuOpen(false)}>
             Prowadząca
-          </Link>
-          <Link href="/about" onClick={() => setMenuOpen(false)}>
+          </a>
+          <a href="/about" onClick={() => setMenuOpen(false)}>
             Warsztaty
-          </Link>
-          <Link href="/about" onClick={() => setMenuOpen(false)}>
+          </a>
+          <a href="/about" onClick={() => setMenuOpen(false)}>
             Kontakt
-          </Link>
+          </a>
         </div>
         <Btn id="nav-btn" title="Zapisz się" />
       </div>
