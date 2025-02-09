@@ -64,13 +64,13 @@ const Navbar: React.FC<NavbarProps> = ({ className, truth }) => {
           <Link href="/">
             <Option shadow={isTruth ? false : isShadow} className={`${isTruth ? className : isColor}`}>Malownia</Option>
           </Link>
-          <Link href="/about">
+          <Link href="/">
             <Option shadow={isTruth ? false : isShadow} className={`${isTruth ? className : isColor}`}>Prowadząca</Option>
           </Link>
-          <Link href="#warsztaty">
+          <Link href="/">
             <Option shadow={isTruth ? false : isShadow} className={`${isTruth ? className : isColor}`}>Warsztaty</Option>
           </Link>
-          <Link href="#kontakt">
+          <Link href="/">
             <Option shadow={isTruth ? false : isShadow} className={`${isTruth ? className : isColor}`}>Kontakt</Option>
           </Link>
         </div>
@@ -93,16 +93,16 @@ const Navbar: React.FC<NavbarProps> = ({ className, truth }) => {
         <button className="absolute top-6 right-6" onClick={() => setMenuOpen(false)}>
           ✖
         </button>
-        <Link href="#Malownia" className="text-2xl my-2 text-black" onClick={() => setMenuOpen(false)}>
+        <Link href="/" className="text-2xl my-2 text-black" onClick={() => setMenuOpen(false)}>
           Malownia
         </Link>
-        <Link href="#Prowadząca" className="text-2xl my-2 text-black" onClick={() => setMenuOpen(false)}>
+        <Link href="/" className="text-2xl my-2 text-black" onClick={() => setMenuOpen(false)}>
           Prowadząca
         </Link>
-        <Link href="#warsztaty" className="text-2xl my-2 text-black" onClick={() => setMenuOpen(false)}>
+        <Link href="/" className="text-2xl my-2 text-black" onClick={() => setMenuOpen(false)}>
           Warsztaty
         </Link>
-        <Link href="#kontakt" className="text-2xl my-2 mb-[10vh] text-black" onClick={() => setMenuOpen(false)}>
+        <Link href="/" className="text-2xl my-2 mb-[10vh] text-black" onClick={() => setMenuOpen(false)}>
           Kontakt
         </Link>
         <Btn id="nav-btn" title="Zapisz się" />
