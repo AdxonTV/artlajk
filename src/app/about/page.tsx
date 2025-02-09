@@ -1,10 +1,11 @@
-"use client";
+  "use client";
 import ReusablePage from "@/components/ReusablePage";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import Lenis from "lenis";
 import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import { gsap } from "gsap";
+import { usePathname } from "next/navigation";
 
 import WorkPresentation from "@/components/WorkPresentation";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -14,7 +15,19 @@ import ComponentAppear from "@/components/ComponentAppear";
 gsap.registerPlugin(ScrollTrigger);
 export default function Home() {
 
-  
+   const container = useRef<HTMLDivElement>(null);
+
+ 
+
+   const pathname = usePathname()
+
+   useEffect(() => {
+     // Scroll to top on every route change
+     window.scrollTo(0, 0)
+     container.current?.scrollTo(0, 0)
+   }, [pathname])
+
+
   useEffect(() => {
     const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
@@ -53,7 +66,7 @@ export default function Home() {
     });
   }, []);
   return (
-    <div className="overflow-x-hidden w-[100vw] text-black h-fit  flex flex-col items-center justify-center">
+    <div ref={container} className="overflow-x-hidden relative w-[100vw] text-black h-fit  flex flex-col items-center justify-center">
     <Navbar className="text-black" truth="true"></Navbar>
 
       <div className="flex w-[96vw]">
