@@ -21,7 +21,7 @@ const Navbar: React.FC<NavbarProps> = ({ className, truth }) => {
   const currentScrollY = useWindowScroll();
   const [isColor, setIsColor] = useState("");
   const [isTruth, setIsTruth] = useState(false);
-  const pathname = usePathname();
+ 
 
   useEffect(() => {
     if (typeof window !== "undefined") {
