@@ -1,6 +1,6 @@
 "use client";
 import Contact from "@/components/Contact";
-import { useEffect, Suspense, useRef, useState, use } from "react";
+import { useEffect, Suspense, useRef, useState } from "react";
 import useLenisScroll from "@/components/Lenis";
 import Loading from "./loading";
 import Navbar from "@/components/Navbar";

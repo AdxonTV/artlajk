@@ -68,7 +68,7 @@ export default function About() {
     });
   }, []);
   return (
-    <div ref={container} className="overflow-x-hidden relative w-full text-black h-fit  flex flex-col items-center justify-center">
+    <div ref={scrollRef} className="overflow-x-hidden relative w-full text-black h-fit  flex flex-col items-center justify-center">
     <Navbar className="text-black" truth="true" ></Navbar>
 
       <div className="flex w-[96vw]">
