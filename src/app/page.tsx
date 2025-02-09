@@ -9,7 +9,7 @@ import Loading from "./loading";
 
 import CirclesSection from "@/components/CirclesSection";
 import Header from "@/components/header";
-import Malownia from "@/components/Malownia";
+
 
 export default function Home() {
   useEffect(() => {
