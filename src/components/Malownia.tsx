@@ -1,7 +1,7 @@
 
 import MalowniaHeader from "./MalowniaHeader";
 import MalowniaWorks from "./MalowniaWorks";
-
+import HorizontalScroll from "./HorizontalScroll";
 import About from "./About";
 
 const Malownia = () => {
@@ -11,7 +11,7 @@ const Malownia = () => {
     <div className="flex mt-[-7vh] md:gap-[100px] relative flex-col">
       <MalowniaHeader />
       <MalowniaWorks />
-
+      <HorizontalScroll />
       <About />
    
     </div>
