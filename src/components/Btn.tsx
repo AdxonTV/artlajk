@@ -8,9 +8,16 @@ interface face {
   title: string;
   rightIcon?: React.ReactNode;
 }
+
+
+
+
+const handleClick = ()=>{
+  window.scrollTo({top:0})
+}
 const Btn: React.FC<face> = ({ id, title, rightIcon, leftIcon, link }) => {
   return (
-    <Link href={link || ""}>
+    <Link href={link || ""} onClick={handleClick} scroll={true}>
       <button
         id={id}
         className="group border-4  border-violet-500 relative flex z-10 w-fit cursor-pointer overflow-hidden rounded-full bg-violet-700 border-[#8238f93d] duration-200 transition-all hover:bg-violet-50 px-7 py-3 text-black"
