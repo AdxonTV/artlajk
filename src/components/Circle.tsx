@@ -63,8 +63,7 @@ const Circle: React.FC<Props> = ({ img, className, textclass, id }) => {
 
   const handleClickMore = () => {
     if (isClient) {
-      const router = require("next/router").useRouter();
-      router.push("/about");
+      window.scrollTo({ top: 0 });
     }
   };
 
