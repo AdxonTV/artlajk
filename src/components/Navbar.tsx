@@ -28,8 +28,8 @@ const Navbar: React.FC<NavbarProps> = ({ className, truth }) => {
    
      const handleClickMore = () => {
       if (isClient) {
-        const router = require("next/router").useRouter();
-        router.push("/about");
+        window.scrollTo({ top: 0 });
+        setMenuOpen(false);
       }
     };
 
