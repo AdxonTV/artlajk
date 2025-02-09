@@ -1,7 +1,7 @@
 "use client";
 import Contact from "@/components/Contact";
-import { useEffect, Suspense,  useRef } from "react";
-import Lenis from "lenis";
+import { useEffect, Suspense, useRef, useState, use } from "react";
+import useLenisScroll from "@/components/Lenis";
 import Loading from "./loading";
 import Navbar from "@/components/Navbar";
 import { gsap } from "gsap";
@@ -9,52 +9,39 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import CirclesSection from "@/components/CirclesSection";
 import Header from "@/components/header";
 import Malownia from "@/components/Malownia";
-import { usePathname } from "next/navigation";
 
 gsap.registerPlugin(ScrollTrigger);
 export default function Home() {
-
- const container = useRef<HTMLDivElement>(null);
-
- const pathname = usePathname()
-
- useEffect(() => {
-   // Scroll to top on every route change
-   window.scrollTo(0, 0)
-   container.current?.scrollTo(0, 0)
- }, [pathname])
-  
-
+  const [isLoading, setIsLoading] = useState(true);
+  const scrollRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    // Lock the scroll and set initial properties when page is loading
+    document.body.style.overflow = "hidden";
+    document.body.style.cursor = "default";
+    window.scrollTo(0, 0);
 
-    // const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-    if (typeof window !== "undefined") {
-      // kod działający tylko po stronie klienta
-    }
-    // if (!isMobile) {
-    const lenis = new Lenis({
-      duration: 1.2,
-      easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-      orientation: "vertical",
-      gestureOrientation: "vertical",
-      smoothWheel: true,
-      touchMultiplier: 2,
-      infinite: false,
-    });
+    // Unlock after the loading time has completed (1200ms here)
+    const timeout = setTimeout(() => {
+      setIsLoading(false);
+      document.body.style.overflow = "auto";
+    }, 1000);
 
-    function raf(time: number) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
-    requestAnimationFrame(raf);
-    // }
+    // Ensure cleanup reverts the overflow so that subsequent page interactions are normal
+    return () => {
+      clearTimeout(timeout);
+      document.body.style.overflow = "auto"; // Fixed the assignment here
+    };
   }, []);
-  
+
+  useLenisScroll(isLoading);
 
   return (
-    <div ref={container} className="overflow-x-hidden relative top-0 h-[1000vh]">
-      <Navbar className="" truth="false"></Navbar>
+    <div
+      ref={scrollRef}
+      className="overflow-x-hidden relative top-0 h-[1000vh]"
+    >
+      <Navbar truth="false" />
       <Suspense fallback={<Loading />}>
         <Header />
         <div className="h-[20vh]"></div>
@@ -63,7 +50,7 @@ export default function Home() {
           <CirclesSection />
         </div>
         <section id="kontakt">
-          <Contact></Contact>
+          <Contact />
         </section>
       </Suspense>
     </div>

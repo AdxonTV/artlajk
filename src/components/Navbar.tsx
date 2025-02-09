@@ -1,9 +1,12 @@
+
+
+
 "use client";
 import React, { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import Btn from "./Btn";
 import Option from "./Option";
-import { usePathname } from "next/navigation";
+
 import useWindowScroll from "@react-hook/window-scroll";
 
 interface NavbarProps {
@@ -15,7 +18,6 @@ const Navbar: React.FC<NavbarProps> = ({ className, truth }) => {
   const [isShadow, setIsShadow] = useState(false);
   const navContainerRef = useRef<HTMLDivElement>(null);
   const [lastScrollY, setLastScrollY] = useState(0);
-  
   const [isVisible, setIsVisible] = useState(true);
   const [menuOpen, setMenuOpen] = useState(false);
   const currentScrollY = useWindowScroll();
@@ -23,13 +25,14 @@ const Navbar: React.FC<NavbarProps> = ({ className, truth }) => {
   const [isTruth, setIsTruth] = useState(false);
    const [isClient, setIsClient] = useState(false);
 
+    useEffect(() => {
+       setIsClient(true);
+     }, []);
    
      const handleClickMore = () => {
       if (isClient) {
-        
-  
-        scrollTo(0, 0);
-
+        window.scrollTo({ top: 0 });
+        setMenuOpen(false);
       }
     };
 
@@ -58,13 +61,6 @@ const Navbar: React.FC<NavbarProps> = ({ className, truth }) => {
   }, [currentScrollY]);
 
   // Utility function to scroll to top and close mobile menu if open
-  const pathname = usePathname()
-
-   useEffect(() => {
-     // Scroll to top on every route change
-     window.scrollTo(0, 0)
-    
-   }, [pathname])
 
 
   return (
@@ -79,12 +75,12 @@ const Navbar: React.FC<NavbarProps> = ({ className, truth }) => {
         </div>
         <div className={`${className} font-bold ml-4 p-2 rounded-lg`}>By Artlajk</div>
         <div className="nav-elements hidden md:flex gap-4">
-          <Link href="/" onClick={()=>handleClickMore()} scroll={true}>
+          <Link href="/" onClick={handleClickMore} scroll={true}>
             <Option shadow={isTruth ? false : isShadow} className={`${isTruth ? className : isColor}`}>
               Malownia
             </Option>
           </Link>
-          <Link href="/about" onClick={handleClickMore} scroll={true}> 
+          <Link href="/about" onClick={handleClickMore} scroll={true}>
             <Option shadow={isTruth ? false : isShadow} className={`${isTruth ? className : isColor}`}>
               Prowadząca
             </Option>

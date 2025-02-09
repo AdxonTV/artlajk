@@ -1,7 +1,7 @@
   "use client";
 import ReusablePage from "@/components/ReusablePage";
-import { useEffect, useRef } from "react";
-import Lenis from "lenis";
+import { useEffect, useRef, useState } from "react";
+import useLenisScroll from "@/components/Lenis";
 import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import { gsap } from "gsap";
@@ -13,7 +13,7 @@ import ComponentAppearSide from "@/components/ComponentAppearSide";
 import ComponentAppear from "@/components/ComponentAppear";
 
 gsap.registerPlugin(ScrollTrigger);
-export default function Home() {
+export default function About() {
 
    const container = useRef<HTMLDivElement>(null);
 
@@ -22,33 +22,35 @@ export default function Home() {
    const pathname = usePathname()
 
    useEffect(() => {
-     // Scroll to top on every route change
+
      window.scrollTo(0, 0)
      container.current?.scrollTo(0, 0)
    }, [pathname])
 
+   const [isLoading, setIsLoading] = useState(true);
+   const scrollRef = useRef<HTMLDivElement>(null);
+ 
+   useEffect(() => {
 
-  useEffect(() => {
-    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+     document.body.style.overflow = "hidden";
+     document.body.style.cursor = "default";
+     window.scrollTo(0, 0);
+ 
 
-    if (!isMobile) {
-      const lenis = new Lenis({
-        duration: 1.2,
-        easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-        orientation: "vertical",
-        gestureOrientation: "vertical",
-        smoothWheel: true,
-        touchMultiplier: 2,
-        infinite: false,
-      });
+     const timeout = setTimeout(() => {
+       setIsLoading(false);
+       document.body.style.overflow = "auto";
+     }, 1000);
+ 
+     return () => {
+       clearTimeout(timeout);
+       document.body.style.overflow = "auto"; 
 
-      function raf(time: number) {
-        lenis.raf(time);
-        requestAnimationFrame(raf);
-      }
-      requestAnimationFrame(raf);
-    }
-  }, []);
+     };
+   }, []);
+ 
+   useLenisScroll(isLoading);
+
   useEffect(() => {
     gsap.to(".imgparalaxa", {});
   });
@@ -66,8 +68,8 @@ export default function Home() {
     });
   }, []);
   return (
-    <div ref={container} className="overflow-x-hidden relative w-[100vw] text-black h-fit  flex flex-col items-center justify-center">
-    <Navbar className="text-black" truth="true"></Navbar>
+    <div ref={container} className="overflow-x-hidden relative w-full text-black h-fit  flex flex-col items-center justify-center">
+    <Navbar className="text-black" truth="true" ></Navbar>
 
       <div className="flex w-[96vw]">
         <div>
