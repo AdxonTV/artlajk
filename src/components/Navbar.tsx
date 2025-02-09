@@ -20,11 +20,13 @@ const Navbar: React.FC<NavbarProps> = ({ className, truth }) => {
   const currentScrollY = useWindowScroll();
   const [isColor, setIsColor] = useState("");
   const [isTruth, setIsTruth] = useState(false);
+
   useEffect(() => {
     if (typeof window !== "undefined") {
       console.log(window.innerWidth);
     }
   }, []);
+
   useEffect(() => {
     if (truth === "true") {
       setIsTruth(true);
@@ -63,7 +65,7 @@ const Navbar: React.FC<NavbarProps> = ({ className, truth }) => {
           By Artlajk
         </div>
         <div className="nav-elements hidden md:flex gap-4">
-          <Link href={"/"}>
+          <Link href={"/about"}>
             <Option
               shadow={isTruth ? false : isShadow}
               className={`${isTruth ? className : isColor}`}
@@ -71,7 +73,7 @@ const Navbar: React.FC<NavbarProps> = ({ className, truth }) => {
               Malownia
             </Option>
           </Link>
-          <Link href={"/"}>
+          <Link href={"/about"}>
             <Option
               shadow={isTruth ? false : isShadow}
               className={`${isTruth ? className : isColor}`}
@@ -79,7 +81,7 @@ const Navbar: React.FC<NavbarProps> = ({ className, truth }) => {
               Prowadząca
             </Option>
           </Link>
-          <Link href={"/"}>
+          <Link href={"/about"}>
             <Option
               shadow={isTruth ? false : isShadow}
               className={`${isTruth ? className : isColor}`}
@@ -87,7 +89,7 @@ const Navbar: React.FC<NavbarProps> = ({ className, truth }) => {
               Warsztaty
             </Option>
           </Link>
-          <Link href={"/"}>
+          <Link href={"/about"}>
             <Option
               shadow={isTruth ? false : isShadow}
               className={`${isTruth ? className : isColor}`}
@@ -121,16 +123,16 @@ const Navbar: React.FC<NavbarProps> = ({ className, truth }) => {
           ✖
         </button>
         <div className="text-2xl my-2 text-black">
-          <Link href={"/"} onClick={() => setMenuOpen(false)}>
+          <Link href={"/about"} onClick={() => setMenuOpen(false)}>
             Malownia
           </Link>
-          <Link href={"/"} onClick={() => setMenuOpen(false)}>
+          <Link href={"/about"} onClick={() => setMenuOpen(false)}>
             Prowadząca
           </Link>
-          <Link href={"/"} onClick={() => setMenuOpen(false)}>
+          <Link href={"/about"} onClick={() => setMenuOpen(false)}>
             Warsztaty
           </Link>
-          <Link href={"/"} onClick={() => setMenuOpen(false)}>
+          <Link href={"/about"} onClick={() => setMenuOpen(false)}>
             Kontakt
           </Link>
         </div>
