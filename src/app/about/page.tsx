@@ -3,7 +3,7 @@ import ReusablePage from "@/components/ReusablePage";
 import { useEffect } from "react";
 import Lenis from "lenis";
 import Image from "next/image";
-
+import Navbar from "@/components/Navbar";
 import { gsap } from "gsap";
 import Contact from "@/components/Contact";
 import WorkPresentation from "@/components/WorkPresentation";
@@ -54,7 +54,7 @@ export default function Home() {
   }, []);
   return (
     <div className="overflow-x-hidden w-[100vw] text-black  flex flex-col items-center justify-center">
-    
+    <Navbar className="text-black" truth="true"></Navbar>
 
       <div className="flex w-[96vw]">
         <div>

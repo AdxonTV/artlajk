@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-
+import { Suspense } from "react";
 interface Props {
   img: string;
   desc: string;
@@ -19,7 +19,7 @@ const WorkPresentation: React.FC<Props> = ({ img, desc, title, date }) => {
             <div className=" md:block hidden text-[15vw] w-fit tracking-tighter opacity-35 ">
               {date}.
               </div>
-              
+              <Suspense fallback={<div>loading...</div>}>
               <Image
               src={img}
               className="object-cover  rounded-xl h-full md:w-[48vw] w-full"
@@ -27,7 +27,7 @@ const WorkPresentation: React.FC<Props> = ({ img, desc, title, date }) => {
               alt="dd"
               width={1000}
               ></Image>
-           
+           </Suspense>
           </div>
 
       </div>

@@ -3,7 +3,7 @@ import Contact from "@/components/Contact";
 import { useEffect, Suspense} from "react";
 import Lenis from "lenis";
 import Loading from "./loading";
-
+import Navbar from "@/components/Navbar";
 
 
 
@@ -41,6 +41,7 @@ export default function Home() {
 
   return (
     <div className="overflow-x-hidden">     
+       <Navbar className="text-black" truth="true"></Navbar>
  <Suspense fallback={<Loading />}>
 
       <Header />
