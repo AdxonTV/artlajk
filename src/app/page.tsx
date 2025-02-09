@@ -9,7 +9,7 @@ import Loading from "./loading";
 
 import CirclesSection from "@/components/CirclesSection";
 import Header from "@/components/header";
-
+import Malownia from "@/components/Malownia";
 
 export default function Home() {
   useEffect(() => {
@@ -45,7 +45,7 @@ export default function Home() {
 
       <Header />
       <div className="h-[20vh]"></div>
-     
+      <Malownia />
       <div className="mt-[20vh]">
       <CirclesSection />
       </div>
