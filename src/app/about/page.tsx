@@ -131,7 +131,7 @@ export default function Home() {
       ></WorkPresentation>
          </ComponentAppearSide>
       <div className="mt-[30vh]">
-        <Contact></Contact>
+     
       </div>
     </div>
   );

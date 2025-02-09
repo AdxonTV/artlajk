@@ -8,7 +8,7 @@ import ContactFeature from "./ContactFeature";
 const Contact = () => {
   return (
     <div className="  ">
-      <div className="flex flex-col items-center justify-start mt-[-2vh] gap-[6vh] h-[90dvh]">
+      <div className="flex flex-col items-center justify-start mt-[-2vh] gap-[6vh] h-[80dvh]">
         <div className="md:mb-[-110px] z-[10] scale-[0.3] mb-[-100px] md:scale-[0.6]">
           <ComponentAppear>
           <Carrier />

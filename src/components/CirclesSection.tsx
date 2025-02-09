@@ -13,10 +13,10 @@ const CirclesSection = () => {
   const container = useRef<HTMLDivElement>(null);
   const circles = [
     { id: "#circle1", imgid: "#circleimg1", endTranslateY: -240 },
-    { id: "#circle2", imgid: "#circleimg2", endTranslateY: -400 },
+    { id: "#circle2", imgid: "#circleimg2", endTranslateY: -300 },
     { id: "#circle3", imgid: "#circleimg3", endTranslateY: -280 },
     { id: "#circle4", imgid: "#circleimg4", endTranslateY: -100 },
-    { id: "#circle5", imgid: "#circleimg5", endTranslateY: -120 },
+
   ];
 
   useEffect(() => {

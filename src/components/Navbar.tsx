@@ -19,12 +19,15 @@ const Navbar: React.FC<NavbarProps> = ({ className, truth }) => {
   const currentScrollY = useWindowScroll();
   const [isColor, setIsColor] = useState("");
   const [isTruth, setIsTruth] = useState(false);
+  const [path, setPath] = useState("")
 
   useEffect(() => {
     if (truth === "true") {
       setIsTruth(true);
+      setPath("about");
     } else {
       setIsTruth(false);
+      setPath("");
     }
     setLastScrollY(scrollY);
 
@@ -71,7 +74,7 @@ const Navbar: React.FC<NavbarProps> = ({ className, truth }) => {
               Warsztaty
             </Option>
           </a>
-          <a href="/#kontakt">
+          <a href={`${path}/#kontakt`}>
             <Option shadow={isTruth ? false : isShadow} className={`${isTruth ? className : isColor}`}>
               Kontakt
             </Option>
@@ -102,10 +105,10 @@ const Navbar: React.FC<NavbarProps> = ({ className, truth }) => {
         <a href="/about" className="text-2xl my-2 text-black" onClick={() => setMenuOpen(false)}>
           Prowadząca
         </a>
-        <a href="/#warsztaty" className="text-2xl my-2 text-black" onClick={() => setMenuOpen(false)}>
+        <a href="/" className="text-2xl my-2 text-black" onClick={() => setMenuOpen(false)}>
           Warsztaty
         </a>
-        <a href="/#kontakt" className="text-2xl my-2 mb-[10vh] text-black" onClick={() => setMenuOpen(false)}>
+        <a href={`/#kontakt`} className="text-2xl my-2 mb-[10vh] text-black" onClick={() => setMenuOpen(false)}>
           Kontakt
         </a>
         <Btn id="nav-btn" title="Zapisz się" />

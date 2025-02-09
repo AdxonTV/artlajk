@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 import Magnetics from "./Magnetics";
 import gsap from "gsap";
-
+import Link from "next/link";
 interface Props {
   img: string;
   className: string;
@@ -13,7 +13,7 @@ interface Props {
 }
 
 const Circle: React.FC<Props> = ({ img, className, textclass, id }) => {
-  const router = useRouter();
+
   const imageRef = useRef<HTMLDivElement>(null);
   const clipRef = useRef<HTMLButtonElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
@@ -56,14 +56,11 @@ const Circle: React.FC<Props> = ({ img, className, textclass, id }) => {
       ease: "power2.out",
     });
   };
-  const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
-    e.preventDefault();
-    router.push("/about");
-    window.scrollTo(0, 0);
-  };
+
   
 
   return (
+    <Link href="/about">
     <div id={id}>
       <div
         ref={containerRef}
@@ -77,7 +74,7 @@ const Circle: React.FC<Props> = ({ img, className, textclass, id }) => {
         >
           <button
             ref={clipRef}
-            onClick={handleClick}
+        
             className={`${textclass || ""} tracking-tighter w-full h-full bg-violet-300 text-white font-semibold absolute z-10 flex justify-center items-center circlepath`}
           >
             <Magnetics>
@@ -95,6 +92,7 @@ const Circle: React.FC<Props> = ({ img, className, textclass, id }) => {
         </div>
       </div>
     </div>
+    </Link>
   );
 };
 
