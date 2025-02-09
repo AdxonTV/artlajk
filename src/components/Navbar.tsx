@@ -22,7 +22,9 @@ const Navbar: React.FC<NavbarProps> = ({ className, truth }) => {
   const [isColor, setIsColor] = useState("");
   const [isTruth, setIsTruth] = useState(false);
   const pathname = usePathname();
-pathname
+  if (pathname === "/about") {
+    console.log("User is on the About page.");
+  }
   useEffect(() => {
     if (typeof window !== "undefined") {
       console.log("Window width:", window.innerWidth);
