@@ -12,20 +12,22 @@ const WorkPresentation: React.FC<Props> = ({ img, desc, title, date }) => {
     <div>
     
       <div
-        className={`w-[96vw]  rounded-xl flex relative justify-center items-center h-[80vh] mt-[10vh]`}
+        className={`w-[96vw] rounded-xl flex relative justify-between items-center h-[80vh] mt-[10vh]`}
       >
 
-          <div className="md:w-[50vw] w-full h-full right-0 md:h-[60vh] ">
-            <Image
+          <div className="w-full h-full justify-between flex items-center md:h-[60vh] ">
+            <div className=" md:block hidden text-[15vw] w-fit tracking-tighter opacity-35 ">
+              {date}.
+              </div>
+              
+              <Image
               src={img}
-              className="object-cover md:ml-[20vw] rounded-xl h-full w-full"
+              className="object-cover  rounded-xl h-full md:w-[48vw] w-full"
               height={1000}
               alt="dd"
               width={1000}
-            ></Image>
-            <div className=" md:block hidden absolute text-[15vw] w-fit tracking-tighter top-[20%] left-0   opacity-35 ">
-              {date}.
-            </div>
+              ></Image>
+           
           </div>
 
       </div>

@@ -62,7 +62,7 @@ const Navbar: React.FC<NavbarProps> = ({ className, truth }) => {
           <Link href="/">
             <Option  shadow={isTruth ? false : isShadow}className={`${isTruth ?  className: isColor }`}>Malownia</Option>
           </Link>
-          <Link href="/about">
+          <Link href="/about/">
             <Option shadow={isTruth ? false : isShadow} className={`${isTruth ?  className: isColor }`}>Prowadząca</Option>
           </Link>
           <a href="#warsztaty">
