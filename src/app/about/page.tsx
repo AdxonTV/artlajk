@@ -5,7 +5,7 @@ import Lenis from "lenis";
 import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import { gsap } from "gsap";
-import Contact from "@/components/Contact";
+
 import WorkPresentation from "@/components/WorkPresentation";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import ComponentAppearSide from "@/components/ComponentAppearSide";

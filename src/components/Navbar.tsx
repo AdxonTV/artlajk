@@ -1,5 +1,6 @@
 "use client";
 import React, { useState, useRef, useEffect } from "react";
+import Link from "next/link";
 import Btn from "./Btn";
 import Option from "./Option";
 
@@ -19,15 +20,15 @@ const Navbar: React.FC<NavbarProps> = ({ className, truth }) => {
   const currentScrollY = useWindowScroll();
   const [isColor, setIsColor] = useState("");
   const [isTruth, setIsTruth] = useState(false);
-  const [path, setPath] = useState("")
+ 
 
   useEffect(() => {
     if (truth === "true") {
       setIsTruth(true);
-      setPath("about");
+ 
     } else {
       setIsTruth(false);
-      setPath("");
+  
     }
     setLastScrollY(scrollY);
 
@@ -59,26 +60,26 @@ const Navbar: React.FC<NavbarProps> = ({ className, truth }) => {
         </div>
         <div className={`${className} font-bold ml-4 p-2 rounded-lg`}>By Artlajk</div>
         <div className="nav-elements hidden md:flex gap-4">
-          <a href="/">
+          <Link href="/">
             <Option shadow={isTruth ? false : isShadow} className={`${isTruth ? className : isColor}`}>
               Malownia
             </Option>
-          </a>
-          <a href="/about">
+          </Link>
+          <Link href="/about">
             <Option shadow={isTruth ? false : isShadow} className={`${isTruth ? className : isColor}`}>
               Prowadząca
             </Option>
-          </a>
-          <a href="/#warsztaty">
+          </Link>
+          <Link href="/#warsztaty">
             <Option shadow={isTruth ? false : isShadow} className={`${isTruth ? className : isColor}`}>
               Warsztaty
             </Option>
-          </a>
-          <a href={`${path}/#kontakt`}>
+          </Link>
+          <Link href={`/#kontakt`}>
             <Option shadow={isTruth ? false : isShadow} className={`${isTruth ? className : isColor}`}>
               Kontakt
             </Option>
-          </a>
+          </Link>
         </div>
         <div className="nav-elements hidden md:flex">
           <Btn id="nav-btn" title="Zapisz się" />
@@ -99,20 +100,28 @@ const Navbar: React.FC<NavbarProps> = ({ className, truth }) => {
         <button className="absolute top-6 right-6" onClick={() => setMenuOpen(false)}>
           ✖
         </button>
-        <a href="/#Malownia" className="text-2xl my-2 text-black" onClick={() => setMenuOpen(false)}>
-          Malownia
-        </a>
-        <a href="/about" className="text-2xl my-2 text-black" onClick={() => setMenuOpen(false)}>
-          Prowadząca
-        </a>
-        <a href="/" className="text-2xl my-2 text-black" onClick={() => setMenuOpen(false)}>
-          Warsztaty
-        </a>
-        <a href={`/#kontakt`} className="text-2xl my-2 mb-[10vh] text-black" onClick={() => setMenuOpen(false)}>
-          Kontakt
-        </a>
+        <Link href="/#Malownia">
+          <span className="text-2xl my-2 text-black" onClick={() => setMenuOpen(false)}>
+            Malownia
+          </span>
+        </Link>
+        <Link href="/about">
+          <span className="text-2xl my-2 text-black" onClick={() => setMenuOpen(false)}>
+            Prowadząca
+          </span>
+        </Link>
+        <Link href="/#warsztaty">
+          <span className="text-2xl my-2 text-black" onClick={() => setMenuOpen(false)}>
+            Warsztaty
+          </span>
+        </Link>
+        <Link href="/#kontakt">
+          <span className="text-2xl my-2 mb-[10vh] text-black" onClick={() => setMenuOpen(false)}>
+            Kontakt
+          </span>
+        </Link>
         <Btn id="nav-btn" title="Zapisz się" />
-      </div> 
+      </div>
     </div>
   );
 };
