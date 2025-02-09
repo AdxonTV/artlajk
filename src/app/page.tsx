@@ -1,8 +1,8 @@
 "use client";
 import Contact from "@/components/Contact";
-import { useEffect} from "react";
+import { useEffect, Suspense} from "react";
 import Lenis from "lenis";
-
+import Loading from "./loading";
 
 
 
@@ -41,18 +41,18 @@ export default function Home() {
 
   return (
     <div className="overflow-x-hidden">     
-
+ <Suspense fallback={<Loading />}>
 
       <Header />
       <div className="h-[20vh]"></div>
-      <Malownia />
+     
       <div className="mt-[20vh]">
       <CirclesSection />
       </div>
       <section id="kontakt">
       <Contact></Contact>
       </section>
-
+      </Suspense>
     </div>
   );
 }
