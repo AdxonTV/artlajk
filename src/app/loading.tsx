@@ -1,9 +1,27 @@
-import React from 'react'
+"use client"
+import React, { useState, useEffect } from "react";
+import SsAuto from "@/components/SsAuto";
 
 const Loading = () => {
-  return (
-    <div className='w-full h-full bg-black text-[1000px] text-white'>loading</div>
-  )
-}
+  const [visible, setVisible] = useState(true);
 
-export default Loading
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setVisible(false);
+    }, 10000); // 10 seconds
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (!visible) {
+    return null;
+  }
+
+  return (
+    <div className="w-full h-[100vh] text-black flex justify-center items-center text-[100px] opacity-30 ">
+      (...)
+    </div>
+  );
+};
+
+export default Loading;

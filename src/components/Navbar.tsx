@@ -90,7 +90,7 @@ const Navbar: React.FC<NavbarProps> = ({ className, truth }) => {
               Warsztaty
             </Option>
           </Link>
-          <Link href="/" onClick={handleClickMore} scroll={true}>
+          <Link href="#kontakt" onClick={handleClickMore} scroll={true}>
             <Option shadow={isTruth ? false : isShadow} className={`${isTruth ? className : isColor}`}>
               Kontakt
             </Option>

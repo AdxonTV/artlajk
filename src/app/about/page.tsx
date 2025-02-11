@@ -6,7 +6,7 @@ import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import { gsap } from "gsap";
 import { usePathname } from "next/navigation";
-
+import Contact from "@/components/Contact";
 import WorkPresentation from "@/components/WorkPresentation";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import ComponentAppearSide from "@/components/ComponentAppearSide";
@@ -148,6 +148,9 @@ export default function About() {
       <div className="mt-[30vh]">
      
       </div>
+      <section id="kontakt" >
+      <Contact></Contact>
+      </section>
     </div>
   );
 }
