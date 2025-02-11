@@ -11,36 +11,39 @@ import Header from "@/components/header";
 import Malownia from "@/components/Malownia";
 
 gsap.registerPlugin(ScrollTrigger);
+
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
+  const [isMobile, setIsMobile] = useState(false);
   const scrollRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    // Determine if it's a mobile device
+    setIsMobile(window.innerWidth < 768);
+
     // Lock the scroll and set initial properties when page is loading
-    document.body.style.overflow = "hidden";
     document.body.style.cursor = "default";
     window.scrollTo(0, 0);
 
-    // Unlock after the loading time has completed (1200ms here)
+    // Unlock after the loading time has completed (1000ms here)
     const timeout = setTimeout(() => {
       setIsLoading(false);
       document.body.style.overflow = "auto";
     }, 1000);
 
-    // Ensure cleanup reverts the overflow so that subsequent page interactions are normal
+    // Cleanup: revert styles to normal
     return () => {
       clearTimeout(timeout);
-      document.body.style.overflow = "auto"; // Fixed the assignment here
+      document.body.style.overflow = "auto";
+      document.body.style.overflowY = "default";
     };
   }, []);
 
-  useLenisScroll(isLoading);
+  // Apply Lenis scroll only if not mobile
+  useLenisScroll(isLoading && !isMobile);
 
   return (
-    <div
-      ref={scrollRef}
-      className="overflow-x-hidden relative top-0 h-[1000vh]"
-    >
+    <div ref={scrollRef} className="overflow-x-hidden relative top-0 h-fit">
       <Navbar truth="false" />
       <Suspense fallback={<Loading />}>
         <Header />

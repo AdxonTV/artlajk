@@ -11,7 +11,7 @@ const ContactFeature:React.FC<Props> = ({title, subtitle, title2, className}) =>
     <div className={className} >
         <div className='md:text-[16px] text-[10px]'>{subtitle}</div>
         <div className='md:text-[24px] text-[14px]'>{title}</div>
-        <div className='leading-[90%] md:text-[24px] text-[14px]'>{title2}</div>
+        <div className='leading-[90%] md:text-[24px] text-[14px] '>{title2}</div>
     </div>
   )
 }

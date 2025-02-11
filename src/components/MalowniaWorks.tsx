@@ -1,5 +1,6 @@
 import React from "react";
-
+import TextRev from "./TextRev";
+import ComponentAppear from "./ComponentAppear";
 
 
 const MalowniaWorks = () => {
@@ -8,14 +9,18 @@ const MalowniaWorks = () => {
       <div className="flex-col flex w-full md:flex-row   justify-center px-[2vw]">
         <div className="text-[13vw] md:text-[10vw] text-center mb-[5vh] md:text-left">
           {" "}
-          {/* <TextRev>{`O\u00A0nas`}</TextRev> */}
+       
         </div>
-        <div className="w-full md:w-[40vw] text-center mb-[20vh] text-[32px]">
+        <ComponentAppear >
+        <div className="w-full md:w-[40vw] text-[32px]  text-center mb-[20vh] ">
+   
           W naszej pracowni tworzymy atmosferę wzajemnego wsparcia, otwartości i
           inspiracji, gdzie każdy czuje się swobodnie, by rozwijać swoje
           zainteresowania.
-          <div>~Bottom</div>
+         
+          <div className="petit mt-[3vh] "> ~Bottom</div>
         </div>
+        </ComponentAppear>
       </div>
 
       {/* <ImgCarusel></ImgCarusel> */}
