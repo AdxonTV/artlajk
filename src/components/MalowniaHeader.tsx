@@ -99,7 +99,7 @@ const MalowniaHeader = () => {
         <div
           id="fix"
           ref={fixClassRef}
-          className="text-[20px] text-black  md:text-[32px] z-[10] md:text-left text-center leading-[115%] tracking-tight fixclass ml-[1vw] md:w-[40vw] w-[90vw]"
+          className="text-[20px] text-black h-fit  md:text-[32px] md:text-justify z-[10] text-center leading-[115%] tracking-tight fixclass ml-[1vw] md:w-[40vw] w-[90vw]"
         >
          W naszej pracowni tworzymy atmosferę wzajemnego wsparcia, otwartości i
           inspiracji, gdzie każdy czuje się swobodnie, by rozwijać swoje

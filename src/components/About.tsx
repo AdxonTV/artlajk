@@ -32,7 +32,7 @@ const About = () => {
           </div>
         </div>
         <Suspense fallback={<div>Loading...</div>}>
-          <div ref={containerRef} className="w-full opac md:flex justify-between">
+          <div ref={containerRef} className="w-full  md:flex justify-between">
             <div className="box-f">
               <AboutFeature
                 title="Od 9 do ∞ roku życia"
@@ -40,16 +40,16 @@ const About = () => {
                 desc="wspieramy rozwój artystyczny dzieci, młodzieży i dorosłych od 9. roku życia wzwyż."
               />
             </div>
-            <div className="flex flex-wrap">
-              <div>
-                <div className="box-f">
+            <div className="flex md:flex-nowrap flex-wrap ">
+              <div className="" >
+                <div >
                   <AboutFeature
                     title="Zajęcia raz w tygodniu"
                     icon={<LuCalendar />}
                     desc="Qudrix base set includes solid basement, aluminium full-frame and few options of walls and windows."
                   />
                 </div>
-                <div className="box-f ">
+                <div >
                   <AboutFeature
                     title="Płatność 150zł/msc"
                     icon={<MdAttachMoney />}
@@ -57,15 +57,15 @@ const About = () => {
                   />
                 </div>
               </div>
-              <div>
-                <div className="box-f">
+              <div className=" ">
+                <div >
                   <AboutFeature
                     title="Trwają 90 minut"
                     icon={<FaRegStar />}
                     desc="Świetną zabawę i rozwój pasji"
                   />
                 </div>
-                <div className="box-f">
+                <div >
                   <AboutFeature
                     title="Grupy na Zajęciach"
                     icon={<BiBrain />}

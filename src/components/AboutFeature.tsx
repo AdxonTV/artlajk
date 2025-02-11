@@ -9,8 +9,8 @@ interface AboutFeatureProps {
 const AboutFeature: React.FC<AboutFeatureProps> = ({ title, desc, icon }) => {
   return (
     <ComponentAppear>
-    <div className=" flex feature-item md:w-[25vw] w-[96vw] my-[20px]  items-start gap-6 bg-[#ffffff00] rounded-lg max-w-2xl">
-      <div className="w-16 h-16 flex items-center justify-center rounded-full border-[#0000001a] border-2 ">
+    <div className=" flex feature-item md:w-fit   my-[20px] md:max-w-[30vw]   h-[15vh] w-full m-2  items-start gap-6 bg-[#ffffff00] rounded-lg ">
+      <div className="w-[60px] h-[60px] flex items-center justify-center rounded-full border-[#0000001a] border-2 ">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="30"
@@ -26,11 +26,11 @@ const AboutFeature: React.FC<AboutFeatureProps> = ({ title, desc, icon }) => {
           {icon}
         </svg>
       </div>
-      <div className="space-y-2 w-[290px] md:w-[350px]">
-        <h2 className="md:text-[35px] text-[28px] mt-[13px] font-normal tracking-tight text-gray-900">
+      <div className="space-y-2 w-full md:w-[20vw]">
+        <h2 className="md:text-[20px] xl:text-[36px] text-[28px] mt-[13px] font-normal tracking-tight text-gray-900">
           {title}
         </h2>
-        <p className="text-sm text-gray-600 leading-tight max-w-lg  md:w-fit  tracking-wide">
+        <p className="text-sm text-gray-600 leading-tight  md:text-[11px]  xl:text-[16px]   md:max-w-[20vw]  tracking-wide">
           {desc}
         </p>
       </div>

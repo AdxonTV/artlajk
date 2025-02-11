@@ -12,7 +12,7 @@ const LazyCircle = React.lazy(() => import("./Circle"));
 const CirclesSection = () => {
   const container = useRef<HTMLDivElement>(null);
   const circles = [
-    { id: "#circle1", imgid: "#circleimg1", endTranslateY: -240 },
+    { id: "#circle1", imgid: "#circleimg1", endTranslateY: -140 },
     { id: "#circle2", imgid: "#circleimg2", endTranslateY: -300 },
     { id: "#circle3", imgid: "#circleimg3", endTranslateY: -280 },
     { id: "#circle4", imgid: "#circleimg4", endTranslateY: -100 },
@@ -56,23 +56,23 @@ const CirclesSection = () => {
                 </LazyTextRev>
               </Suspense>
             </div>
-            <ComponentAppear>
-              <div className="w-full md:w-[39vw] md:text-[32px] mt-[5vh] tracking-tight text-black text-right leading-[130%] md:block hidden text-[24px]">
+            {/* <ComponentAppear>
+              <div className="w-full md:w-[30vw] md:text-[32px] h-[20vh] mt-[5vh] tracking-tight  text-black text-right leading-[130%] md:block hidden text-[24px]">
                 W naszej pracowni tworzymy atmosferę wzajemnego wsparcia,
                 otwartości i inspiracji, gdzie każdy czuje się swobodnie, by
                 rozwijać swoje zainteresowania.
               </div>
-            </ComponentAppear>
+            </ComponentAppear> */}
           </div>
 
-          <div className="mb-[100px] md:my-[5vh] gap-[4vw] h-fit flex mt-[4vw] md:gap-[3vh] md:mt-[3vh] flex-col-reverse">
+          <div className="mb-[100px] md:my-[5vh] gap-[4vw]  h-fit flex mt-[4vw] md:gap-[3vh] md:mt-[3vh] flex-col-reverse">
             <Btn title="Zobacz więcej" id="searcg" link="/about" />
             <div className="uppercase md:w-[20vw]">
               W naszej pracowni tworzymy atmosferę wzajemnego wsparcia,
             </div>
           </div>
           <ComponentAppear>
-            <div className="flex md:flex-row md:flex-nowrap flex-wrap md:items-end md:h-fit h-full mt-[30px] items-end md:mt-[-150px] w-full justify-between">
+            <div className={`] flex md:flex-row md:flex-nowrap flex-wrap md:items-end md:h-fit h-full mt-[30px] items-end md:mt-[-10vh] lg:[-40vh] w-full justify-between`}>
               <Suspense fallback={<div>Loading circle...</div>}>
                 <LazyCircle
                   className="md:w-[19vw] w-[20vw] drop-shadow-xl h-[20vw] md:h-[19vw]"
