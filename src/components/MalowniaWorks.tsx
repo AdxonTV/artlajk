@@ -1,5 +1,5 @@
 import React from "react";
-import TextRev from "./TextRev";
+
 import ComponentAppear from "./ComponentAppear";
 
 

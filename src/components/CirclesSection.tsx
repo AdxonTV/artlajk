@@ -34,7 +34,7 @@ const CirclesSection = () => {
       },
     });
     return () => trigger.kill();
-  }, []);
+  }, [circles]);
 
   return (
     <div

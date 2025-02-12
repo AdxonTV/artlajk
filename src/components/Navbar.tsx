@@ -58,7 +58,7 @@ const Navbar: React.FC<NavbarProps> = ({ className, truth }) => {
     } else {
       setIsVisible(true);
     }
-  }, [currentScrollY]);
+  }, [currentScrollY, lastScrollY, truth]);
 
   // Utility function to scroll to top and close mobile menu if open
 
