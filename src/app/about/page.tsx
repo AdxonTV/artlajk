@@ -72,7 +72,7 @@
     return (
       <div
         ref={scrollRef}
-        className="overflow-x-hidden relative w-full text-black h-fit flex flex-col items-center justify-center"
+        className="overflow-x-hidden relative  w-full text-black h-fit flex flex-col items-center justify-center"
       >
         <Navbar className="text-black" truth="true" />
         <div className="flex w-[96vw]">

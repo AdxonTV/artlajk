@@ -8,7 +8,7 @@ const Malownia = () => {
  
 
   return (
-    <div className="flex mt-[-7vh] md:gap-[100px] relative flex-col">
+    <div className="flex mt-[-7vh]  md:gap-[100px] relative flex-col">
       <MalowniaHeader />
       <MalowniaWorks />
       <HorizontalScroll />
