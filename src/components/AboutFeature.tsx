@@ -30,7 +30,7 @@ const AboutFeature: React.FC<AboutFeatureProps> = ({ title, desc, icon }) => {
         <h2 className="md:text-[20px] xl:text-[36px] text-[28px] mt-[13px] font-normal tracking-tight text-gray-900">
           {title}
         </h2>
-        <p className="text-sm text-gray-600 leading-tight  md:text-[11px]  xl:text-[16px]   md:max-w-[18vw]  tracking-wide">
+        <p className="text-sm text-gray-600 leading-tight  md:text-[11px]  xl:text-[16px] h-fit w-[72vw]  md:w-[17vw]  tracking-wide">
           {desc}
         </p>
       </div>
