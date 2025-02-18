@@ -60,9 +60,7 @@ const Option: React.FC<OptionProps> = ({ children, shadow, className }) => {
         } `}
       >
         {splitText(children as string)}{" "}
-        <span className={`${className}`} style={{ display: "inline-block" }}>
-          ,
-        </span>
+      
       </div>
     </button>
   );

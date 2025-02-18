@@ -12,13 +12,13 @@ const MalowniaWorks = () => {
        
         </div>
         <ComponentAppear >
-        <div className="w-full md:w-[40vw] text-[32px]  text-center mb-[20vh] ">
+        <div className="w-full md:w-[40vw] md:text-[32px] text-[16px] leading-[120%]   text-center mb-[20vh] ">
    
-          W naszej pracowni tworzymy atmosferę wzajemnego wsparcia, otwartości i
+          W Naszej pracowni tworzymy atmosferę wzajemnego wsparcia, otwartości i
           inspiracji, gdzie każdy czuje się swobodnie, by rozwijać swoje
           zainteresowania.
          
-          <div className="petit mt-[3vh] "> ~Bottom</div>
+        
         </div>
         </ComponentAppear>
       </div>
