@@ -5,10 +5,11 @@ import { FaRegStar } from "react-icons/fa6";
 import { MdAttachMoney } from "react-icons/md";
 import { LuCalendar } from "react-icons/lu";
 import { MdOutlineChildFriendly } from "react-icons/md";
-import { BiBrain } from "react-icons/bi";
+
 import TextRev from "./TextRev";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import { gsap } from "gsap";
+import { BsPeople } from "react-icons/bs";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -69,9 +70,10 @@ const About = () => {
                 </div>
                 <div >
                   <AboutFeature
-                    title="Grupy na Zajęciach"
-                    icon={<BiBrain />}
-                    desc="Zajęcia podzielone są grupami set includes solid basement, aluminium full-frame and few options of walls and windows."
+                    title="Dziel pasję z innymi"
+                    icon={<BsPeople />}
+                    desc="Nierzadko w naszej pracowni tworzą się przyjaźnie, a uczestnicy w różnym wieku wymieniają się uwagami i doświadczeniem. 
+"
                   />
                 </div>
               </div>

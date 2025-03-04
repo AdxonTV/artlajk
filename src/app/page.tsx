@@ -57,7 +57,7 @@ export default function Home() {
         <div className="h-[20vh]"></div>
         <Malownia />
       
-        <div className="mt-[-20vh] ">
+        <div className="mt-[10vh] ">
           <CirclesSection />
         </div>
         <section id="kontakt">
