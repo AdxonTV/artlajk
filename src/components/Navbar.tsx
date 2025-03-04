@@ -109,7 +109,7 @@ const Navbar: React.FC<NavbarProps> = ({ className, truth }) => {
 
       {/* Mobile Menu */}
       <div
-        className={`fixed top-0 left-0 w-full h-full bg-white flex flex-col items-center justify-center transition-transform duration-500 
+        className={`fixed top-0 left-0 w-full h-full bg-[#ffffff51] backdrop-blur-3xl flex flex-col gap-2 items-center justify-center transition-transform duration-500 
         ${menuOpen ? "translate-x-0" : "-translate-x-full"}`}
       >
         <button className="absolute top-6 right-6" onClick={() => setMenuOpen(false)}>
@@ -135,7 +135,8 @@ const Navbar: React.FC<NavbarProps> = ({ className, truth }) => {
             Kontakt
           </span>
         </Link>
-        <Btn id="nav-btn" title="Zapisz się" />
+        <div className="mt-[5vh]">
+        <Btn id="nav-btn" title="Zapisz się" /></div>
       </div>
     </div>
   );

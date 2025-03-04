@@ -93,10 +93,10 @@ import Head from "next/head";
             </div>
           </div>
         </div>
-        <div className="w-[96vw] mt-[5vh] rounded-xl h-[100vh] overflow-hidden flex justify-center items-center">
-          <div className="w-[96vw] h-[120vh] mt-[10vh]">
+        <div className="w-[96vw] mt-[5vh] rounded-xl h-[90vh] flex overflow-hidden   items-start">
+          <div className="w-[96vw] h-[120vh] mt-[-15vh]">
             <Image
-              src="/img/Praca2.jpg"
+              src="/img/ela.jpg"
               className="object-cover rounded-xl imgparalaxa h-full w-full"
               height={1900}
               alt="dd"
