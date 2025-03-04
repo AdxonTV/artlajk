@@ -94,10 +94,10 @@ const Header = () => {
       </div>
       <Image
         alt="x"
-        width={2000}
+        width={1200}
         placeholder="blur"
         blurDataURL="/img/bg_img2.png"
-        height={2000}
+        height={1200}
         className="md:block hidden tracker absolute overflow-hidden w-full h-[100dvh] object-cover z-[-192]"
         src={"/img/bg_img2.png"}
       />

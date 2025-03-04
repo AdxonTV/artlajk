@@ -121,8 +121,8 @@ const MalowniaHeader = () => {
               ref={videoRef}
               className="x md:w-[40vw] hidden md:block w-[80vw] z-[10] rounded-[20px]"
               autoPlay
-              width={800}
-              height={800}
+              width={700}
+              height={700}
               muted
               controls={false}
               loop
