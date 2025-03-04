@@ -14,50 +14,50 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
-  const [isMobile, setIsMobile] = useState(false);
+  const [isMobile, setIsMobile] = useState(true);
   const scrollRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    // Determine if it's a mobile device
-    setIsMobile(window.innerWidth < 768);
-    if (isMobile) {
-     console.log("mobile website")
-    }else{
-      console.log("desktop website")
-         // Lock the scroll and set initial properties when page is loading
-    document.body.style.overflow = "hidden";
-    document.body.style.cursor = "default";
-    window.scrollTo(0, 0);
-
-    // Unlock after the loading time has completed (1000ms here)
-    const timeout = setTimeout(() => {
-      setIsLoading(false);
-      
-      document.body.style.overflow = "auto";
-    }, 1000);
-
-    // Cleanup: revert styles to normal
-    return () => {
-      clearTimeout(timeout);
-      document.body.style.overflow = "auto";
-      document.body.style.overflowY = "default";
-    };
-    }
-
+    console.log(isMobile)
  
-  }, []);
+    if (window.innerWidth > 700) {
+      setIsMobile(false)
+      console.log(window.innerWidth);
+      console.log("desktop");
+      // Lock the scroll and set initial properties when page is loading
+    
+      document.body.style.cursor = "default";
+      window.scrollTo(0, 0);
+
+      // Unlock after the loading time has completed (1000ms here)
+      const timeout = setTimeout(() => {
+        setIsLoading(false);
+        document.body.style.overflow = "auto";
+      }, 1000);
+
+      // Cleanup: revert styles to normal
+      return () => {
+        clearTimeout(timeout);
+        document.body.style.overflow = "auto";
+        document.body.style.overflowY = "default";
+      };
+    }else{
+      setIsLoading(false);
+    }
+  }, [isLoading, isMobile]);
 
   // Apply Lenis scroll only if not mobile
-  useLenisScroll(isLoading && !isMobile);
+  useLenisScroll(isMobile);
 
   return (
-    <div ref={scrollRef} className="overflow-x-hidden relative top-0 h-fit">
+    <div ref={scrollRef} className={isLoading ? `overflow-y-hidden opacity-0 relative h-fit` :  `overflow-hidden relative  h-fit`  }>
       <Navbar truth="false" />
       <Suspense fallback={<Loading />}>
         <Header />
         <div className="h-[20vh]"></div>
         <Malownia />
-        <div className="mt-[20vh]">
+      
+        <div className="mt-[-20vh] ">
           <CirclesSection />
         </div>
         <section id="kontakt">

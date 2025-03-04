@@ -7,8 +7,8 @@ const MalowniaWorks = () => {
     <div className="text-black h-fit mb-0 mx-[5vw] md:mb-[-30vh] mt-[20vh]">
       <div className="flex w-full  items-center  flex-row-reverse  justify-between ">
         <ComponentAppear>
-          <div className="w-full md:w-[40vw] md:text-[32px]   gap-[6vh]   relative flex-col flex  leading-tight  text-left  ">
-            <div className="  text-[32px] ">
+          <div className="w-full md:w-[40vw] md:text-[32px] text-[18px]    gap-[6vh]   relative flex-col flex  leading-tight  text-left  ">
+            <div className="   ">
               W Malowni wierzymy, że sztuka jest dla każdego. Niezależnie od
               wieku czy doświadczenia, każdy znajdzie tu przestrzeń do wyrażania
               siebie. Dbamy o to, żeby w studiu panowała przyjacielska, a wręcz
@@ -19,7 +19,7 @@ const MalowniaWorks = () => {
           
             </div>
             <div className="w-full bg-black h-[1px] opacity-20 "></div>
-            <div className=" text-[20px] leading-[120%] opacity-50 ">
+            <div className=" md:text-[20px] text-[15px] leading-[120%] opacity-50 ">
               Oczywiście wszystko to pod okiem wykwalifikowanej i doświadczonej
               instruktorki – pani Elżbiety Jakubowskiej, która z niesamowitą
               wrażliwością, ogromną pasją i z zaangażowaniem rozwija skrzydła

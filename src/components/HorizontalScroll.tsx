@@ -37,9 +37,6 @@ const HorizontalScroll = () => {
     const ctx = gsap.context(() => {
       if (typeof window !== "undefined") {
         const isMobile = window.innerWidth <= 768;
-        if (isMobile) {
-          ScrollTrigger.normalizeScroll(true);
-        }
 
         ScrollTrigger.create({
           trigger: ".wrapper-404",
@@ -48,8 +45,9 @@ const HorizontalScroll = () => {
           scrub: 1,
           pin: true,
           pinSpacing: false,
+          invalidateOnRefresh: true, // Recalculate on refresh
           onUpdate: (self) => {
-            gsap.to(".wrapper-404", {
+            gsap.to("#wrapper-404", {
               x: `${-250 * self.progress}vw`,
               duration: 0.5,
               ease: "power3.out",
@@ -58,10 +56,11 @@ const HorizontalScroll = () => {
         });
 
         ScrollTrigger.create({
-          trigger: ".wrapper-404",
+          trigger: "#wrapper-404",
           start: "top top",
           end: isMobile ? "+=1000dvh" : "+=1500dvh",
           scrub: 1,
+          invalidateOnRefresh: true, // Recalculate on refresh
           onUpdate: (self) => {
             gsap.to(textSkew.current, {
               skewX: `${-15 * self.progress}vw`,
@@ -77,6 +76,7 @@ const HorizontalScroll = () => {
             start: "top top",
             end: isMobile ? "+=1200dvh" : "+=1900dvh",
             scrub: 1,
+            invalidateOnRefresh: true, // Recalculate on refresh
             onUpdate: (self) => {
               gsap.to(card.id, {
                 x: `${card.endTranslateX * self.progress}px`,
@@ -99,13 +99,13 @@ const HorizontalScroll = () => {
       <div
         className={`${
           height ? "h-[325dvh]" : "h-[260dvh]"
-        } w-full flex items-start flex-col my-[20vh] relative  overflow-hidden`}
+        } w-full flex items-start flex-col relative overflow-hidden`}
       >
-        <section className="wrapper-404 h-[90dvh] w-[400vw]">
+        <section id="wrapper-404" className="wrapper-404 h-[100vh] bg-slate-600 w-[400vw]">
           <div>
             <h1
               ref={textSkew}
-              className="w-full text-[30vw] tracking-tight top-0 absolute text-violet-300"
+              className="w-full text-[30vw] tracking-tight text-violet-300"
             >
               Myślimy <b className="opacity-40">Nie</b>szablonowo.
             </h1>
