@@ -99,9 +99,9 @@ const HorizontalScroll = () => {
       <div
         className={`${
           height ? "h-[325dvh]" : "h-[260dvh]"
-        } w-full flex items-start flex-col relative overflow-hidden`}
+        } w-full mt-[20vh] flex items-start flex-col relative overflow-hidden`}
       >
-        <section id="wrapper-404" className="wrapper-404 h-[100vh] bg-slate-600 w-[400vw]">
+        <section id="wrapper-404" className="wrapper-404 h-[100vh]  w-[400vw]">
           <div>
             <h1
               ref={textSkew}
