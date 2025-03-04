@@ -99,7 +99,7 @@ const HorizontalScroll = () => {
       <div
         className={`${
           height ? "h-[325dvh]" : "h-[260dvh]"
-        } w-full m-0 flex items-start flex-col relative md:mb-[-200px] overflow-hidden`}
+        } w-full flex items-start flex-col my-[20vh] relative  overflow-hidden`}
       >
         <section className="wrapper-404 h-[90dvh] w-[400vw]">
           <div>

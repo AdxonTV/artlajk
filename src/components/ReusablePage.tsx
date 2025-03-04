@@ -58,12 +58,12 @@ const ReusablePage = () => {
           <div className=" absolute bottom-[2vh] text-[3vw] justify-between leading-[110%] top  w-[100vw] md:text-[20px] flex tracking-[-1px] ">
             <div className="flex  gap-[10vw]">
               <div>
-                <div className="opacity-50 uppercase">doświadczenie</div>
+                <div className="opacity-50 uppercase">Absolwentka</div>
                 <div>Akademia Sztuk Pięknych, Gdańsk</div>
               </div>
               <div>
-                <div className="opacity-50 uppercase">doświadczenie</div>
-                <div>Akademia Sztuk Pięknych, Gdańsk</div>
+                <div className="opacity-50 uppercase">Studia magisterskie</div>
+                <div>Wyższej Szkole Pedagogicznej im. Janusza Korczaka w Warszawie</div>
               </div>
             </div>
             <div>

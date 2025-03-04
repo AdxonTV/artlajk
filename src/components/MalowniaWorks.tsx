@@ -1,14 +1,14 @@
 import React from "react";
 import Image from "next/image";
 import ComponentAppear from "./ComponentAppear";
-import Btn from "./Btn";
+
 const MalowniaWorks = () => {
   return (
-    <div className="text-black h-fit mb-0 mx-[2vw] md:mb-[-30vh] mt-[20vh]">
-      <div className="flex w-full  items-start  justify-between ">
+    <div className="text-black h-fit mb-0 mx-[5vw] md:mb-[-30vh] mt-[20vh]">
+      <div className="flex w-full  items-center  flex-row-reverse  justify-between ">
         <ComponentAppear>
-          <div className="w-full md:w-[37vw] md:text-[32px] gap-[4vw]  flex-col flex  leading-[120%]   text-left  ">
-            <div className="  text-[32px]">
+          <div className="w-full md:w-[40vw] md:text-[32px]   gap-[6vh]   relative flex-col flex  leading-tight  text-left  ">
+            <div className="  text-[32px] ">
               W Malowni wierzymy, że sztuka jest dla każdego. Niezależnie od
               wieku czy doświadczenia, każdy znajdzie tu przestrzeń do wyrażania
               siebie. Dbamy o to, żeby w studiu panowała przyjacielska, a wręcz
@@ -16,8 +16,9 @@ const MalowniaWorks = () => {
               – czuli się równi sobie. Nierzadko w naszej pracowni tworzą się
               przyjaźnie, a uczestnicy w różnym wieku wymieniają się uwagami i
               doświadczeniem.
-              <br /> <br />
+          
             </div>
+            <div className="w-full bg-black h-[1px] opacity-20 "></div>
             <div className=" text-[20px] leading-[120%] opacity-50 ">
               Oczywiście wszystko to pod okiem wykwalifikowanej i doświadczonej
               instruktorki – pani Elżbiety Jakubowskiej, która z niesamowitą
@@ -26,18 +27,20 @@ const MalowniaWorks = () => {
               otrzymał indywidualne wsparcie dostosowane do swoich potrzeb i
               artystycznych aspiracji.
             </div>
-            <Btn  id="x" title="Dołącz do nas"></Btn>
+         
           </div>
         </ComponentAppear>
-        <div className="md:right-[5vw] drop-shadow-xl h-fit  md:h-[90vh] rounded-[20px] overflow-hidden  pointer-events-none">
+        <ComponentAppear>
+        <div className="   md:block hidden w-[45vw] h-full   ">
           <Image
-            className="opacity-100 z-[10]   object-cover  rounded-[20px]"
-            src={"/img/image00031.jpeg"}
+            className=" object-cover rounded-xl drop-shadow-xl"
+            src={"/img/carusel_5.jpeg"}
             width={1000}
             height={1000}
             alt="xx"
           />
         </div>
+        </ComponentAppear>
       </div>
 
       {/* <ImgCarusel></ImgCarusel> */}

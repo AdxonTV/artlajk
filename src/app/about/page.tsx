@@ -76,7 +76,7 @@ import Head from "next/head";
     return (
       <div
         ref={scrollRef}
-        className="overflow-x-hidden relative  w-full text-black h-fit flex flex-col items-center justify-center"
+        className="overflow-x-hidden relative    w-full text-black h-fit flex flex-col items-center justify-center"
       >
          <Head>
         <title>Elżbieta Jakubowska</title>
@@ -107,16 +107,11 @@ import Head from "next/head";
         <div className="w-full h-[50vh] flex flex-col justify-center items-center">
           <div className="text-[3vw] md:text-[26px]">
             <ComponentAppear>
-              <div className="mb-[2vh]">(Artlajks)</div>
+              <div className="mb-[2vh] mt-[10vh] ">(o mnie)</div>
             </ComponentAppear>
             <ComponentAppear>
               <div className="md:w-[50vw] w-[90vw]">
-                The main idea of these buttons is that they are magnetic and follow
-                the mouse pointer. Along with that, there’s lots of room to play
-                with some interesting hover animations. A very nice thing to explore
-                is the motion of an additional element like a shadow or another line.
-                The parallax effect created by moving the button’s elements differently,
-                gives a nice twist to the animation.
+              Malarka oraz instruktorka malarstwa i rysunku z wieloletnim doświadczeniem, niesamowitą energią i wrażliwością na drugiego człowieka. Spod jej skrzydeł co roku wyfruwają osoby, które kształcą się na uczelniach artystycznych, a także osiągają sukcesy w świecie sztuki – tak różne, jak tylko różnorodna może być sztuka. W czasie swoich zajęć stara się z pasją i zaangażowaniem wspierać rozwój artystyczny uczestników, służąc profesjonalnymi wskazówkami, a jednocześnie tworząc atmosferę pełną ciepła i inspiracji. 
               </div>
             </ComponentAppear>
           </div>

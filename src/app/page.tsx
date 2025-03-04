@@ -20,14 +20,19 @@ export default function Home() {
   useEffect(() => {
     // Determine if it's a mobile device
     setIsMobile(window.innerWidth < 768);
-
-    // Lock the scroll and set initial properties when page is loading
+    if (isMobile) {
+     console.log("mobile website")
+    }else{
+      console.log("desktop website")
+         // Lock the scroll and set initial properties when page is loading
+    document.body.style.overflow = "hidden";
     document.body.style.cursor = "default";
     window.scrollTo(0, 0);
 
     // Unlock after the loading time has completed (1000ms here)
     const timeout = setTimeout(() => {
       setIsLoading(false);
+      
       document.body.style.overflow = "auto";
     }, 1000);
 
@@ -37,6 +42,9 @@ export default function Home() {
       document.body.style.overflow = "auto";
       document.body.style.overflowY = "default";
     };
+    }
+
+ 
   }, []);
 
   // Apply Lenis scroll only if not mobile
