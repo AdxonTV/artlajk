@@ -1,8 +1,10 @@
 
 import MalowniaHeader from "./MalowniaHeader";
 import MalowniaWorks from "./MalowniaWorks";
-import HorizontalScroll from "./HorizontalScroll";
 import About from "./About";
+import { lazy } from "react";
+const HorizontalScroll = lazy(() => import("./HorizontalScroll"))
+
 
 const Malownia = () => {
  

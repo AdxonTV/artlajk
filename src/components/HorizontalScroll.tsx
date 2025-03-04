@@ -18,6 +18,15 @@ const HorizontalScroll = () => {
   const containersRef = useRef(null);
   const textSkew = useRef(null);
 
+  const cards = [
+    { id: "#card-1", endTranslateX: -2000, rotate: 45 },
+    { id: "#card-2", endTranslateX: -1000, rotate: -30 },
+    { id: "#card-3", endTranslateX: -2000, rotate: 45 },
+    { id: "#card-4", endTranslateX: -1000, rotate: -30 },
+    { id: "#card-5", endTranslateX: -2000, rotate: 45 },
+  ];
+
+  
   useEffect(() => {
     if (typeof window !== "undefined") {
       const windowHeight = window.innerHeight;
@@ -26,13 +35,6 @@ const HorizontalScroll = () => {
       }
     }
 
-    const cards = [
-      { id: "#card-1", endTranslateX: -2000, rotate: 45 },
-      { id: "#card-2", endTranslateX: -1000, rotate: -30 },
-      { id: "#card-3", endTranslateX: -2000, rotate: 45 },
-      { id: "#card-4", endTranslateX: -1000, rotate: -30 },
-      { id: "#card-5", endTranslateX: -2000, rotate: 45 },
-    ];
 
     const ctx = gsap.context(() => {
       if (typeof window !== "undefined") {
@@ -99,7 +101,7 @@ const HorizontalScroll = () => {
       <div
         className={`${
           height ? "h-[325dvh]" : "h-[260dvh]"
-        } w-full mt-[20vh] flex items-start flex-col relative overflow-hidden`}
+        } w-full mt-[20vh] flex items-start flex-col relative `}
       >
         <section id="wrapper-404" className="wrapper-404 h-[100vh]  w-[400vw]">
           <div>
