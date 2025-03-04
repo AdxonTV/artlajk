@@ -71,7 +71,7 @@ const ReusablePage = () => {
               <div>Akademia Sztuk Pięknych, Gdańsxk</div>
             </div>
           </div>
-          \
+          
         </div>
       </ComponentAppear>
     </div>

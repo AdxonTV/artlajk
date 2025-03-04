@@ -34,24 +34,25 @@ const Contact = () => {
             <ContactFeature
               className="text-left"
               subtitle="Adres"
-              title="Chojnice"
-              title2="Jana Pawła 29"
+              title="ul. Grobelna 5"
+              title2="biuro 310 "
             />
           </div>
           <div className="md:w-[9vw] w-[28vw]">
             <ContactFeature
               className="text-center"
               subtitle="Email"
-              title="Malownia"
+              title="malownia.chojnice
+"
               title2="@gmail.com"
             />
           </div>
           <div className="md:w-[9vw] w-[28vw]">
             <ContactFeature
               className="text-right"
-              subtitle="Number"
+              subtitle="Numer telefonu"
               title="+48"
-              title2="123 456 789"
+              title2="538 329 051"
             />
           </div>
         </div>

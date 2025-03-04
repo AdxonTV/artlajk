@@ -57,7 +57,7 @@ const Header = () => {
           <div className="text-[8vw] mb-[5vh] md:w-[40vw] leading-[110%] md:text-[7vh]">
             <div>
               <div>Rozwiń się na Zajęciach </div>
-              <div className="md:text-left text-right">z Malartwa i Rysunku</div>
+              <div className="md:text-left text-right">zMalujmy coś razem.</div>
             </div>
           </div>
           <div className="flex flex-col gap-[10vh] md:flex-row w-full justify-center items-center md:justify-between">
@@ -67,15 +67,15 @@ const Header = () => {
             <div className="flex text-left opacity-90 md:text-[18px] text-[10px] md:w-fit w-full justify-between mb-[2vh] gap-8 md:text-right">
               <div className="w-fit">
                 <div className="font-semibold">Kontakt</div>
-                <div className="leading-none text-[20px]">512 321 664</div>
+                <div className="leading-none text-[20px]">538 329 051</div>
               </div>
               <div className="w-fit text-left md:text-right">
                 <div className="font-semibold">Prowadzi</div>
-                <div className="leading-none  text-[20px]">Ela Jakubowska</div>
+                <div className="leading-none  text-[20px]">Elżbieta Jakubowska</div>
               </div>
               <div className="w-fit text-right md:text-right">
                 <div className="font-semibold">Miejsce</div>
-                <div className="leading-none  text-[20px]">Chojnice, ul. 31 Stycznia</div>
+                <div className="leading-none  text-[20px]">Chojnice, ul. Grobelna 5</div>
               </div>
             </div>
           </div>

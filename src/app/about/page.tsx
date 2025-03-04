@@ -1,4 +1,4 @@
-  "use client";
+"use client";
   import ReusablePage from "@/components/ReusablePage";
   import { useEffect, useRef, useState } from "react";
   import useLenisScroll from "@/components/Lenis";
@@ -11,8 +11,12 @@
   import { ScrollTrigger } from "gsap/ScrollTrigger";
   import ComponentAppearSide from "@/components/ComponentAppearSide";
   import ComponentAppear from "@/components/ComponentAppear";
+import Head from "next/head";
+
 
   gsap.registerPlugin(ScrollTrigger);
+
+
 
   export default function About() {
     const container = useRef<HTMLDivElement>(null);
@@ -74,6 +78,13 @@
         ref={scrollRef}
         className="overflow-x-hidden relative  w-full text-black h-fit flex flex-col items-center justify-center"
       >
+         <Head>
+        <title>Elżbieta Jakubowska</title>
+        <meta name="description" content="About Elżbieta Jakubowska, designer and artist." />
+        <meta name="keywords" content="Elżbieta Jakubowska, design, artist, portfolio" />
+        <meta property="og:title" content="Elżbieta Jakubowska" />
+        <meta property="og:description" content="Elżbieta Jakubowska's portfolio." />
+      </Head>
         <Navbar className="text-black" truth="true" />
         <div className="flex w-[96vw]">
           <div>

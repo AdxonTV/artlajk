@@ -15,7 +15,6 @@ const MalowniaHeader = () => {
   const imageRef = useRef<HTMLImageElement>(null);
 
   useEffect(() => {
-
     if (
       !containerRef.current ||
       !fixClassRef.current ||
@@ -72,7 +71,7 @@ const MalowniaHeader = () => {
       videoAnimation.kill();
       imageAnimation.kill();
       textAnimation.kill();
-      ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
     };
   }, []);
 
@@ -95,18 +94,18 @@ const MalowniaHeader = () => {
             </TextRev>
           </div>
         </div>
-      
+
         <div
           id="fix"
           ref={fixClassRef}
-          className="text-[20px] text-black h-fit  md:text-[32px] md:text-justify z-[10] text-center leading-[115%] tracking-tight fixclass ml-[1vw] md:w-[40vw] w-[90vw]"
+          className="text-[20px] text-black h-fit pb-[10vh]  md:text-[32px] md:text-justify z-[10] text-center leading-[115%]  tracking-tight fixclass ml-[1vw] md:w-[40vw] w-[90vw]"
         >
-         W naszej pracowni tworzymy atmosferę wzajemnego wsparcia, otwartości i
-          inspiracji, gdzie każdy czuje się swobodnie, by rozwijać swoje
-          zainteresowania.
+          Nasza pracownia to miejsce w samym sercu Chojnic, gdzie pasja do
+          sztuki łączy pokolenia, a kameralna przestrzeń tętni twórczą energią
+          od 2016 roku i cieszy się ogromnym zainteresowaniem.
+          <br />
         </div>
-        <div className="md:top-[120vh] w-full hidden md:block  top-[110vh] absolute">
-
+        <div className="md:top-[140vh] w-full hidden md:block  top-[110vh] absolute">
           <Image
             id="fix2"
             className="opacity-100"
@@ -117,8 +116,7 @@ const MalowniaHeader = () => {
           />
         </div>
         <div className="w-full flex justify-center  h-fit relative">
- 
-            <div className="md:right-[5vw] drop-shadow-xl h-fit md:h-[90vh] rounded-[20px] overflow-hidden md:rotate-3 mt-[3vh] md:mt-[-20vh] md:absolute pointer-events-none">
+          <div className="md:right-[5vw] drop-shadow-xl h-fit md:h-[90vh] rounded-[20px] overflow-hidden md:rotate-3 mt-[3vh] md:mt-[-20vh] md:absolute pointer-events-none">
             <video
               ref={videoRef}
               className="x md:w-[40vw] hidden md:block w-[80vw] z-[10] rounded-[20px]"
@@ -130,21 +128,23 @@ const MalowniaHeader = () => {
               loop
               src="/img/malowniafilm.mp4"
             />
-             
+
             <Image
               ref={imageRef}
-              className="opacity-100 z-[10] object-cover h-[400px] rounded-[20px] md:hidden"
+              className="opacity-100 z-[10]  object-cover h-[400px] rounded-[20px] md:hidden"
               src={"/img/carusel_4.jpeg"}
               width={1000}
               height={1000}
               alt="xx"
             />
-            </div>
-       
+          </div>
         </div>
       </div>
       <div className="xl:top-[-30vh] md:right-[-19vw] opacity-40 xl:opacity-100 top-[-440px] z-[-20] absolute xl:right-[5vw] right-[-10vw]">
-        <Ss path="M19.4982 17.4986C1367.01 1453 893.504 -603 310 1184.5" value={6.5} />
+        <Ss
+          path="M19.4982 17.4986C1367.01 1453 893.504 -603 310 1184.5"
+          value={5.5}
+        />
       </div>
     </div>
   );

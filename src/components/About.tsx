@@ -35,34 +35,36 @@ const About = () => {
           <div ref={containerRef} className="w-full  md:flex justify-between">
             <div className="box-f">
               <AboutFeature
-                title="Od 9 do ∞ roku życia"
+                title="Od 7 do ∞ roku życia"
                 icon={<MdOutlineChildFriendly />}
-                desc="wspieramy rozwój artystyczny dzieci, młodzieży i dorosłych od 9. roku życia wzwyż."
+                desc="Nasze zajęcia skierowane są do dzieci od 7 roku życia, młodzieży oraz dorosłych. "
               />
             </div>
             <div className="flex md:flex-nowrap flex-wrap ">
               <div className="" >
                 <div >
                   <AboutFeature
-                    title="Zajęcia raz w tygodniu"
+                    title="90 min raz w tygodniu"
                     icon={<LuCalendar />}
-                    desc="Qudrix base set includes solid basement, aluminium full-frame and few options of walls and windows."
+                    desc="Podczas których każdy uczestnik ma szansę rozwijać swoje umiejętności w dziedzinie malarstwa i rysunku. 
+"
                   />
                 </div>
                 <div >
                   <AboutFeature
                     title="Płatność 150zł/msc"
                     icon={<MdAttachMoney />}
-                    desc="Qudrix base set includes solid basement, aluminium full-frame and few options of walls and windows."
+                    desc="...(Wpisz np. że zależnie od liczby zajęć w miesiacu)"
                   />
                 </div>
               </div>
               <div className=" ">
                 <div >
                   <AboutFeature
-                    title="Trwają 90 minut"
+                    title="Naucz się Rysunku"
                     icon={<FaRegStar />}
-                    desc="Świetną zabawę i rozwój pasji"
+                    desc="Czekamy na Ciebie – tu, gdzie pędzlem i ołówkiem tworzy się magia! 
+"
                   />
                 </div>
                 <div >
