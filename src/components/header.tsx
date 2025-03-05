@@ -67,15 +67,15 @@ const Header = () => {
             <div className="flex text-left opacity-90 md:text-[18px] text-[10px] md:w-fit w-full justify-between mb-[2vh] gap-8 md:text-right">
               <div className="w-fit">
                 <div className="font-semibold">Kontakt</div>
-                <div className="leading-none text-[20px]">538 329 051</div>
+                <div className="leading-none text-[14px] md:text-[20px]">538 329 051</div>
               </div>
               <div className="w-fit text-left md:text-right">
                 <div className="font-semibold">Prowadzi</div>
-                <div className="leading-none  text-[20px]">Elżbieta Jakubowska</div>
+                <div className="leading-none  text-[14px] md:text-[20px]">Elżbieta Jakubowska</div>
               </div>
               <div className="w-fit text-right md:text-right">
                 <div className="font-semibold">Miejsce</div>
-                <div className="leading-none  text-[20px]">Chojnice, ul. Grobelna 5</div>
+                <div className="leading-none  text-[14px] md:text-[20px]">Chojnice, ul. Grobelna 5</div>
               </div>
             </div>
           </div>

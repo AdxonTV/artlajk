@@ -18,7 +18,7 @@ const About = () => {
 
 
   return (
-    <div className="w-full h-screen md:h-fit bg mx-[2vw]">
+    <div className="w-full h-screen  md:h-fit bg mx-[2vw]">
       <div className="w-full flex flex-col justify-between">
         <div className="w-full md:w-[45vw] mb-12 flex justify-start md:justify-end">
           <div className="ml-[82px]">

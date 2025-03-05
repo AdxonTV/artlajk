@@ -109,7 +109,7 @@ const Navbar: React.FC<NavbarProps> = ({ className, truth }) => {
 
       {/* Mobile Menu */}
       <div
-        className={`fixed top-0 left-0 w-full h-full bg-[#ffffff51] backdrop-blur-3xl flex flex-col gap-2 items-center justify-center transition-transform duration-500 
+        className={`fixed top-0 left-0 w-full h-full bg-[#ffffff] backdrop-blur-3xl flex flex-col gap-2 items-center justify-center transition-transform duration-500 
         ${menuOpen ? "translate-x-0" : "-translate-x-full"}`}
       >
         <button className="absolute top-6 right-6" onClick={() => setMenuOpen(false)}>

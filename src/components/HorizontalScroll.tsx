@@ -3,6 +3,7 @@ import Image from "next/image";
 import React, { useEffect, useRef, useState } from "react";
 import ScrollTrigger from "gsap/src/ScrollTrigger";
 import gsap from "gsap";
+gsap.registerPlugin(ScrollTrigger);
 
 const photos = [
   "/img/carusel_1.jpeg",
@@ -11,45 +12,43 @@ const photos = [
   "/img/carusel_4.jpeg",
   "/img/carusel_5.jpeg",
 ];
-gsap.registerPlugin(ScrollTrigger);
+
+const cards = [
+  { id: "#card-1", endTranslateX: -2000, rotate: 45 },
+  { id: "#card-2", endTranslateX: -1000, rotate: -30 },
+  { id: "#card-3", endTranslateX: -2000, rotate: 45 },
+  { id: "#card-4", endTranslateX: -1000, rotate: -30 },
+  { id: "#card-5", endTranslateX: -2000, rotate: 45 },
+];
 
 const HorizontalScroll = () => {
-  const [height, setHeight] = useState(false);
-  const containersRef = useRef(null);
-  const textSkew = useRef(null);
+  const containersRef = useRef<HTMLDivElement>(null);
+  const wrapper = useRef<HTMLDivElement>(null);
+  const textSkew = useRef<HTMLDivElement>(null);
 
-  const cards = [
-    { id: "#card-1", endTranslateX: -2000, rotate: 45 },
-    { id: "#card-2", endTranslateX: -1000, rotate: -30 },
-    { id: "#card-3", endTranslateX: -2000, rotate: 45 },
-    { id: "#card-4", endTranslateX: -1000, rotate: -30 },
-    { id: "#card-5", endTranslateX: -2000, rotate: 45 },
-  ];
+  const [loaded, setLoaded] = useState(false);
+  const [imageCount, setImageCount] = useState(0);
 
-  
   useEffect(() => {
-    if (typeof window !== "undefined") {
-      const windowHeight = window.innerHeight;
-      if (windowHeight <= 900) {
-        setHeight(true);
-      }
+    if (imageCount === photos.length) {
+      setLoaded(true);
     }
+  }, [imageCount]);
 
+  useEffect(() => {
+    if (!loaded) return;
 
     const ctx = gsap.context(() => {
       if (typeof window !== "undefined") {
-        const isMobile = window.innerWidth <= 768;
-
         ScrollTrigger.create({
-          trigger: ".wrapper-404",
+          trigger: wrapper.current,
           start: "top top",
-          end: isMobile ? "+=1000dvh" : "+=1500dvh",
-          scrub: 1,
+          end: "+=1500dvh",
+          scrub: true,
           pin: true,
-          pinSpacing: false,
-          invalidateOnRefresh: true, // Recalculate on refresh
+          invalidateOnRefresh: true,
           onUpdate: (self) => {
-            gsap.to("#wrapper-404", {
+            gsap.to(wrapper.current, {
               x: `${-250 * self.progress}vw`,
               duration: 0.5,
               ease: "power3.out",
@@ -58,11 +57,11 @@ const HorizontalScroll = () => {
         });
 
         ScrollTrigger.create({
-          trigger: "#wrapper-404",
+          trigger: wrapper.current,
           start: "top top",
-          end: isMobile ? "+=1000dvh" : "+=1500dvh",
-          scrub: 1,
-          invalidateOnRefresh: true, // Recalculate on refresh
+          end: "+=1500dvh",
+          scrub: true,
+          invalidateOnRefresh: true,
           onUpdate: (self) => {
             gsap.to(textSkew.current, {
               skewX: `${-15 * self.progress}vw`,
@@ -76,9 +75,9 @@ const HorizontalScroll = () => {
           ScrollTrigger.create({
             trigger: card.id,
             start: "top top",
-            end: isMobile ? "+=1200dvh" : "+=1900dvh",
-            scrub: 1,
-            invalidateOnRefresh: true, // Recalculate on refresh
+            end: "+=1900dvh",
+            scrub: true,
+            invalidateOnRefresh: true,
             onUpdate: (self) => {
               gsap.to(card.id, {
                 x: `${card.endTranslateX * self.progress}px`,
@@ -88,29 +87,37 @@ const HorizontalScroll = () => {
             },
           });
         });
+
+        ScrollTrigger.refresh();
       }
     }, containersRef);
 
     return () => {
       ctx.revert();
     };
-  }, []);
+  }, [loaded]);
 
   return (
     <div ref={containersRef}>
+      {!loaded && (
+        <div className="">
+      
+        </div>
+      )}
       <div
-        className={`${
-          height ? "h-[325dvh]" : "h-[260dvh]"
-        } w-full mt-[20vh] flex items-start flex-col relative `}
+        id="wrapper-404"
+        className={`h-[270dvh]  w-full mt-[20vh] flex items-start flex-col relative ${
+          loaded ? "opacity-100 transition-opacity duration-500" : "opacity-0"
+        }`}
       >
-        <section id="wrapper-404" className="wrapper-404 h-[100vh]  w-[400vw]">
+        <section ref={wrapper} className="wrapper-404  h-[100vh] w-[400vw]">
           <div>
-            <h1
+            <div
               ref={textSkew}
               className="w-full text-[30vw] tracking-tight text-violet-300"
             >
               Myślimy <b className="opacity-40">Nie</b>szablonowo.
-            </h1>
+            </div>
             {photos.map((photo, index) => (
               <div className="card drop-shadow-2xl" key={photo} id={`card-${index + 1}`}>
                 <Image
@@ -119,7 +126,7 @@ const HorizontalScroll = () => {
                   alt={photo}
                   width={500}
                   height={500}
-                  id={`img-${index + 1}`}
+                  onLoad={() => setImageCount((prev) => prev + 1)}
                 />
               </div>
             ))}

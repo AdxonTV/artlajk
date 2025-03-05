@@ -56,19 +56,13 @@ const CirclesSection = () => {
                 </LazyTextRev>
               </Suspense>
             </div>
-            {/* <ComponentAppear>
-              <div className="w-full md:w-[30vw] md:text-[32px] h-[20vh] mt-[5vh] tracking-tight  text-black text-right leading-[130%] md:block hidden text-[24px]">
-                W naszej pracowni tworzymy atmosferę wzajemnego wsparcia,
-                otwartości i inspiracji, gdzie każdy czuje się swobodnie, by
-                rozwijać swoje zainteresowania.
-              </div>
-            </ComponentAppear> */}
+      
           </div>
 
           <div className="mb-[100px] md:my-[5vh] gap-[4vw]  h-fit flex mt-[4vw] md:gap-[3vh] md:mt-[3vh] flex-col-reverse">
             <Btn title="Zobacz więcej" id="searcg" link="/about" />
-            <div className="uppercase md:w-[20vw]">
-              W naszej pracowni tworzymy atmosferę wzajemnego wsparcia,
+            <div className="capitalize md:w-[20vw]">
+            służy profesjonalnymi wskazówkami, a jednocześnie tworząc atmosferę pełną ciepła i inspiracji. 
             </div>
           </div>
           <ComponentAppear>
@@ -107,13 +101,7 @@ const CirclesSection = () => {
               </Suspense>
             </div>
           </ComponentAppear>
-          <ComponentAppear>
-            <div className="w-full md:w-[33vw] mb-[15vh] md:hidden leading-[110%] tracking-tight text-center text-[24px]">
-              &lsquo;W naszej pracowni tworzymy atmosferę wzajemnego wsparcia,
-              otwartości i inspiracji, gdzie każdy czuje się swobodnie, by
-              rozwijać swoje zainteresowania.&rsquo;
-            </div>
-          </ComponentAppear>
+     
         </div>
       </div>
     </div>

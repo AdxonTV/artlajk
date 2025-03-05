@@ -18,14 +18,14 @@ export default function Home() {
   const scrollRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    console.log(isMobile)
- 
+    console.log(isMobile);
+
     if (window.innerWidth > 700) {
-      setIsMobile(false)
+      setIsMobile(false);
       console.log(window.innerWidth);
       console.log("desktop");
       // Lock the scroll and set initial properties when page is loading
-    
+
       document.body.style.cursor = "default";
       window.scrollTo(0, 0);
 
@@ -41,7 +41,7 @@ export default function Home() {
         document.body.style.overflow = "auto";
         document.body.style.overflowY = "default";
       };
-    }else{
+    } else {
       setIsLoading(false);
     }
   }, [isLoading, isMobile]);
@@ -50,13 +50,21 @@ export default function Home() {
   useLenisScroll(isMobile);
 
   return (
-    <div ref={scrollRef} className={isLoading ? `overflow-y-hidden opacity-0 relative h-fit` :  `overflow-hidden relative  h-fit`  }>
+    <div
+      ref={scrollRef}
+      className={
+        isLoading
+          ? `overflow-y-hidden relative h-fit`
+          : `overflow-hidden relative  h-fit`
+      }
+    >
+      {isLoading && <Loading />}
       <Navbar truth="false" />
       <Suspense fallback={<Loading />}>
         <Header />
         <div className="h-[20vh]"></div>
         <Malownia />
-      
+
         <div className="mt-[10vh] ">
           <CirclesSection />
         </div>
