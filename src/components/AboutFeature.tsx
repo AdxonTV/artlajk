@@ -27,10 +27,10 @@ const AboutFeature: React.FC<AboutFeatureProps> = ({ title, desc, icon }) => {
         </svg>
       </div>
       <div className="space-y-2 w-full  md:w-[20vw]">
-        <h2 className="md:text-[20px] xl:text-[36px] text-[28px] mt-[13px] font-normal tracking-tight text-gray-900">
+        <h2 className="md:text-[20px] xl:text-[33px] text-[28px] mt-[13px] font-normal tracking-tight text-gray-900">
           {title}
         </h2>
-        <p className="text-sm text-gray-600 leading-tight  md:text-[11px]  xl:text-[16px] h-fit w-[72vw]  md:w-[17vw]  tracking-wide">
+        <p className="md:text-[0.4vw] text-gray-600 leading-tight text-[11px]  xl:text-[16px] h-fit w-[72vw]  md:w-[17vw]  tracking-wide">
           {desc}
         </p>
       </div>

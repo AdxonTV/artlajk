@@ -1,7 +1,9 @@
 "use client";
 import React, { useEffect, useState } from "react";
-
-const Cursor = () => {
+interface CursorProps {
+  scale?: string;
+}
+const Cursor:React.FC<CursorProps> = ({scale}) => {
   const [mousePositions, setMousePositions] = useState<
     { x: number; y: number; time: number; opacity: number }[]
   >([]);
@@ -46,8 +48,8 @@ const Cursor = () => {
             position: "absolute",
             top: pos.y,
             left: pos.x,
-            width: "100px",
-            height: "100px",
+            width: scale || "100px",
+            height: scale || "100px",
       
             transform: "translate(-50%, -50%)",
             filter: `blur(${(1 - pos.opacity) * 15}px)`, // Adjusted blur effect
