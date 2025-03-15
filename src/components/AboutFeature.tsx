@@ -9,7 +9,7 @@ interface AboutFeatureProps {
 const AboutFeature: React.FC<AboutFeatureProps> = ({ title, desc, icon }) => {
   return (
     <ComponentAppear>
-    <div className=" flex feature-item md:w-fit   my-[20px] md:max-w-[33vw]   h-[15vh] w-full m-2  items-start gap-6 bg-[#ffffff00] rounded-lg ">
+    <div className=" flex feature-item md:w-fit md:h-[25vh]   my-[20px] md:max-w-[33vw]   h-[15vh] w-full m-2  items-start gap-6 bg-[#ffffff00] rounded-lg ">
       <div className="w-[60px] h-[60px] flex items-center justify-center rounded-full border-[#0000001a] border-2 ">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -30,7 +30,7 @@ const AboutFeature: React.FC<AboutFeatureProps> = ({ title, desc, icon }) => {
         <h2 className="md:text-[20px] xl:text-[33px] text-[28px] mt-[13px] font-normal tracking-tight text-gray-900">
           {title}
         </h2>
-        <p className="md:text-[0.4vw] text-gray-600 leading-tight text-[11px]  xl:text-[16px] h-fit w-[72vw]  md:w-[17vw]  tracking-wide">
+        <p className="md:text-[0.4vw] text-gray-600 leading-tight text-[11px]  xl:text-[16px] h-fit w-[72vw]  md:w-[17vw]  tracking-normal">
           {desc}
         </p>
       </div>

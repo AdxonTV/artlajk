@@ -23,9 +23,9 @@ const WorkPresentation: React.FC<Props> = ({ img, desc, title, date }) => {
               <Image
               src={img}
               className="object-cover  rounded-xl h-full md:w-[48vw] w-full"
-              height={1000}
+              height={500}
               alt="dd"
-              width={1000}
+              width={500}
               ></Image>
            </Suspense>
           </div>

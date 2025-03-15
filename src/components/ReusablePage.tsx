@@ -37,7 +37,7 @@ const ReusablePage = () => {
                   <div className="md:w-[15vw]  w-[35vw]  h-[35vw] rounded-xl md:h-[15vw] top-0 b-[10vh] absolute right-0 bottom-[-100%] overflow-hidden">
                     <StoryTilt>
                       <Image
-                        src="/img/ela.jpg"
+                        src="/img/Praca4.jpg"
                         className="object-fill   rounded-xl  z-[50] scale-[1.6]"
                         height={300}
                         alt="Elżbieta Jakubowska"

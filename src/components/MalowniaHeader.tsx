@@ -98,7 +98,7 @@ const MalowniaHeader = () => {
         <div
           id="fix"
           ref={fixClassRef}
-          className="text-[20px] text-black h-fit pb-[10vh]  md:text-[32px] md:text-justify z-[10] text-center leading-[115%]  tracking-tight fixclass ml-[1vw] md:w-[40vw] w-[90vw]"
+          className="text-[20px] text-black h-fit pb-[10vh]  md:text-[32px] md:text-l  z-[10] text-center leading-[115%]  tracking-tight fixclass ml-[1vw] md:w-[40vw] w-[90vw]"
         >
           Nasza pracownia to miejsce w samym sercu Chojnic, gdzie pasja do
           sztuki łączy pokolenia, a kameralna przestrzeń tętni twórczą energią
