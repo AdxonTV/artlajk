@@ -33,15 +33,15 @@ const ReusablePage = () => {
               </div>
               <div>
                 <div className="flex   h-[30vh]   w-[40vw] relative items-end">
-                  <div >Elżbieta</div>
+                  <div>Elżbieta</div>
                   <div className="md:w-[15vw]  w-[35vw]  h-[35vw] rounded-xl md:h-[15vw] top-0 b-[10vh] absolute right-0 bottom-[-100%] overflow-hidden">
                     <StoryTilt>
                       <Image
-                        src="/img/praca3.jpg"
+                        src="/img/ela.jpg"
                         className="object-fill   rounded-xl  z-[50] scale-[1.6]"
-                        height={1000}
-                        alt="dd"
-                        width={1000}
+                        height={300}
+                        alt="Elżbieta Jakubowska"
+                        width={300}
                       ></Image>
                     </StoryTilt>
                   </div>
@@ -58,24 +58,27 @@ const ReusablePage = () => {
           <div className=" absolute bottom-[2vh] text-[3vw] justify-between w-full leading-[110%] md:text-[20px] flex tracking-[-1px] ">
             <div className="flex w-full justify-between ">
               <div className="flex gap-[10vw]">
-              <div>
-                <div className="opacity-50 uppercase">Absolwentka</div>
-                <div>Akademia Sztuk Pięknych, Gdańsk</div>
-              </div>
-              <div>
-                <div className="opacity-50 uppercase">Studia magisterskie</div>
-                <div>Wyższej Szkole Pedagogicznej im. Janusza Korczaka w Warszawie</div>
-              </div>
+                <div>
+                  <div className="opacity-50 uppercase">Absolwentka</div>
+                  <div>Akademia Sztuk Pięknych, Gdańsk</div>
+                </div>
+                <div>
+                  <div className="opacity-50 uppercase">
+                    Studia magisterskie
+                  </div>
+                  <div>
+                    Wyższej Szkole Pedagogicznej im. Janusza Korczaka w
+                    Warszawie
+                  </div>
+                </div>
               </div>
 
               <div>
-              <div className="opacity-50 uppercase">Podpisy</div>
-              <div>Podpis.png</div>
+                <div className="opacity-50 uppercase">Podpisy</div>
+                <div>Podpis.png</div>
+              </div>
             </div>
           </div>
-            </div>
-          
-          
         </div>
       </ComponentAppear>
     </div>
