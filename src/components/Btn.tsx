@@ -20,7 +20,7 @@ const Btn: React.FC<face> = ({ id, title, rightIcon, leftIcon, link }) => {
     <Link href={link || ""} onClick={handleClick} scroll={true}>
       <button
         id={id}
-        className="group border-4  items-center border-violet-500 relative flex z-10 w-fit cursor-pointer overflow-hidden rounded-full bg-violet-700 border-[#8238f93d] duration-200 transition-all hover:bg-violet-50 px-7 py-3 text-black"
+        className="group border-4  items-center border-violet-500 relative flex z-10 w-fit cursor-pointer overflow-hidden rounded-full violet-700 bg-violet-700 border-[#8238f93d] duration-200 transition-all hover:bg-violet-50 px-7 py-3 text-black"
       >
         <div className="">
         {leftIcon}</div>
