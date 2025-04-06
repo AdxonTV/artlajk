@@ -106,7 +106,7 @@ const HorizontalScroll = () => {
       )}
       <div
         id="wrapper-404"
-        className={`h-[270dvh]  w-full mt-[20vh] flex items-start flex-col relative ${
+        className={`h-[270dvh]  w-full mt-[20vh] mb-[-10vh] flex items-start flex-col relative ${
           loaded ? "opacity-100 transition-opacity duration-500" : "opacity-0"
         }`}
       >
