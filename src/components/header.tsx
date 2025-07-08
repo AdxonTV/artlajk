@@ -7,6 +7,7 @@ import Image from "next/image";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { useEffect } from "react";
+import Ribbons from "./Ribbons";
 gsap.registerPlugin(ScrollTrigger);
 
 const Header = () => {
@@ -49,9 +50,17 @@ const Header = () => {
   }, []);
 
   return (
-    <div className="h-[100dvh]  cursor-context-menu z-10 relative flex justify-center overflow-hidden text-white">
-      <Cursor />
-    
+    <div className="h-[100dvh]  cursor-context-menu z-10 relative flex justify-center overflow-hidden  text-white">
+      {/* <Cursor /> */}
+      <div className="absolute top-0 left-0 w-full h-full  z-[10000]">
+     <Ribbons
+    baseThickness={44}
+    colors={['#9432F0']}
+    speedMultiplier={0.2}
+    maxAge={600}
+    enableFade={true}
+    enableShaderEffect={false}
+  /></div>
       <div className="w-[96vw] relative">
         <div className="w-full bottom-0 absolute  md:text-left">
           <div className="text-[8vw] mb-[5vh] md:w-[60vw] leading-[110%] md:text-[7vh]">
