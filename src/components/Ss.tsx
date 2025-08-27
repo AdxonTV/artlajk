@@ -27,7 +27,7 @@ const Ss:React.FC<MyInterface> = ({path, value}) => {
       window.addEventListener("scroll", handleScroll);
       return () => window.removeEventListener("scroll", handleScroll);
     }
-  }, []);
+  }, [value]);
 
   return (
     <div>

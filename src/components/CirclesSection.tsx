@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useRef, Suspense } from "react";
+import React, { useEffect, useRef, Suspense, useMemo } from "react";
 import Btn from "./Btn";
 import ScrollTrigger from "gsap/src/ScrollTrigger";
 import gsap from "gsap";
@@ -11,13 +11,16 @@ const LazyCircle = React.lazy(() => import("./Circle"));
 
 const CirclesSection = () => {
   const container = useRef<HTMLDivElement>(null);
-  const circles = [
-    { id: "#circle1", imgid: "#circleimg1", endTranslateY: -140 },
-    { id: "#circle2", imgid: "#circleimg2", endTranslateY: -300 },
-    { id: "#circle3", imgid: "#circleimg3", endTranslateY: -280 },
-    { id: "#circle4", imgid: "#circleimg4", endTranslateY: -100 },
 
-  ];
+  const circles = useMemo(
+    () => [
+      { id: "#circle1", imgid: "#circleimg1", endTranslateY: -140 },
+      { id: "#circle2", imgid: "#circleimg2", endTranslateY: -300 },
+      { id: "#circle3", imgid: "#circleimg3", endTranslateY: -280 },
+      { id: "#circle4", imgid: "#circleimg4", endTranslateY: -100 },
+    ],
+    []
+  );
 
   useEffect(() => {
     const trigger = ScrollTrigger.create({
@@ -56,17 +59,19 @@ const CirclesSection = () => {
                 </LazyTextRev>
               </Suspense>
             </div>
-      
           </div>
 
           <div className="mb-[100px] md:my-[5vh] gap-[4vw]  h-fit flex mt-[4vw] md:gap-[3vh] md:mt-[3vh] flex-col-reverse">
             <Btn title="Zobacz więcej" id="searcg" link="/about" />
             <div className="capitalize md:w-[20vw]">
-            służy profesjonalnymi wskazówkami, a jednocześnie tworząc atmosferę pełną ciepła i inspiracji. 
+              służy profesjonalnymi wskazówkami, a jednocześnie tworząc atmosferę
+              pełną ciepła i inspiracji.
             </div>
           </div>
           <ComponentAppear>
-            <div className={`] flex md:flex-row md:flex-nowrap flex-wrap md:items-end md:h-fit h-full mt-[30px] items-end md:mt-[-10vh] lg:[-40vh] w-full justify-between`}>
+            <div
+              className={`] flex md:flex-row md:flex-nowrap flex-wrap md:items-end md:h-fit h-full mt-[30px] items-end md:mt-[-10vh] lg:[-40vh] w-full justify-between`}
+            >
               <Suspense fallback={<div>Loading circle...</div>}>
                 <LazyCircle
                   className="md:w-[19vw] w-[20vw] drop-shadow-xl h-[20vw] md:h-[19vw]"
@@ -101,7 +106,6 @@ const CirclesSection = () => {
               </Suspense>
             </div>
           </ComponentAppear>
-     
         </div>
       </div>
     </div>

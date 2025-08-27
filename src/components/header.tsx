@@ -1,7 +1,7 @@
 "use client";
 
 import ScrollBtn from "./ScrollBtn";
-import Cursor from "./cursor";
+// import Cursor from "./cursor";
 import Image from "next/image";
 
 import gsap from "gsap";
@@ -56,8 +56,8 @@ const Header = () => {
      <Ribbons
     baseThickness={44}
     colors={['#9432F0']}
-    speedMultiplier={0.2}
-    maxAge={600}
+    speedMultiplier={0.8}
+    maxAge={1000}
     enableFade={true}
     enableShaderEffect={false}
   /></div>
@@ -103,10 +103,10 @@ const Header = () => {
       </div>
       <Image
         alt="x"
-        width={1200}
+        width={1920}
         placeholder="blur"
-        blurDataURL="/img/bg_img2.png"
-        height={1200}
+        blurDataURL="/img/image7.jpg"
+        height={1100}
         className="md:block hidden tracker absolute overflow-hidden w-full h-[100dvh] object-cover z-[-192]"
         src={"/img/bg_img2.png"}
       />
